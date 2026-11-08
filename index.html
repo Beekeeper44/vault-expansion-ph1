@@ -261,6 +261,38 @@ header h1{font-size:40px!important;line-height:1.1}
 body.sizelocked #rackSeg,body.sizelocked #binSeg,body.sizelocked #shelfBtn,body.sizelocked #bSize,body.sizelocked #reset,
 body.sizelocked .rangebox .row,body.sizelocked #ranges,body.sizelocked #shSeg{pointer-events:none;opacity:.4}
 body.sizelocked .rangebox::after{content:"🔒 Sizes are locked. Unlock to make changes.";display:block;margin-top:8px;font-weight:600;color:var(--t-std)}
+#aPrint{white-space:nowrap}.rcard .rt2 .open.plbl{border:1px solid #93C5FD!important;background:#EFF6FF!important;color:#1D4ED8!important}.rcard .rt2 .open.plbl:hover{background:#1D4ED8!important;color:#fff!important}
+#aAddPop select,#aCreatePop select{font:inherit!important;font-size:18px!important;font-weight:600!important;padding:9px 14px!important;min-width:180px!important;height:auto!important;border:1px solid #9CA3AF!important;border-radius:8px!important;background:#fff!important}
+#aAddPop .cubox p.label,#aCreatePop .cubox p.label{font-size:17px!important;line-height:1.5!important;color:#374151!important}
+#aAddPop .row .label,#aCreatePop .row .label{font-size:17px!important;color:#374151!important}
+#aAddPop input[type=number],#aCreatePop input[type=number]{font-size:18px!important;padding:8px 12px!important}
+.btp{display:inline-flex;align-items:center;gap:6px;padding:2px 10px;border-radius:999px;font-weight:700;font-size:13px;color:var(--c);background:color-mix(in srgb,var(--c) 10%,#fff);border:1px solid color-mix(in srgb,var(--c) 45%,#fff)}.btp::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--c)}
+.st.ship{background:#EEF7EC;color:#3F7F3A;border:1px solid #9FCF98}
+.btn.mk{background:#ECFDF5;border-color:#6EE7B7;color:#047857;font-weight:800}.btn.mk:hover{background:#047857;color:#fff}
+#tMakePop .nb{font-size:28px;font-weight:800}#tMakePop .seg2{display:flex;gap:8px}#tMakePop .seg2 button{flex:1}#tMakePop .seg2 button.on{background:#1D4ED8;color:#fff;border-color:#1D4ED8}
+.prn{display:inline-flex;padding:2px 9px;border-radius:999px;font-size:12.5px;font-weight:700;white-space:nowrap}.prn.yes{background:#F0FDF4;color:#15803D;border:1px solid #86EFAC}.prn.no{color:#9CA3AF;border:1px dashed #D1D5DB}
+.rcard .rt2 .open.plbl:disabled{opacity:.45;cursor:not-allowed}.rcard .rt2 .open.plbl:disabled:hover{background:#EFF6FF!important;color:#1D4ED8!important}
+.actshade{position:fixed;inset:0;background:rgba(17,24,39,.35);z-index:99990}
+#tActMenu.actpanel{position:fixed!important;top:0!important;right:0!important;left:auto!important;bottom:0!important;width:min(420px,92vw)!important;max-height:none!important;height:100vh;margin:0!important;border-radius:0!important;border:0!important;border-left:1px solid #E5E7EB!important;box-shadow:-12px 0 40px rgba(0,0,0,.18)!important;background:#fff!important;z-index:99991!important;padding:20px 20px 28px!important;overflow:auto;display:flex;flex-direction:column;gap:8px}
+#tActMenu.actpanel[hidden]{display:none!important}
+#tActMenu .aph{display:flex;align-items:flex-start;justify-content:space-between;padding:4px 4px 14px;border-bottom:1px solid #E5E7EB;margin-bottom:8px}
+#tActMenu .apt{font-size:24px;font-weight:800;color:#111827}#tActMenu .aps{font-size:16px;color:#4B5563;margin-top:2px}
+#tActMenu .apx{border:1px solid #D1D5DB;background:#fff;border-radius:8px;font-size:18px;width:40px;height:40px;cursor:pointer}
+#tActMenu [data-act]{display:block!important;width:100%!important;text-align:left!important;font-size:19px!important;font-weight:600!important;padding:15px 18px!important;border:1px solid #E5E7EB!important;border-radius:10px!important;background:#F9FAFB!important;color:#111827!important;cursor:pointer}
+#tActMenu [data-act]:hover:not(:disabled){background:#EFF6FF!important;border-color:#93C5FD!important;color:#1D4ED8!important}
+#tActMenu [data-act]:disabled{opacity:.45;cursor:not-allowed}
+#tActMenu [data-act="remove"]{color:#B91C1C!important}#tActMenu [data-act="remove"]:hover{background:#FEF2F2!important;border-color:#FCA5A5!important}
+#tActMenu hr{border:0;border-top:1px solid #E5E7EB;margin:8px 0}
+#actConfirm .acbox{width:min(640px,94vw);max-height:88vh;display:flex;flex-direction:column;gap:12px}
+#actConfirm .ach b{font-size:22px}#actConfirm .ach.remove b{color:#B91C1C}
+#actConfirm .acsum{display:grid;gap:8px;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:12px 14px}
+#actConfirm .acsum div{display:grid;grid-template-columns:90px 1fr;gap:10px;font-size:16px}#actConfirm .acsum span{color:#6B7280}#actConfirm .acsum b{font-weight:700;word-break:break-word}
+#actConfirm .aclist{max-height:38vh;overflow:auto;border:1px solid #E5E7EB;border-radius:10px}
+#actConfirm .aclist table{width:100%;border-collapse:collapse;font-size:15px}#actConfirm .aclist th{position:sticky;top:0;background:#F3F4F6;text-align:left;padding:8px 12px;font-size:13px;text-transform:uppercase;color:#374151}
+#actConfirm .aclist td{padding:7px 12px;border-top:1px solid #F3F4F6}
+#actConfirm .acskip{background:#FFFBEB;border:1px solid #FCD34D;color:#92400E;border-radius:8px;padding:8px 12px;font-size:15px;margin:0}
+#actConfirm .acbtns{justify-content:flex-end}#actConfirm .btn.danger{background:#DC2626;border-color:#DC2626}#actConfirm .btn.danger:hover{background:#B91C1C}
+#actConfirm .btn{font-size:16px;padding:10px 18px}
 </style>
 <style>
 body,button,input,select,textarea,.ttab,.mono,.ttab .mono{font-family:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif!important}
@@ -394,7 +426,7 @@ svg text{font-family:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif
 .slotcard .cam{margin:10px 0}
 #modal,#modal .dialog,#binPanel,.cupop,.cupop .cubox{animation:none!important;transition:none!important}
 /* Locations tab: no checkboxes or Actions bar */
-#pgLocs .ttab .cb,#lAct{display:none!important}#pgLocs .ttab thead th{top:52px!important}
+#pgLocs .ttab thead th{top:52px!important}
 /* rack card: heading across the top, buttons down the left, the bin grid large on the right */
 .rcard{grid-template-columns:auto minmax(0,1fr)!important;column-gap:16px!important;align-items:start}
 .rcard .rt1{grid-column:1/-1}
@@ -506,25 +538,28 @@ svg text{font-family:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif
     <div class="ahead alh"><div><h2>Locations</h2><span class="sub">Every shelf position (Aisle · Column · Level) · the label stays on the shelf, tins move in and out · click a row to open it</span></div><span class="grow"></span><button class="btn store" id="lStore">＋ Store item</button><button class="btn primary" id="lScan">Scan tin → location</button></div>
     <div class="tstats" id="lStats"></div>
     <div class="tfilters"><input id="lQ" placeholder="Search location or tin #" autocomplete="off">
+      <span class="trange"><span class="label">Column</span><input id="lMin" type="number" min="1" placeholder="Min" inputmode="numeric"><span class="label">to</span><input id="lMax" type="number" min="1" placeholder="Max" inputmode="numeric"></span>
       <select id="lAisle"><option value="">All aisles</option></select>
       <select id="lLevel"><option value="">All levels</option></select>
       <select id="lStat"><option value="">All statuses</option><option value="has">Has a tin</option><option value="empty">Empty (no tin)</option><option value="used">In use</option><option value="off">Off</option></select>
-      <select id="lSize"><option value="">All sizes</option><option value="CU">Custom</option><option value="S">Small</option><option value="M">Medium</option><option value="L">Large</option><option value="XL">X-Large</option></select>
+      <select id="lSize"><option value="">All sizes</option><option value="CU">Standard</option><option value="CX">Custom</option><option value="S">Small</option><option value="M">Medium</option><option value="L">Large</option><option value="XL">X-Large</option></select>
       <span class="grow"></span><span class="label" id="lCount"></span></div>
     <div class="tact" id="lAct"></div>
     <div class="twrap"><table class="ttab"><thead><tr><th class="cb"><input type="checkbox" id="lAllPg" aria-label="Select this page"></th><th>Location</th><th>Barcode</th><th>Aisle</th><th>Column</th><th>Level</th><th>Side</th><th>Tin</th><th>Size</th><th>Slots</th><th>Used</th><th>Status</th></tr></thead><tbody id="lRows"></tbody></table></div>
     <div class="tpager"><button class="btn" id="lPrev">‹ Prev</button><span class="label" id="lPage"></span><button class="btn" id="lNext">Next ›</button></div>
   </section>
   <section class="panel sec pg" id="pgTins" role="tabpanel" aria-labelledby="tabTins" hidden>
-    <div class="ahead alh"><div><h2>Tins</h2><span class="sub" id="tSub"></span></div><span class="grow"></span><button class="btn store" id="tStore">＋ Store item</button><button class="btn primary" id="tScan">Scan tin → location</button></div>
+    <div class="ahead alh"><div><h2>Tins</h2><span class="sub" id="tSub"></span></div><span class="grow"></span><button class="btn store" id="tStore">＋ Store item</button><button class="btn mk" id="tMake">＋ Create tins</button><button class="btn primary" id="tScan">Scan tin → location</button></div>
     <div class="tstats" id="tStats"></div>
     <div class="tfilters"><input id="tQ" placeholder="Search tin # or location" autocomplete="off">
       <span class="trange"><span class="label">Tin #</span><input id="tMin" type="number" min="1" placeholder="Min" inputmode="numeric"><span class="label">to</span><input id="tMax" type="number" min="1" placeholder="Max" inputmode="numeric"></span>
-      <select id="tSize"><option value="">All sizes</option><option value="CU">Custom</option><option value="S">Small</option><option value="M">Medium</option><option value="L">Large</option><option value="XL">X-Large</option><option value="NONE">No size (off a shelf)</option></select>
+      <select id="tSize"><option value="">All sizes</option><option value="CU">Standard</option><option value="CX">Custom</option><option value="S">Small</option><option value="M">Medium</option><option value="L">Large</option><option value="XL">X-Large</option><option value="NONE">No size (off a shelf)</option></select>
+      <select id="tType"><option value="">Tin Type</option><option value="store">Storage</option><option value="ship">Shipping</option></select>
+      <select id="tPrn"><option value="">Printed or not</option><option value="y">Label printed</option><option value="n">Not printed</option></select>
       <select id="tStat"><option value="">All statuses</option><option value="on">On a shelf</option><option value="used">In use</option><option value="off">Off</option><option value="none">Not on a shelf</option></select>
       <select id="tAisle"><option value="">All aisles</option></select><span class="grow"></span><span class="label" id="tCount"></span></div>
     <div class="tact" id="tAct"></div>
-    <div class="twrap"><table class="ttab"><thead><tr><th class="cb"><input type="checkbox" id="tAllPg" aria-label="Select this page"></th><th>Tin</th><th>Barcode</th><th>Location</th><th>Aisle</th><th>Column</th><th>Level</th><th>Size</th><th>Slots</th><th>Used</th><th>Status</th><th></th></tr></thead><tbody id="tRows"></tbody></table></div>
+    <div class="twrap"><table class="ttab"><thead><tr><th class="cb"><input type="checkbox" id="tAllPg" aria-label="Select this page"></th><th>Tin</th><th>Type</th><th>Barcode</th><th>Location</th><th>Aisle</th><th>Column</th><th>Level</th><th>Size</th><th>Slots</th><th>Used</th><th>Status</th><th>Printed</th><th></th></tr></thead><tbody id="tRows"></tbody></table></div>
     <div class="tpager"><button class="btn" id="tPrev">‹ Prev</button><span class="label" id="tPage"></span><button class="btn" id="tNext">Next ›</button></div>
   </section>
   <nav hidden>
@@ -551,14 +586,14 @@ svg text{font-family:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif
     </div>
     <div class="rangebox" id="tinRangeBox">
       <h3>Size by tin number</h3>
-      <p class="sub">Give tin numbers a size, e.g. Tin #1–20 Small, #21–25 Medium. Every tin not in a range is Custom 100 (the default). If ranges overlap, the later one in the list wins. Nothing changes until you confirm.</p>
+      <p class="sub">Give tin numbers a size, e.g. Tin #1–20 Small, #21–25 Medium. Every tin not in a range is Standard 100 (the default). If ranges overlap, the later one in the list wins. Nothing changes until you confirm.</p>
       <div id="tranges"></div>
       <div class="row">
         <button class="btn" id="trAdd">+ Add range</button>
         <button class="btn" id="trOne">+ Add single tin</button>
         <span class="label" id="trSum"></span>
         <span class="grow"></span>
-        <label class="cuchk"><input type="checkbox" id="trRest" checked> Set every other tin to Custom 100</label>
+        <label class="cuchk"><input type="checkbox" id="trRest" checked> Set every other tin to Standard 100</label>
         <button class="btn" id="trClear">Clear</button>
         <span class="ok" id="trStatus" hidden></span>
         <button class="btn primary" id="trOk">Confirm</button>
@@ -2924,12 +2959,16 @@ var qrcode = function() {
 (function(){
 const SIZES={S:{name:"Small",slots:6},M:{name:"Medium",slots:3},L:{name:"Large",slots:2},XL:{name:"X-Large",slots:1}};
 // Custom tins (tin level only): keep one bin-level number like X-Large; their slots are sub-addresses 46-01 … 46-40.
-const CUSTOM={name:"Custom",slots:1,min:1,max:100,def:100};
+const CUSTOM={name:"Standard",slots:1,min:1,max:100,def:100};
 // cap 0 = no cap: the custom tin takes any number of items and the system assigns each slot
-const capTxt=c=>c===0?"no cap":c;const SZ=k=>SIZES[k]||CUSTOM;
+const capTxt=c=>c===0?"no cap":c;const CXS={name:"Custom",slots:1};const SZ=k=>k==="CX"?CXS:SIZES[k]||CUSTOM;
+const kName=k=>k==="CX"?"Custom":k==="CU"?"Standard":SZ(k).name;const cuL=(cx,c)=>cx?`Custom ${capTxt(c)}`:"Standard 100";
 // Frozen slot numbers: once frozen, every tin keeps its numbers; size changes never shift the tins after it.
 const FKEY="vault-slotnums-v1",LKEY="vault-sizelog-v1",WKEY="vault-who";
 let FROZ={frozenAt:null,bins:{}};try{const v=JSON.parse(localStorage.getItem(FKEY)||"null");if(v&&v.bins)FROZ=v;}catch(e){}
+// Standard tins are always 100 slots; any tin saved with another count (or no cap) becomes Custom
+for(const b in FROZ.bins){const t=(FROZ.bins[b]||{}).t||{};for(const k in t){const e=t[k];if(e&&e.cap!=null&&e.cap!==100&&e.cx===undefined)e.cx=true;}}
+let CXNEXT=false;
 let SLOG=[];try{SLOG=JSON.parse(localStorage.getItem(LKEY)||"[]")||[];}catch(e){}
 let WHO="";try{WHO=localStorage.getItem(WKEY)||"";}catch(e){}
 const saveFroz=()=>{ROWCACHE={};DATAV++;try{localStorage.setItem(FKEY,JSON.stringify(FROZ));}catch(e){}};
@@ -2938,7 +2977,7 @@ const fmtNums=a=>{const o=[];let i=0;a=[...a].sort((x,y)=>x-y);while(i<a.length)
 const sub2=(a,k)=>{let t=false;try{t=TINMODE();}catch(e){}return t?`${a} · Slot ${k}`:`${a}-${String(k).padStart(2,"0")}`;};
 const slotRange=(a,f,to)=>{let t=false;try{t=TINMODE();}catch(e){}return t?`${a} · Slots ${f}–${to}`:`${a}-${String(f).padStart(2,"0")} … ${a}-${String(to).padStart(2,"0")}`;};
 const slotRangeT=(a,f,to)=>{let t=false;try{t=TINMODE();}catch(e){}return t?`Slots ${f}–${to}`:slotRange(a,f,to);};
-const sct=k=>`<small class="sct">${k==="CU"?`${CUSTOM.min}–${CUSTOM.max} or no cap`:`${SZ(k).slots} slot${SZ(k).slots===1?"":"s"}`}</small>`;
+const sct=k=>`<small class="sct">${k==="CX"?`${CUSTOM.min}–${CUSTOM.max} or no cap`:k==="CU"?"100 slots":`${SZ(k).slots} slot${SZ(k).slots===1?"":"s"}`}</small>`;
 // Column numbers run along each aisle like house numbers: odd on the aisle's right-hand side, even on the left; facing racks share a pair (5↔6).
 const aisleColOdd=r=>{if(r.virt)return r.vodd;const m=r.id.match(/-([LR])\d$/);return m?m[1]==="L":colOf(r)<13;};
 const aisleCol=r=>{const bi=BANDS.indexOf(r.id[0]),pp=bi*2+(r.id.slice(-1)==="2"?1:0);return aisleColOdd(r)?2*pp+1:2*pp+2;};
@@ -2951,18 +2990,21 @@ const rackSeq=r=>r._seq??(r._seq=rackSeq0(r));
 const rackSeq0=r=>{const a=aisleOf(r),same=racks.filter(x=>aisleOf(x)===a),odd=same.filter(aisleColOdd),
     start=Math.min(...(odd.length?odd:same).map(rackPos)),last=Math.max(...same.map(rackPos)),p=rackPos(r);
   return p>=start?p-start:last-start+1+p;};
-const colNo=(r,n)=>{const k=rackSeq(r);return aisleColOdd(r)?12*k+2*n-1:12*k+2*n;};
-const colRange=r=>`${colNo(r,1)}–${colNo(r,PER)}`;
+const colBase=r=>{const k=rackSeq(r);if(!HASPER)return 6*k;if(r._cb!=null)return r._cb;const a=aisleOf(r),od=aisleColOdd(r);let b=6*k;[...racks,...(typeof GONE!=="undefined"?GONE:[])].forEach(x=>{if(x!==r&&aisleOf(x)===a&&aisleColOdd(x)===od&&rackSeq(x)<k)b+=perOf(x)-6;});return r._cb=b;};
+const colNo=(r,n)=>{const b=colBase(r);return aisleColOdd(r)?2*(b+n)-1:2*(b+n);};
+const colRange=r=>`${colNo(r,1)}–${colNo(r,perOf(r))}`;
 const binLabel=r=>`Aisle ${aisleOf(r)}`;
 const _sub2Pad=(a,k)=>`${a}-${String(k).padStart(2,"0")}`;
 const LEVELS=10, PER=6;
+const perOf=r=>(r&&r.per)||PER;/* bins across each level: 6, 8 or a custom number */
+let HASPER=false;
 // Tin numbering on a shelf, viewed from above with the aisle (front) at the bottom:
 // back  row: 6 3 2
 // front row: 5 4 1
 const C=10;
 const BANDS=["A","B","C","D"], BAND_Y=[1,16,31,46];
 const STORE="vault-layout-v5";
-const SCOL={S:"#D946EF",M:"#EAB308",L:"#92582E",XL:"#06B6D4",CU:"#FB923C",MIX:"#9CA3AF",NONE:"#9CA3AF"};
+const SCOL={S:"#D946EF",M:"#EAB308",L:"#92582E",XL:"#06B6D4",CU:"#FB923C",CX:"#7C3AED",MIX:"#9CA3AF",NONE:"#9CA3AF"};
 const pname=k=>k==="NONE"?"Not set":SZ(k).name;
 const TYPE={std:"Watches bin",comic:"Cards bin",steel:"Cards bin (blue)",item:"Items bin"};
 const TYPE_OPTS=[["comic","Cards"],["std","Watches"],["item","Items"]];
@@ -3006,9 +3048,15 @@ racks.forEach(r=>{const m=r.id.match(/^([A-D])(\d\d)-([LR]\d)$/);
 const NKEY="vault-nums-v2";let NUMS=null;try{NUMS=JSON.parse(localStorage.getItem(NKEY)||"null");}catch(e){}
 const XKEY="vault-extra-racks";let XRACKS=[];try{XRACKS=JSON.parse(localStorage.getItem(XKEY)||"[]");}catch(e){}
 const CAKEY="vault-created-aisles";let CAISLES=[];try{CAISLES=JSON.parse(localStorage.getItem(CAKEY)||"[]");}catch(e){}
+const rtPick=(id,val)=>`<div class="row"><span class="label">Rack type</span><select id="${id}T"><option value="6" selected>6 Tins</option><option value="8">8 Tins</option><option value="c">Custom…</option></select></div>
+  <div class="row" id="${id}Crow" hidden><span class="label">Tins per level</span><input type="number" id="${id}N" min="1" max="30" value="10"><span class="label" id="${id}Tot"></span></div>`;
+const rtWire=(w,id)=>{const t=w.querySelector(`#${id}T`),row=w.querySelector(`#${id}Crow`),n=w.querySelector(`#${id}N`),tot=w.querySelector(`#${id}Tot`);
+  t.value="6";/* 6 Bins is always the default */const upd=()=>{row.hidden=t.value!=="c";const v=+n.value||0;tot.textContent=v>=1?`= ${v*LEVELS} tins per location · ${LEVELS} levels`:"";};t.onchange=()=>{upd();if(t.value==="c")n.focus();};n.oninput=upd;upd();
+  return ()=>{if(t.value!=="c")return +t.value;const v=Math.round(+n.value);return v>=1&&v<=30?v:null;};};
 function buildCreated(){racks.forEach(r=>{delete r._seq;});for(let i=racks.length-1;i>=0;i--)if(racks[i].virt)racks.splice(i,1);
-  racks.forEach(r=>{delete r._seq;});CAISLES.forEach(c=>{["odd","even"].forEach(side=>{for(let k=0;k<(+c[side]||0);k++)racks.push({id:`N${c.a}-${side==="odd"?"O":"E"}${k+1}`,virt:true,va:c.a,vodd:side==="odd",vpos:k,type:c.type||"std",def:"CU",x:0,y:0,w:0,h:0});});});
-  XRACKS.forEach(x=>racks.push({id:x.id,virt:true,extra:true,va:x.a,vodd:x.odd,vpos:x.pos,type:x.type||"std",def:"CU",x:0,y:0,w:0,h:0}));
+  racks.forEach(r=>{delete r._seq;});CAISLES.forEach(c=>{["odd","even"].forEach(side=>{for(let k=0;k<(+c[side]||0);k++)racks.push({id:`N${c.a}-${side==="odd"?"O":"E"}${k+1}`,virt:true,va:c.a,vodd:side==="odd",vpos:k,type:c.type||"std",per:+c.per||PER,def:"CU",x:0,y:0,w:0,h:0});});});
+  XRACKS.forEach(x=>racks.push({id:x.id,virt:true,extra:true,va:x.a,vodd:x.odd,vpos:x.pos,type:x.type||"std",per:+x.per||PER,def:"CU",x:0,y:0,w:0,h:0}));
+  HASPER=racks.some(r=>perOf(r)!==PER);racks.forEach(r=>{delete r._cb;});
   racks.forEach(r=>{delete r._seq;});{const base=(buildCreated._base??=racks.filter(r=>!r.virt).length);racks.filter(r=>r.virt).forEach((r,i)=>{r.defNum=base+i+1;r.num=(typeof NUMS!=="undefined"&&NUMS&&NUMS[r.id])||r.defNum;});}try{LOCMAP=null;}catch(e){}}
 buildCreated();
 function applyNums(){racks.forEach(r=>{r.num=NUMS?(NUMS[r.id]||0):r.defNum;});}
@@ -3024,7 +3072,7 @@ function removeRacks(rs){const xs=rs.filter(r=>r.extra).map(r=>r.id);
   if(xs.length){XRACKS=XRACKS.filter(x=>!xs.includes(x.id));try{localStorage.setItem(XKEY,JSON.stringify(XRACKS));}catch(e){}}
   rs.filter(r=>!r.extra&&!r.virt).forEach(r=>{if(!REMOVED.includes(r.id))REMOVED.push(r.id);});try{localStorage.setItem(RMKEY,JSON.stringify(REMOVED));}catch(e){}
   buildCreated();applyRemoved();}
-const holdsItems=r=>{for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=PER;n++)if(isOcc(r,lv,n))return true;return false;};
+const holdsItems=r=>{for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=perOf(r);n++)if(isOcc(r,lv,n))return true;return false;};
 applyRemoved();
 // Occupancy (demo): slots with an item in them, by tin. A tin with any occupied slot is locked — its size can't change until every slot is cleared.
 const OKEY="vault-occ-v1";let OCC=null;try{OCC=JSON.parse(localStorage.getItem(OKEY)||"null");}catch(e){}
@@ -3064,8 +3112,8 @@ function findSlot(size,skip){let seen=0,off=0,full=0;const rows=locRows();
     if(!k){full++;continue;}if(seen++<skip)continue;return {t,k,off,full};}
   return {t:null,off,full};}
 function openStore(){const w=document.createElement("div");w.className="cupop";w.id="storePop";let size="S",skip=0,hit=null;
-  const opts=[["S","Small"],["M","Medium"],["L","Large"],["XL","X-Large"],["CU","Custom"]];
-  w.innerHTML=`<div class="cubox storebox"><b>Store item</b><p class="label">Scan or type the item, pick its size. The system finds the next active tin of that size — off tins, off locations and full tins are skipped, and a Small item never goes in a Custom tin.</p>
+  const opts=[["S","Small"],["M","Medium"],["L","Large"],["XL","X-Large"],["CU","Standard"]];
+  w.innerHTML=`<div class="cubox storebox"><b>Store item</b><p class="label">Scan or type the item, pick its size. The system finds the next active tin of that size — off tins, off locations and full tins are skipped, and a Small item never goes in a Standard tin.</p>
     <div class="row" id="stRow"><input id="stItem" placeholder="Item code, e.g. ITEM-DEMO-0001" autocomplete="off"></div>
     <div class="szl">Item size</div><div class="stpills">${opts.map(([k,n])=>`<button class="szpill${k===size?" on":""}" data-k="${k}" style="--c:${sizeFill(k)}"><b>${n}</b></button>`).join("")}</div>
     <div id="stRes" class="stres"></div>
@@ -3099,7 +3147,7 @@ function photoBtn(label,onCode,onMsg){const l=document.createElement("label");l.
 function toggleOcc(r,lv,n,k){const o=OCC[r.id]||(OCC[r.id]={}),a=o[lv+"-"+n]||[];const i=a.indexOf(k);i>=0?a.splice(i,1):a.push(k);a.sort((x,y)=>x-y);o[lv+"-"+n]=a;saveOcc();}
 function clearOcc(r,lv,n){if(OCC[r.id])delete OCC[r.id][lv+"-"+n];saveOcc();}
 const occName=(r,lv,n)=>{const c=tinCode(lv,n,r),z=tinSize(r,lv,n);return occ(r,lv,n).map(k=>`Slot ${k}`).join(", ");};
-let BLOCKED=[];const blockNote=t=>{BLOCKED.push(t);};
+let BLOCKED=[];const blockNote=t=>{if(!BLOCKED.includes(t))BLOCKED.push(t);};
 function flushBlocked(){if(!BLOCKED.length)return;const t=document.getElementById("occToast")||Object.assign(document.createElement("div"),{id:"occToast",className:"occtoast"});document.body.appendChild(t);
   const u=[...new Set(BLOCKED)];t.innerHTML=`<b>🔒 Blocked — storage in use</b>${u.slice(0,6).map(x=>`<div>${x}</div>`).join("")}${u.length>6?`<div>+${u.length-6} more</div>`:""}<div class="label">Clear every slot in that tin before changing its size.</div>`;t.hidden=false;BLOCKED=[];clearTimeout(t._tm);t._tm=setTimeout(()=>{t.hidden=true;},6000);t.onclick=()=>{t.hidden=true;};}
 const colOf=r=>{const m=r.id.match(/^[A-D](\d\d)-/);if(m)return 11-(+m[1]);const i=r.id.match(/-I(\d)-/);return i?14-(+i[1]):0;};
@@ -3117,11 +3165,16 @@ let state={};
 try{const s=localStorage.getItem(STORE);if(s)state=JSON.parse(s)||{};
   else{const o=JSON.parse(localStorage.getItem("vault-layout-v4")||"{}");for(const k in o)if(o[k]&&o[k]._off&&o[k]._off.length)state[k]={_off:o[k]._off};}}catch(e){state={};}
 // default tin size by bin number: 1–8 small, 9–16 medium, 17–28 large, 29–32 x-large
-function binSize(r){const st=state[r.id];if(!st||(!st._size&&!Object.keys(st).some(k=>k[0]!=="_")))return null;let z=null;for(let lv=1;lv<=LEVELS;lv++){if(!isOn(r,lv))continue;for(let n=1;n<=PER;n++){const t=tinSize(r,lv,n);if(z===null)z=t;else if(z!==t)return "MIX";}}return z||st._size||null;}
+function binSize(r){const st=state[r.id];if(!st||(!st._size&&!Object.keys(st).some(k=>k[0]!=="_")))return null;let z=null;for(let lv=1;lv<=LEVELS;lv++){if(!isOn(r,lv))continue;for(let n=1;n<=perOf(r);n++){const t=tinSize(r,lv,n);if(z===null)z=t;else if(z!==t)return "MIX";}}return z||st._size||null;}
 function save(){ROWCACHE={};DATAV++;try{localStorage.setItem(STORE,JSON.stringify(state));}catch(e){}}
 const tinSize=(r,lv,n)=>(state[r.id]&&(state[r.id][lv+"-"+n]||state[r.id]._size))||"CU";
+// rack size sets what fits: a rack takes bins its size and smaller, never larger. No rack size (Standard) = no limit.
+const RANK={S:1,M:2,L:3,XL:4};const rackSize=r=>{const z=state[r.id]&&state[r.id]._size;return RANK[z]?z:null;};
+const fitsRack=(r,s)=>{if(s==="CX")return true;const rz=rackSize(r);return !rz||(!!RANK[s]&&RANK[s]<=RANK[rz]);};
+const fitList=rz=>Object.keys(RANK).filter(k=>RANK[k]<=RANK[rz]).join(", ");
+const rackNote=r=>{const rz=rackSize(r);return `${binLabel(r)} is a ${SZ(rz).name} rack — it takes ${fitList(rz)} only`;};
 function setBinSize(r,k){if(sizeLock)return false;{const bo=binOcc(r);if(bo.length){blockNote(`${bo.map(t=>{const [lv,n]=t.split("-").map(Number);return `${binLabel(r)} · Column ${colNo(r,n)} · Level ${lv} · ${occName(r,lv,n)}`;}).join("; ")} occupied`);return false;}}
-  const had=binSize(r),before={};for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=PER;n++)before[lv+"-"+n]=tinSize(r,lv,n);
+  const had=binSize(r),before={};for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=perOf(r);n++)before[lv+"-"+n]=tinSize(r,lv,n);
   if(FROZ.frozenAt&&!isFrozen(r)&&had&&k)freezeBin(r);
   const o=state[r.id]||{};state[r.id]={};if(o._off&&o._off.length)state[r.id]._off=o._off;if(o._offb&&o._offb.length)state[r.id]._offb=o._offb;if(o._type)state[r.id]._type=o._type;if(k)state[r.id]._size=k;
   if((had||null)===(k||null)&&!Object.keys(before).some(t=>before[t]!==tinSize(r,+t.split("-")[0],+t.split("-")[1])))return;
@@ -3132,32 +3185,34 @@ function setBinSize(r,k){if(sizeLock)return false;{const bo=binOcc(r);if(bo.leng
   logSize(r,{scope:"bin",from:had?(had==="MIX"?"Mixed":SZ(had).name):"Not set",to:SZ(k).name,ret,add,note:!had&&FROZ.frozenAt?"first size set · numbers frozen":""});}
 const rType=r=>(state[r.id]&&state[r.id]._type)||r.type;
 function setType(r,t){state[r.id]=state[r.id]||{};if(t===r.type)delete state[r.id]._type;else state[r.id]._type=t;}
-function setTin(r,lv,n,s,cap){if(sizeLock)return false;const from=tinSize(r,lv,n);if(from===s&&s!=="CU")return false;
-  if(isOcc(r,lv,n)&&!(from===s&&(cap||tinCap(r,lv,n))===tinCap(r,lv,n))){blockNote(`${binLabel(r)} · Column ${colNo(r,n)} · Level ${lv} · ${occName(r,lv,n)} occupied`);return false;}
+function setTin(r,lv,n,s,cap){if(sizeLock)return false;if(!fitsRack(r,s)){blockNote(rackNote(r));return false;}const cx=s==="CX";if(cx)s="CU";if(s==="CU"&&!cx)cap=100;const from=tinSize(r,lv,n),wasCx=isCx(r,lv,n);if(from===s&&s!=="CU")return false;
+  if(isOcc(r,lv,n)&&!(from===s&&wasCx===cx&&(cap||tinCap(r,lv,n))===tinCap(r,lv,n))){blockNote(`${binLabel(r)} · Column ${colNo(r,n)} · Level ${lv} · ${occName(r,lv,n)} occupied`);return false;}
   if((FROZ.frozenAt||s==="CU"||from==="CU")&&!isFrozen(r))freezeBin(r);
-  state[r.id]=state[r.id]||{};state[r.id][lv+"-"+n]=s;
-  const oldCap=from==="CU"?tinCap(r,lv,n):null;let x={ret:[],add:[]};if(isFrozen(r)){x=reslot(r,lv,n,from,s,cap);saveFroz();}
-  if(from===s&&oldCap===(cap??oldCap))return;
-  if(from===s){logSize(r,{scope:"tin",lv,n,from:`Custom ${capTxt(oldCap)}`,to:`Custom ${capTxt(cap)}`,note:"capacity changed · no numbers moved"});return;}
-  logSize(r,{scope:"tin",lv,n,from:from==="CU"?`Custom ${capTxt(oldCap)}`:SZ(from).name,to:s==="CU"?`Custom ${capTxt(cap??CUSTOM.def)}`:SZ(s).name,ret:x.ret,add:x.add,addr:s==="CU"?x.addr:undefined});}
+  state[r.id]=state[r.id]||{};state[r.id][lv+"-"+n]=s;if(state[r.id]._max)delete state[r.id]._max[lv+"-"+n];
+  const oldCap=from==="CU"?tinCap(r,lv,n):null;let x={ret:[],add:[]};if(isFrozen(r)){CXNEXT=cx;try{x=reslot(r,lv,n,from,s,cap);}finally{CXNEXT=false;}saveFroz();}
+  if(from===s&&wasCx===cx&&oldCap===(cap??oldCap))return;
+  if(from===s){logSize(r,{scope:"tin",lv,n,from:cuL(wasCx,oldCap),to:cuL(cx,cap??oldCap),note:"capacity changed · no numbers moved"});return;}
+  logSize(r,{scope:"tin",lv,n,from:from==="CU"?cuL(wasCx,oldCap):SZ(from).name,to:s==="CU"?cuL(cx,cap??CUSTOM.def):SZ(s).name,ret:x.ret,add:x.add,addr:s==="CU"?x.addr:undefined});}
 // Slot numbering: every column counts bottom to top, left column first. Inactive shelves keep their numbers.
 const isOn=(r,lv)=>!((state[r.id]&&state[r.id]._off)||[]).includes(lv);
 function setOn(r,lv,on){state[r.id]=state[r.id]||{};const o=new Set(state[r.id]._off||[]);on?o.delete(lv):o.add(lv);state[r.id]._off=[...o];}
 // a single bin (one column on one level) can be switched off without touching the rest of its level, column or the numbering
 const isBinOn=(r,lv,n)=>isOn(r,lv)&&!((state[r.id]&&state[r.id]._offb)||[]).includes(lv+"-"+n);
 function setBinOn(r,lv,n,on){state[r.id]=state[r.id]||{};const o=new Set(state[r.id]._offb||[]);on?o.delete(lv+"-"+n):o.add(lv+"-"+n);state[r.id]._offb=[...o];}
-const activeTins=r=>{let t=0;for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=PER;n++)if(isBinOn(r,lv,n))t++;return t;};
+const activeTins=r=>{let t=0;for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=perOf(r);n++)if(isBinOn(r,lv,n)&&(!r.virt||binIdAt(r,lv,n)))t++;return t;};
 function computeMap(r){const m={};let next=1,idx=0;
-  for(let n=1;n<=PER;n++){
+  for(let n=1;n<=perOf(r);n++){
     for(let lv=1;lv<=LEVELS;lv++){const c=SZ(tinSize(r,lv,n)).slots,nums=[];for(let k=0;k<c;k++)nums.push(next+k);
       m[lv+"-"+n]={start:next,count:c,idx:++idx,nums};next+=c;}}
   return m;}
 const isFrozen=r=>!!FROZ.bins[r.id];
 function freezeBin(r){const m=computeMap(r),t={};let mx=0;for(const k in m){t[k]={n:m[k].nums.slice()};mx=Math.max(mx,...m[k].nums);}FROZ.bins[r.id]={t,ret:[],next:mx+1,at:new Date().toISOString()};}
 function slotMap(r){if(!isFrozen(r))return computeMap(r);const fb=FROZ.bins[r.id],m={};let idx=0;
-  for(let n=1;n<=PER;n++)for(let lv=1;lv<=LEVELS;lv++){const k=lv+"-"+n,e=fb.t[k]||{n:[0]};m[k]={start:e.n[0],count:e.n.length,idx:++idx,nums:e.n,cap:e.cap};}
+  for(let n=1;n<=perOf(r);n++)for(let lv=1;lv<=LEVELS;lv++){const k=lv+"-"+n,e=fb.t[k]||{n:[0]};m[k]={start:e.n[0],count:e.n.length,idx:++idx,nums:e.n,cap:e.cap};}
   return m;}
 const tinCap=(r,lv,n)=>{const fb=FROZ.bins[r.id],c=fb&&fb.t[lv+"-"+n]&&fb.t[lv+"-"+n].cap;return c===0?0:(c||CUSTOM.def);};
+const isCx=(r,lv,n)=>{if(tinSize(r,lv,n)!=="CU")return false;const fb=FROZ.bins[r.id],e=fb&&fb.t[lv+"-"+n];return !!(e&&e.cx);};
+const dKey=(r,lv,n)=>isCx(r,lv,n)?"CX":tinSize(r,lv,n);
 // Slot labels: "tin" (default) = each tin is named column+level (C3-L7) and its slots count 1–N inside it; "global" = bin-wide numbers
 let SLOTMODE="tin";try{SLOTMODE=localStorage.getItem("vault-slotmode")||"tin";}catch(e){}
 const TINMODE=()=>SLOTMODE==="tin";
@@ -3165,14 +3220,14 @@ const tinCode=(lv,n,r)=>`C${colNo(r||selRack,n)}-L${lv}`;
 const setSlotMode=m=>{SLOTMODE=m;try{localStorage.setItem("vault-slotmode",m);}catch(e){}};
 const slotLabel=(r,lv,n,info)=>{const z=tinSize(r,lv,n);if(TINMODE()){const c=tinCode(lv,n,r),k=z==="CU"?tinCap(r,lv,n):SZ(z).slots;if(z==="CU"&&k===0)return "No cap · slots assigned by the system";return k>1?`Slots 1–${k}`:"Slot 1";}
   return z==="CU"?`${slotRange(info.start,1,tinCap(r,lv,n))}`:fmtNums(info.nums||[info.start]);};
-const noCapCount=r=>{let t=0;for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=PER;n++)if(isBinOn(r,lv,n)&&tinSize(r,lv,n)==="CU"&&tinCap(r,lv,n)===0)t++;return t;};
-function rackSlots(r){let t=0;for(let lv=1;lv<=LEVELS;lv++)if(isOn(r,lv))for(let n=1;n<=PER;n++){if(!isBinOn(r,lv,n))continue;const z=tinSize(r,lv,n);t+=z==="CU"?tinCap(r,lv,n):SZ(z).slots;}return t;}
+const noCapCount=r=>{let t=0;for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=perOf(r);n++)if(isBinOn(r,lv,n)&&tinSize(r,lv,n)==="CU"&&tinCap(r,lv,n)===0)t++;return t;};
+function rackSlots(r){let t=0;for(let lv=1;lv<=LEVELS;lv++)if(isOn(r,lv))for(let n=1;n<=perOf(r);n++){if(!isBinOn(r,lv,n)||(r.virt&&!binIdAt(r,lv,n)))continue;const z=tinSize(r,lv,n);t+=z==="CU"?tinCap(r,lv,n):SZ(z).slots;}return t;}
 let logMute=null;
 function logSize(r,o){if(logMute){logMute.push(o);return;}SLOG.push(Object.assign({at:new Date().toISOString(),who:WHO||"(name not set)",bin:rackName(r),id:r.id},o));saveLog();}
-// mass convert: every tin on the chosen shelves of a bin becomes Custom <cap>; one log entry per bin
-function cuPlan(r,shelves,cap){cuPlan.skip=[];const sm=slotMap(r),todo=[];shelves.forEach(lv=>{if(!isOn(r,lv))return;for(let n=1;n<=PER;n++){const z=tinSize(r,lv,n);if(z==="CU"&&tinCap(r,lv,n)===cap)continue;if(!isBinOn(r,lv,n))continue;if(isOcc(r,lv,n)){(cuPlan.skip||(cuPlan.skip=[])).push(`${tinCode(lv,n,r)}`);continue;}const inf=sm[lv+"-"+n],nm=inf.nums||[inf.start];todo.push({lv,n,ret:z==="CU"?[]:nm.slice(1)});}});return todo;}
-function customizeBin(r,shelves,cap){if(sizeLock)return 0;const todo=cuPlan(r,shelves,cap);if(!todo.length)return 0;logMute=[];todo.forEach(t=>setTin(r,t.lv,t.n,"CU",cap));const m=logMute;logMute=null;
-  const ret=m.flatMap(e=>e.ret||[]);logSize(r,{scope:"bin",from:`${todo.length} tin${todo.length>1?"s":""}`,to:`Custom ${capTxt(cap)}`,ret,note:`levels ${fmtNums(shelves)} · mass convert`});return todo.length;}
+// mass convert: every tin on the chosen shelves of a bin becomes Standard <cap>; one log entry per bin
+function cuPlan(r,shelves,cap,cx){cuPlan.skip=[];if(!cx)cap=100;const sm=slotMap(r),todo=[];shelves.forEach(lv=>{if(!isOn(r,lv))return;for(let n=1;n<=perOf(r);n++){const z=tinSize(r,lv,n);if(z==="CU"&&tinCap(r,lv,n)===cap&&isCx(r,lv,n)===!!cx)continue;if(isOcc(r,lv,n)){(cuPlan.skip||(cuPlan.skip=[])).push(`${tinCode(lv,n,r)}`);continue;}const inf=sm[lv+"-"+n],nm=inf.nums||[inf.start];todo.push({lv,n,ret:z==="CU"?[]:nm.slice(1)});}});return todo;}
+function customizeBin(r,shelves,cap,cx){if(sizeLock)return 0;if(rackSize(r)&&!cx){if(ACTIVE(r).every(l=>shelves.includes(l)))delete state[r.id]._size;else{blockNote(rackNote(r)+" · make the whole rack Standard first");return 0;}}const todo=cuPlan(r,shelves,cap,cx);if(!todo.length)return 0;logMute=[];todo.forEach(t=>setTin(r,t.lv,t.n,cx?"CX":"CU",cap));const m=logMute;logMute=null;
+  const ret=m.flatMap(e=>e.ret||[]);logSize(r,{scope:"bin",from:`${todo.length} tin${todo.length>1?"s":""}`,to:cuL(cx,cap),ret,note:`levels ${fmtNums(shelves)} · mass convert`});return todo.length;}
 const ACTIVE=r=>[...Array(LEVELS)].map((_,i)=>i+1).filter(lv=>isOn(r,lv));
 let binCu=null;
 // re-slot one tin in a frozen bin: shrink → keep the first numbers, retire the rest; grow → append new numbers after the bin's highest; custom → keep the tin's first number as its address
@@ -3181,7 +3236,7 @@ function reslot(r,lv,n,from,to,cap){const fb=FROZ.bins[r.id],k=lv+"-"+n,e=fb.t[k
   else if(old.length<want){const back=(e.park||[]).slice(0,want-old.length);e.park=(e.park||[]).slice(back.length);fb.ret=fb.ret.filter(x=>!back.includes(x));
     for(let i=old.length+back.length;i<want;i++)add.push(fb.next++);e.n=old.concat(back,add).sort((x,y)=>x-y);add=back.concat(add);}
   if(ret.length)fb.ret=[...new Set(fb.ret.concat(ret))];
-  if(to==="CU")e.cap=cap===0?0:(cap||e.cap||CUSTOM.def);else delete e.cap;
+  if(to==="CU"){if(CXNEXT){e.cx=true;e.cap=cap===0?0:(cap||e.cap||CUSTOM.def);}else{delete e.cx;e.cap=100;}}else{delete e.cap;delete e.cx;}
   return {ret,add,addr:e.n[0]};}
 
 let PEND={};let selRack=null,selLv=null,selTin=null,bulk=false,suppressClick=false;const picked=new Set();
@@ -3285,37 +3340,78 @@ function barcodeSVG(t,{h=46,mod=1.6,label=true,dark=false}={}){const bits=c128bi
   if(label)txt(svg,W/2,h+16,t,{"text-anchor":"middle","font-size":12,"font-weight":700,"font-family":"ui-monospace,Menlo,monospace",fill:"#000"});
   return svg;}
 const pad=(v,n)=>String(v).padStart(n,"0");
-const rackCode=r=>`A${pad(aisleOf(r),2)}-C${pad(colNo(r,1),3)}-${pad(colNo(r,PER),3)}`;
+const rackCode=r=>`A${pad(aisleOf(r),2)}-C${pad(colNo(r,1),3)}-${pad(colNo(r,perOf(r)),3)}`;
 const binCode=(r,lv,n)=>`A${pad(aisleOf(r),2)}-C${pad(colNo(r,n),3)}-L${pad(lv,2)}`;
 // ---------- bins are movable totes with their own ID; locations (Aisle · Column · Level) are fixed shelf labels ----------
 // A bin barcode shows only the bin number. Scanning a bin, then a location label, allocates that bin to that column + level.
 const AKEY="vault-binalloc-v3";let BALLOC={byLoc:{},byBin:{}};try{const v=JSON.parse(localStorage.getItem(AKEY)||"null");if(v&&v.byLoc)BALLOC=v;}catch(e){}
 const saveAlloc=()=>{ROWCACHE={};DATAV++;try{localStorage.setItem(AKEY,JSON.stringify(BALLOC));}catch(e){}};
 // bin numbers: rack N holds bins (N-1)·60+1 … N·60 to start (Bin #1 … #60 on rack 1); a bin keeps its number when it moves
-const binBase=r=>r.num?(r.num-1)*60:20000+racks.indexOf(r)*60;
+/* bin numbers go aisle by aisle, row by row: odd rack then the even rack facing it (Columns 1–11 = #1–60, Columns 2–12 = #61–120 …).
+   The order is saved once so numbers never shift when locations are added or removed. */
+const ORDKEY="vault-binorder-v2";let BORD=null;try{BORD=JSON.parse(localStorage.getItem(ORDKEY)||"null");}catch(e){}
+if(!Array.isArray(BORD)){const all=[...racks,...GONE].filter(r=>!r.virt);
+  const key=r=>[+aisleOf(r)||0,rackSeq(r),aisleColOdd(r)?0:1];
+  all.sort((a,b)=>{const x=key(a),y=key(b);return x[0]-y[0]||x[1]-y[1]||x[2]-y[2]||String(a.id).localeCompare(String(b.id));});
+  BORD=all.map(r=>r.id);
+  /* move anything already saved under the old numbers over to the new ones */
+  const map={};all.forEach((r,i)=>{const on=r.num||r.defNum;if(!on)return;for(let n=1;n<=6;n++)for(let lv=1;lv<=LEVELS;lv++){const o=`BIN-${pad((on-1)*60+(n-1)*LEVELS+lv,5)}`,nw=`BIN-${pad(i*60+(n-1)*LEVELS+lv,5)}`;if(o!==nw)map[o]=nw;}});
+  const mid=id=>map[id]||id;
+  if(Object.keys(BALLOC.byBin).length||Object.keys(BALLOC.byLoc).length){const nb={},nl={};Object.keys(BALLOC.byBin).forEach(k=>{nb[mid(k)]=BALLOC.byBin[k];});Object.keys(BALLOC.byLoc).forEach(k=>{const v=BALLOC.byLoc[k];nl[k]=v?mid(v):v;});BALLOC={byLoc:nl,byBin:nb};saveAlloc();}
+  ["vault-binprinted-v1","vault-tinsize-off-v1"].forEach(K=>{try{const v=JSON.parse(localStorage.getItem(K)||"null");if(v&&typeof v==="object"){const o={};Object.keys(v).forEach(k=>{o[mid(k)]=v[k];});localStorage.setItem(K,JSON.stringify(o));}}catch(e){}});
+  try{localStorage.setItem(ORDKEY,JSON.stringify(BORD));}catch(e){}}
+const BIDX={};BORD.forEach((id,i)=>{BIDX[id]=i;});
+const binBase=r=>{const i=BIDX[r.id];return i!=null?i*60:20000+racks.indexOf(r)*60;};
 // bins count up each column first: C1-L1 = #1, C1-L2 = #2 … C1-L10 = #10, then the next column starts at #11
 const defBinId=(r,lv,n)=>`BIN-${pad(binBase(r)+(n-1)*LEVELS+lv,5)}`;
-const binNo=id=>id?+String(id).slice(4):null;
-function binHome(id){const m=/^BIN-(\d{5})$/.exec(id||"");if(!m)return null;const q=+m[1]-1,r=q<20000?racks.find(x=>x.num===Math.floor(q/60)+1):racks[Math.floor((q-20000)/60)];if(!r)return null;const rem=q%60;return {r,lv:rem%LEVELS+1,n:Math.floor(rem/LEVELS)+1};}
-function binIdAt(r,lv,n){const loc=binCode(r,lv,n);if(loc in BALLOC.byLoc)return BALLOC.byLoc[loc];const d=defBinId(r,lv,n);if(d in BALLOC.byBin&&BALLOC.byBin[d]!==loc)return null;return d;}
-function binLocOf(id){if(id in BALLOC.byBin)return BALLOC.byBin[id];const h=binHome(id);if(!h)return null;const loc=binCode(h.r,h.lv,h.n);return (loc in BALLOC.byLoc&&BALLOC.byLoc[loc]!==id)?null:loc;}
-let LOCMAP=null;const locFromCode=c=>{if(!LOCMAP){LOCMAP={};racks.forEach(r=>{for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=PER;n++)LOCMAP[binCode(r,lv,n)]={r,lv,n};});}return LOCMAP[normLoc(c)]||null;};
+const binNo=id=>{if(!id)return null;const m=/(\d+)$/.exec(String(id));return m?+m[1]:null;};
+const isShipId=id=>/^SHIP-/.test(String(id||""));
+function binHome(id){const m=/^BIN-(\d{5})$/.exec(id||"");if(!m)return null;const q=+m[1]-1,r=q<20000?racks.find(x=>x.id===BORD[Math.floor(q/60)]):racks[Math.floor((q-20000)/60)];if(!r)return null;const rem=q%60;return {r,lv:rem%LEVELS+1,n:Math.floor(rem/LEVELS)+1};}
+function binIdAt(r,lv,n){const loc=binCode(r,lv,n);if(loc in BALLOC.byLoc)return BALLOC.byLoc[loc];if(r.virt)return null;/* new aisles and added locations start empty — scan bins in */const d=defBinId(r,lv,n);if(d in BALLOC.byBin&&BALLOC.byBin[d]!==loc)return null;return d;}
+function binLocOf(id){if(id in BALLOC.byBin)return BALLOC.byBin[id];const h=binHome(id);if(!h||h.r.virt)return null;const loc=binCode(h.r,h.lv,h.n);return (loc in BALLOC.byLoc&&BALLOC.byLoc[loc]!==id)?null:loc;}
+let LOCMAP=null;const locFromCode=c=>{if(!LOCMAP){LOCMAP={};racks.forEach(r=>{for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=perOf(r);n++)LOCMAP[binCode(r,lv,n)]={r,lv,n};});}return LOCMAP[normLoc(c)]||null;};
 // typed or scanned codes are tidied to the label format: a1-c1-l1 → A01-C001-L01 (longer numbers like A1000 are kept)
 const normLoc=c=>{const t=String(c||"").trim().toUpperCase(),m=/^A\s*-?\s*0*(\d+)\s*[-\s.]?\s*C\s*-?\s*0*(\d+)\s*[-\s.]?\s*L\s*-?\s*0*(\d+)$/.exec(t);return m?`A${pad(+m[1],2)}-C${pad(+m[2],3)}-L${pad(+m[3],2)}`:t;};
 const normBin=c=>{c=String(c||"").trim().toUpperCase();const m=/^(?:#|B(?:IN)?\s*[-#]?\s*)?0*(\d+)$/.exec(c);return m&&+m[1]>0?`BIN-${pad(+m[1],5)}`:null;};
 // a tin keeps its size while it is off a shelf, and takes it to wherever it is scanned in next
 const LSKEY="vault-tinsize-off-v1";let LASTSIZE={};try{LASTSIZE=JSON.parse(localStorage.getItem(LSKEY)||"{}");}catch(e){}
 const saveLast=()=>{try{localStorage.setItem(LSKEY,JSON.stringify(LASTSIZE));}catch(e){}};
-const rememberSize=()=>{}; // tins off a shelf have no size
-function allocate(id,loc){loc=normLoc(loc);const L=locFromCode(loc);if(!L)return {err:`${loc} is not a location label`};id=normBin(id);if(!id)return {err:"That is not a tin barcode (e.g. BIN-00123)"};
+// a bin keeps the size of the last location it sat in, so it can only go into a location of the same size
+const rememberSize=(id,r,lv,n)=>{if(!id)return;const z=tinSize(r,lv,n);LASTSIZE[id]={k:dKey(r,lv,n),cap:z==="CU"?tinCap(r,lv,n):SZ(z).slots};saveLast();};
+const binSizeOf=id=>{const l=binLocOf(id),L=l&&locFromCode(l);if(L){const z=tinSize(L.r,L.lv,L.n);return {k:dKey(L.r,L.lv,L.n),cap:z==="CU"?tinCap(L.r,L.lv,L.n):SZ(z).slots};}return LASTSIZE[id]||null;};
+const sizeTxt=o=>o.k==="CX"?`Custom ${capTxt(o.cap)}`:kName(o.k);
+// what physically fits in each spot: smaller tins fit bigger spots, never the other way.
+// Standard spots take Small, Medium and Standard (Large and X-Large don't fit); a Standard tin only goes in a Standard spot.
+// Custom tins fit a Custom spot with the same or more slots, or a Standard spot if they have 100 or fewer.
+const SPOT_TAKES={S:["S"],M:["S","M"],L:["S","M","L"],XL:["S","M","L","XL"],CU:["S","M","CU"]};
+const binFits=(bs,need)=>{if(need.k==="CX")return bs.k==="CX"&&(need.cap===0||(bs.cap!==0&&bs.cap<=need.cap));if(bs.k==="CX")return need.k==="CU"&&bs.cap!==0&&bs.cap<=100;return (SPOT_TAKES[need.k]||[]).includes(bs.k);};
+const takesTxt=need=>need.k==="CX"?`Custom ${capTxt(need.cap)} or fewer slots`:need.k==="CU"?"Standard, Medium or Small":`${sizeTxt(need)} or smaller`;
+const curSize=(r,lv,n)=>{const z=tinSize(r,lv,n);return {k:dKey(r,lv,n),cap:z==="CU"?tinCap(r,lv,n):SZ(z).slots};};
+// a location remembers its own (largest) size while a smaller bin sits in it
+const locMax=(r,lv,n)=>{const m=state[r.id]&&state[r.id]._max&&state[r.id]._max[lv+"-"+n];return m||curSize(r,lv,n);};
+function setLocSize(r,lv,n,o){if(!FROZ.bins[r.id])freezeBin(r);const from=tinSize(r,lv,n),to=o.k==="CX"?"CU":o.k;state[r.id]=state[r.id]||{};state[r.id][lv+"-"+n]=to;
+  CXNEXT=o.k==="CX";try{reslot(r,lv,n,from,to,o.k==="CX"?o.cap:undefined);}finally{CXNEXT=false;}saveFroz();}
+function restoreLoc(r,lv,n){const st=state[r.id],k=lv+"-"+n,m=st&&st._max&&st._max[k];if(!m)return;delete st._max[k];if(!Object.keys(st._max).length)delete st._max;setLocSize(r,lv,n,m);save();}
+/* tin types: storage tins live on locations; shipping tins never go on a shelf */
+const BTKEY="vault-bintypes-v1";let BTYPE={created:[],type:{}};try{const v=JSON.parse(localStorage.getItem(BTKEY)||"null");if(v&&v.created)BTYPE=v;}catch(e){}
+const saveBT=()=>{ROWCACHE={};DATAV++;try{localStorage.setItem(BTKEY,JSON.stringify(BTYPE));}catch(e){}};
+const binType=id=>isShipId(id)?"ship":(BTYPE.type[id]||"store");
+const BTNAME={store:"Storage",ship:"Shipping"},BTCOL={store:"#EA580C",ship:"#5FA55A"};
+const nextShipNo=()=>{let m=0;BTYPE.created.forEach(id=>{if(isShipId(id)){const n=binNo(id);if(n>m)m=n;}});return m+1;};
+const nextBinNo=()=>{let m=0;tinRows().forEach(t=>{if(t.bt!=="ship"&&t.no>m)m=t.no;});Object.keys(BALLOC.byBin).forEach(id=>{if(isShipId(id))return;const n=binNo(id);if(n>m)m=n;});return m+1;};
+function allocate(id,loc){loc=normLoc(loc);const L=locFromCode(loc);if(!L)return {err:`${loc} is not a location label`};id=normBin(id);if(!id)return {err:"That is not a tin barcode (e.g. BIN-00123)"};if(binType(id)==="ship")return {err:`${id} is a shipping tin — shipping tins don't go on a location`};
   if(isOcc(L.r,L.lv,L.n)&&binIdAt(L.r,L.lv,L.n)!==id)return {err:`${loc} holds items in another tin — clear it first`};
   const prev=binLocOf(id),here=binIdAt(L.r,L.lv,L.n);if(prev===loc)return {ok:true,same:true,id,loc};
+  const need=locMax(L.r,L.lv,L.n),bs=binSizeOf(id);
+  if(bs&&!binFits(bs,need))return {err:`${id} is a ${sizeTxt(bs)} tin — won't fit in ${loc}, which takes ${takesTxt(need)}`};
   if(prev){BALLOC.byLoc[prev]=null;}
   if(here&&here!==id){rememberSize(here,L.r,L.lv,L.n);BALLOC.byBin[here]=null;}
-  BALLOC.byLoc[loc]=id;BALLOC.byBin[id]=loc;saveAlloc();
+  BALLOC.byLoc[loc]=id;BALLOC.byBin[id]=loc;saveAlloc();if(LASTSIZE[id]){delete LASTSIZE[id];saveLast();}
+  {const P0=prev&&prev!==loc?locFromCode(prev):null;if(P0)restoreLoc(P0.r,P0.lv,P0.n);}
+  // a smaller tin sets the spot to its own size while it sits there; the spot's own size comes back when the tin leaves
+  if(bs){const cur=curSize(L.r,L.lv,L.n);if(bs.k!==cur.k||bs.cap!==cur.cap){const st=state[L.r.id]=state[L.r.id]||{};st._max=st._max||{};if(!st._max[L.lv+"-"+L.n])st._max[L.lv+"-"+L.n]=need;setLocSize(L.r,L.lv,L.n,bs);if(bs.k===need.k&&bs.cap===need.cap){delete st._max[L.lv+"-"+L.n];}save();}}
   // the tin carries its contents and its size: occupied slots and capacity move with it to the new location
-  {const P=prev&&prev!==loc?locFromCode(prev):null;if(P){const k1=P.lv+"-"+P.n,k2=L.lv+"-"+L.n,z=tinSize(P.r,P.lv,P.n),cap=z==="CU"?tinCap(P.r,P.lv,P.n):undefined;
-    if(!FROZ.bins[L.r.id])freezeBin(L.r);const from=tinSize(L.r,L.lv,L.n);state[L.r.id]=state[L.r.id]||{};state[L.r.id][k2]=z;reslot(L.r,L.lv,L.n,from,z,cap);saveFroz();
+  {const P=prev&&prev!==loc?locFromCode(prev):null;if(P){const k1=P.lv+"-"+P.n,k2=L.lv+"-"+L.n;
     const src=OCC[P.r.id]&&OCC[P.r.id][k1];if(src&&src.length){OCC[L.r.id]=OCC[L.r.id]||{};OCC[L.r.id][k2]=src.slice();delete OCC[P.r.id][k1];saveOcc();}
     else if(OCC[L.r.id]&&OCC[L.r.id][k2]){delete OCC[L.r.id][k2];saveOcc();}}
 }
@@ -3349,7 +3445,7 @@ function openRemove(r,lv,n){const bid=binIdAt(r,lv,n),loc=binCode(r,lv,n);if(!bi
   setTimeout(()=>inp.focus(),30);}
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){const w=document.getElementById("rmPop");if(w){e.stopImmediatePropagation();e.preventDefault();w.__close();}}},true);
 function unallocate(r,lv,n){const loc=binCode(r,lv,n),id=binIdAt(r,lv,n);if(!id)return;if(isOcc(r,lv,n)){blockNote(`${loc} holds items — clear it first`);flushBlocked();return;}
-  rememberSize(id,r,lv,n);BALLOC.byLoc[loc]=null;BALLOC.byBin[id]=null;saveAlloc();logSize(r,{scope:"tin",lv,n,from:id,to:"empty",note:`tin removed from ${loc}`});}
+  rememberSize(id,r,lv,n);BALLOC.byLoc[loc]=null;BALLOC.byBin[id]=null;saveAlloc();restoreLoc(r,lv,n);logSize(r,{scope:"tin",lv,n,from:id,to:"empty",note:`tin removed from ${loc}`});}
 // scan station: scan a bin, then a location
 function openScan(pre){const m=document.getElementById("modal");const host=(m&&!m.hidden)?m:document.body;let w=document.getElementById("scanPop");if(w)w.remove();
   w=document.createElement("div");w.id="scanPop";w.className="cupop";w.innerHTML=`<div class="cubox scanbox"><b>Scan tin → location</b>
@@ -3437,12 +3533,12 @@ function drawRack(){
   const p=document.getElementById("rackPanel");
   if(!selRack){p.innerHTML="";return;}
   const r=selRack,counts={S:0,M:0,L:0,XL:0,CU:0};
-  for(let lv=1;lv<=LEVELS;lv++)if(isOn(r,lv))for(let n=1;n<=PER;n++)counts[tinSize(r,lv,n)]++;
+  for(let lv=1;lv<=LEVELS;lv++)if(isOn(r,lv))for(let n=1;n<=perOf(r);n++)counts[tinSize(r,lv,n)]++;
   const onCount=[...Array(LEVELS)].filter((_,i)=>isOn(r,i+1)).length;
   document.getElementById("mTitle").textContent=(aisleOf(r)?`Aisle ${aisleOf(r)} · Columns ${colRange(r)}`:rackName(r));
   {const z=binSize(r),el2=document.getElementById("mSize");el2.innerHTML=`<i style="border-color:${z?SCOL[z]:"var(--muted)"}${z?"":";border-style:dotted"}"></i>${z?(z==="MIX"?"Mixed":SZ(z).name):"Size not set"}`;el2.style.color=z?SCOL[z]:"var(--muted)";}
   document.getElementById("mSub").textContent=`${locStr(r)} · ${TYPE[rType(r)]} · ${onCount} of 10 levels active · ${activeTins(r)} tins · ${rackSlots(r)} slots${noCapCount(r)?` + ${noCapCount(r)} no-cap tin${noCapCount(r)>1?"s":""}`:""}${binSize(r)?" · ":""}${!binSize(r)?"":Object.entries(counts).filter(([,v])=>v).map(([k,v])=>`${v} ${SZ(k).name.toLowerCase()}`).join(", ")}`;
-  p.innerHTML=`<div class="row numrow"><span class="label">Bin number</span><input type="number" min="1" id="binNum" value="${r.num||""}" placeholder="none"><button class="btn" id="binNumSave">Save</button>${r.num?'<button class="btn" id="binNumDel">Remove number</button>':""}<span class="label" id="binNumMsg"></span></div><div class="row"><span class="label">Bin type</span><div class="seg" id="typeSeg"></div></div><div class="row"><span class="label">Active levels</span><div class="seg" id="shelfSeg"></div></div><div class="row"><span class="label">Bin size</span><div class="seg" id="rackSeg"></div></div>`;
+  p.innerHTML=`<div class="row numrow"><span class="label">Bin number</span><input type="number" min="1" id="binNum" value="${r.num||""}" placeholder="none"><button class="btn" id="binNumSave">Save</button>${r.num?'<button class="btn" id="binNumDel">Remove number</button>':""}<span class="label" id="binNumMsg"></span></div><div class="row"><span class="label">Bin type</span><div class="seg" id="typeSeg"></div></div><div class="row"><span class="label">Active levels</span><div class="seg" id="shelfSeg"></div></div><div class="row"><span class="label">Rack size</span><div class="seg" id="rackSeg"></div></div><p class="sub" id="rackFit"></p>`;
   p.querySelector("#binNumSave").onclick=()=>{const v=Math.round(+p.querySelector("#binNum").value);if(!v||v<1)return;
     const other=racks.find(x=>x!==r&&x.num===v);setNum(r,v);document.getElementById("mTitle").textContent=(aisleOf(r)?`Aisle ${aisleOf(r)} · Columns ${colRange(r)}`:rackName(r));drawQR(r);refresh();
     if(other)document.getElementById("binNumMsg").textContent=`BIN ${v} moved from ${other.id}; that bin is now unnumbered`;};
@@ -3452,9 +3548,9 @@ function drawRack(){
     if(on)b.style.cssText=`background:${TCOL[t]};color:#1A1206`;b.onclick=()=>{setType(r,t);save();refresh();};ts.appendChild(b);});
   const ss=p.querySelector("#shelfSeg");
   for(let lv=1;lv<=LEVELS;lv++){const b=document.createElement("button");b.textContent=lv;const on=isOn(r,lv);b.setAttribute("aria-pressed",on);if(!on)b.className="off";b.title=`Level ${lv}: ${on?"active, click to make inactive":"inactive, click to make active"}`;
-    b.onclick=()=>{if(isOn(r,lv)){const busy=[...Array(PER)].map((_,i)=>i+1).filter(n=>isOcc(r,lv,n));if(busy.length){busy.forEach(n=>blockNote(`${binLabel(r)} · Column ${colNo(r,n)} · Level ${lv} · ${occName(r,lv,n)} occupied`));flushBlocked();return;}}setOn(r,lv,!isOn(r,lv));if(selLv===lv){selLv=null;selTin=null;}save();refresh();};ss.appendChild(b);}
+    b.onclick=()=>{if(isOn(r,lv)){const busy=[...Array(perOf(r))].map((_,i)=>i+1).filter(n=>isOcc(r,lv,n));if(busy.length){busy.forEach(n=>blockNote(`${binLabel(r)} · Column ${colNo(r,n)} · Level ${lv} · ${occName(r,lv,n)} occupied`));flushBlocked();return;}}setOn(r,lv,!isOn(r,lv));if(selLv===lv){selLv=null;selTin=null;}save();refresh();};ss.appendChild(b);}
   {const lr=ss.closest(".row"),cr=document.createElement("div");cr.className="row";cr.innerHTML=`<span class="label">Active columns</span><div class="seg" id="colSeg"></div>`;lr.after(cr);
-    const cs=cr.querySelector("#colSeg");for(let n=1;n<=PER;n++){const b=document.createElement("button"),on=columnOn(r,n);b.textContent=colNo(r,n);b.setAttribute("aria-pressed",on);if(!on)b.className="off";
+    const cs=cr.querySelector("#colSeg");for(let n=1;n<=perOf(r);n++){const b=document.createElement("button"),on=columnOn(r,n);b.textContent=colNo(r,n);b.setAttribute("aria-pressed",on);if(!on)b.className="off";
       b.title=`Column ${colNo(r,n)}: ${on?"active, click to turn off (all levels)":"off, click to turn on"}`;b.onclick=()=>{if(setColumn(r,n,!columnOn(r,n))){if(selTin===n){selLv=null;selTin=null;}refresh();}};cs.appendChild(b);}}
   {const sl=document.createElement("div");sl.className="row frow";sl.innerHTML=`<span class="label">Slot labels</span><div class="seg" id="slotMode"></div><span class="label">${TINMODE()?"Each tin is named by column + level (C3-L7 = column 3, level 7); slots count 1–N inside the tin.":"Bin-wide numbers, frozen and retired as sizes change."}</span>`;
     [["tin","Tin slots"],["global","Global numbers"]].forEach(([m,l])=>{const b=document.createElement("button");b.textContent=l;b.setAttribute("aria-pressed",SLOTMODE===m);b.onclick=()=>{setSlotMode(m);refresh();};sl.querySelector("#slotMode").appendChild(b);});
@@ -3467,18 +3563,19 @@ function drawRack(){
     if(ck){ck.onchange=()=>{rb.disabled=!ck.checked||binOcc(r).length>0;};rb.onclick=()=>{if(rb.dataset.arm!=="1"){rb.dataset.arm="1";rb.textContent="Click again to renumber";rb.classList.add("danger");setTimeout(()=>{if(rb.isConnected){rb.dataset.arm="";rb.textContent="Renumber this bin";rb.classList.remove("danger");}},4000);return;}
       const oldRet=fb.ret.slice();delete FROZ.bins[r.id];freezeBin(r);saveFroz();logSize(r,{scope:"bin",from:"Frozen numbers",to:"Renumbered from tin sizes",ret:[],note:`bin confirmed empty${oldRet.length?` · retired ${fmtNums(oldRet)} released`:""}`});refresh();};}}
   const seg=p.querySelector("#rackSeg");
-  const cur=binSize(r);
+  const cur=rackSize(r)||binSize(r);
+  {const rf=p.querySelector("#rackFit"),rz=rackSize(r);if(rf)rf.textContent=rz?`${SZ(rz).name} rack · takes ${fitList(rz)} bins — never larger`:"Standard rack · no size limit. Pick a rack size to limit what fits: Small → S · Medium → S, M · Large → S, M, L · X-Large → all four.";}
   [null,...Object.keys(SIZES)].forEach(k=>{const b=document.createElement("button");b.innerHTML=k?`${SZ(k).name}${sct(k)}`:"Not set";
     b.setAttribute("aria-pressed",cur===k);if(k&&cur===k)b.style.cssText=`background:${SCOL[k]};color:#111`;
     b.onclick=()=>{binCu=null;setBinSize(r,k);save();refresh();flushBlocked();};seg.appendChild(b);});
-  {const cb=document.createElement("button");cb.innerHTML=`Custom…${sct("CU")}`;cb.style.boxShadow=`inset 0 -3px 0 ${SCOL.CU}`;cb.setAttribute("aria-pressed",!!(binCu&&binCu.id===r.id)||binSize(r)==="CU");
-    cb.onclick=()=>{binCu=binCu&&binCu.id===r.id?null:{id:r.id,cap:CUSTOM.def,shelves:new Set(ACTIVE(r)),empty:false};drawRack();};seg.appendChild(cb);}
-  if(binCu&&binCu.id===r.id){const c=binCu,valid=c.cap===0||(c.cap>=CUSTOM.min&&c.cap<=CUSTOM.max&&Number.isInteger(c.cap)),todo=valid?cuPlan(r,[...c.shelves].sort((a,b)=>a-b),c.cap):[],ret=todo.flatMap(t=>t.ret);
+  [["CU",false],["CX",true]].forEach(([kk,cx])=>{const cb=document.createElement("button");cb.innerHTML=`${kName(kk)}…${sct(kk)}`;cb.style.boxShadow=`inset 0 -3px 0 ${SCOL[kk]}`;cb.setAttribute("aria-pressed",!!(binCu&&binCu.id===r.id&&!!binCu.cx===cx));if(!cx&&rackSize(r))cb.title="Makes the whole rack Standard (no size limit)";
+    cb.onclick=()=>{binCu=binCu&&binCu.id===r.id&&!!binCu.cx===cx?null:{id:r.id,cap:CUSTOM.def,shelves:new Set(ACTIVE(r)),empty:false,cx};drawRack();};seg.appendChild(cb);});
+  if(binCu&&binCu.id===r.id){const c=binCu,valid=c.cap===0||(c.cap>=CUSTOM.min&&c.cap<=CUSTOM.max&&Number.isInteger(c.cap)),todo=valid?cuPlan(r,[...c.shelves].sort((a,b)=>a-b),c.cap,c.cx):[],ret=todo.flatMap(t=>t.ret);
     const d=document.createElement("div");d.className="cubox";
-    d.innerHTML=`<b>Make tins Custom — mass convert</b>
-      <div class="row"><label class="cuchk"><input type="checkbox" id="bcCapOn" ${c.cap!==0?"checked":""}> Cap the count</label><input type="number" id="bcCap" min="${CUSTOM.min}" max="${CUSTOM.max}" value="${c.cap||c.last||CUSTOM.def}" ${c.cap===0?"disabled":""}><span class="label">${c.cap===0?"No cap — each tin takes any number of items; the system assigns slots":`${CUSTOM.min}–${CUSTOM.max} slots per tin`}</span></div>
+    d.innerHTML=`<b>Make tins ${c.cx?"Custom":"Standard"} — mass convert</b>
+      <div class="row"${c.cx?"":" hidden"}><label class="cuchk"><input type="checkbox" id="bcCapOn" ${c.cap!==0?"checked":""}> Cap the count</label><input type="number" id="bcCap" min="${CUSTOM.min}" max="${CUSTOM.max}" value="${c.cap||c.last||CUSTOM.def}" ${c.cap===0?"disabled":""}><span class="label">${c.cap===0?"No cap — each tin takes any number of items; the system assigns slots":`${CUSTOM.min}–${CUSTOM.max} slots per tin`}</span></div>
       <div class="row"><span class="label">Levels</span><div class="seg" id="bcShelves"></div><button class="btn" id="bcAll">All active</button><button class="btn" id="bcNone">None</button></div>
-      <ul><li>${todo.length} tin${todo.length===1?"":"s"} become Custom ${capTxt(valid?c.cap:"—")} · each keeps its own address (e.g. ${todo[0]?(TINMODE()?sub2(tinCode(todo[0].lv,todo[0].n,r),1):sub2((slotMap(r)[todo[0].lv+"-"+todo[0].n].nums||[0])[0],1)):"—"} …).</li>${ret.length&&!TINMODE()?`<li>${ret.length} numbers retired — never reused, nothing shifts.</li>`:""}<li>Inactive levels are skipped.</li>${cuPlan.skip.length?`<li class="occwarn">🔒 ${cuPlan.skip.length} tin${cuPlan.skip.length>1?"s":""} in use ${cuPlan.skip.length>1?"are":"is"} skipped: ${cuPlan.skip.slice(0,8).join(", ")}${cuPlan.skip.length>8?"…":""}</li>`:""}</ul>
+      <ul><li>${todo.length} tin${todo.length===1?"":"s"} become ${c.cx?`Custom ${capTxt(valid?c.cap:"—")}`:"Standard 100"} · each keeps its own address (e.g. ${todo[0]?(TINMODE()?sub2(tinCode(todo[0].lv,todo[0].n,r),1):sub2((slotMap(r)[todo[0].lv+"-"+todo[0].n].nums||[0])[0],1)):"—"} …).</li>${ret.length&&!TINMODE()?`<li>${ret.length} numbers retired — never reused, nothing shifts.</li>`:""}<li>Inactive levels are skipped.</li>${cuPlan.skip.length?`<li class="occwarn">🔒 ${cuPlan.skip.length} tin${cuPlan.skip.length>1?"s":""} in use ${cuPlan.skip.length>1?"are":"is"} skipped: ${cuPlan.skip.slice(0,8).join(", ")}${cuPlan.skip.length>8?"…":""}</li>`:""}</ul>
       <label class="cuchk"><input type="checkbox" id="bcEmpty" ${c.empty?"checked":""}> These tins are empty, or every taken slot fits the new layout</label>
       <div class="row"><button class="btn" id="bcCancel">Cancel</button><button class="btn primary" id="bcOk" ${valid&&c.empty&&todo.length?"":"disabled"}>Convert ${todo.length} tin${todo.length===1?"":"s"}</button>${!valid?`<span class="err">Use ${CUSTOM.min}–${CUSTOM.max}</span>`:""}</div>`;
     const wrap=document.createElement("div");wrap.className="cupop";wrap.appendChild(d);p.appendChild(wrap);wrap.onclick=e=>{if(e.target===wrap)d.querySelector("#bcCancel").click();};const sh=d.querySelector("#bcShelves");
@@ -3489,7 +3586,7 @@ function drawRack(){
     d.querySelector("#bcCap").onchange=e=>{c.cap=Math.round(+e.target.value);c.last=c.cap;drawRack();};
     d.querySelector("#bcEmpty").onchange=e=>{c.empty=e.target.checked;drawRack();};
     d.querySelector("#bcCancel").onclick=()=>{binCu=null;drawRack();};
-    d.querySelector("#bcOk").onclick=()=>{if(!(valid&&c.empty))return;const k=customizeBin(r,[...c.shelves].sort((a,b)=>a-b),c.cap);binCu=null;save();refresh();flushBlocked();};}
+    d.querySelector("#bcOk").onclick=()=>{if(!(valid&&c.empty))return;const k=customizeBin(r,[...c.shelves].sort((a,b)=>a-b),c.cap,c.cx);binCu=null;save();refresh();flushBlocked();};}
 
   const W=560,H=700,px=30,top=36,bot=22,gap=5;
   const step=(H-top-bot)/(LEVELS-1+.78);
@@ -3500,7 +3597,7 @@ function drawRack(){
   {const cx=(px+8+(W-px-8))/2;txt(svg,cx,-9,"COLUMN →",{"text-anchor":"middle","font-size":12,"font-weight":800,"letter-spacing":"2",fill:"var(--muted)"});
    const ly=(top+H-bot)/2,g=el("g",{transform:`translate(-14 ${ly}) rotate(-90)`},svg);txt(g,0,4,"LEVEL →",{"text-anchor":"middle","font-size":12,"font-weight":800,"letter-spacing":"2",fill:"var(--muted)"});}
   [px+14,W-px-14].forEach(x=>el("rect",{x:x-2,y:top,width:4,height:H-top-bot+6,fill:"var(--muted)",opacity:.45},svg));
-  const bw=(W-2*px-16-gap*(PER-1))/PER, bh=step*.7;
+  const bw=(W-2*px-16-gap*(perOf(r)-1))/perOf(r), bh=step*.7;
   for(let lv=1;lv<=LEVELS;lv++){
     const y=shelfY(lv);
     const g=el("g",{class:"hit",tabindex:0,role:"button","aria-label":`Level ${lv}`},svg);
@@ -3511,7 +3608,7 @@ function drawRack(){
       el("rect",{x:1,y:cy-11,width:24,height:22,rx:5,fill:off?"var(--off)":"var(--surface)",stroke:sel?"var(--ink)":off?"var(--off)":"var(--line)","stroke-width":sel?2:1},g);
       txt(g,13,cy+5.5,lv,{"text-anchor":"middle","font-size":lv>9?13:15,"font-weight":800,fill:off?"#fff":"var(--ink)"});}
     if(!isOn(r,lv)){
-      for(let n=1;n<=PER;n++){const bx=px+8+(n-1)*(bw+gap),by=y-5-bh;
+      for(let n=1;n<=perOf(r);n++){const bx=px+8+(n-1)*(bw+gap),by=y-5-bh;
         el("path",{d:`M${bx} ${by} H${bx+bw} L${bx+bw-3} ${by+bh} H${bx+3} Z`,fill:"var(--off)",opacity:.35,stroke:"var(--off)","stroke-width":1.2},svg);
         el("rect",{x:bx-1,y:by-3,width:bw+2,height:5,rx:1.5,fill:"var(--off)",opacity:.6},svg);
         const fi=sm[lv+"-"+n];txt(svg,bx+bw/2,by+bh-6,TINMODE()?tinCode(lv,n,r):tinSize(r,lv,n)==="CU"?`${fi.start}-xx`:fmtNums(fi.nums),{"text-anchor":"middle","font-size":8.5,"font-weight":600,fill:"#fff",opacity:.75});}
@@ -3519,14 +3616,14 @@ function drawRack(){
       txt(svg,W/2,y-5-bh/2+5,`Level ${lv} inactive`,{"text-anchor":"middle","font-size":12.5,"font-weight":700,fill:"#fff"});
       continue;}
     onAct(g,()=>pickShelf(lv));
-    for(let n=1;n<=PER;n++){const bx=px+8+(n-1)*(bw+gap),tw=Math.min(66,bw*.84),tx=bx+(bw-tw)/2,ty=y-4,code=binCode(r,lv,n);
+    for(let n=1;n<=perOf(r);n++){const bx=px+8+(n-1)*(bw+gap),tw=Math.min(66,bw*.84),tx=bx+(bw-tw)/2,ty=y-4,code=binCode(r,lv,n);
       const tag=el("g",{class:"shelftag","pointer-events":"none"},svg);
       el("rect",{x:tx,y:ty,width:tw,height:13.5,rx:1.5,fill:"#fff",stroke:"#9ca3af","stroke-width":.5},tag);
       const bits=c128bits(code),mw=(tw-6)/bits.length;let d="";for(let i=0;i<bits.length;){let j=i;while(j<bits.length&&bits[j]===bits[i])j++;if(bits[i]==="1")d+=`M${tx+3+i*mw} ${ty+1.4}h${(j-i)*mw}v5.6h${-(j-i)*mw}z`;i=j;}
       el("path",{d,fill:"#000","shape-rendering":"crispEdges"},tag);
       txt(tag,tx+tw/2,ty+12.2,code,{"text-anchor":"middle","font-size":4.7,"font-weight":700,"font-family":"ui-monospace,Menlo,monospace",fill:"#000"});}
     // 6 tins across; each face shows its slot numbers
-    for(let n=1;n<=PER;n++){
+    for(let n=1;n<=perOf(r);n++){
       const s=tinSize(r,lv,n),bx=px+8+(n-1)*(bw+gap),by=y-5-bh;
       const tg=el("g",{class:"bn hit",tabindex:0,role:"button","aria-label":`Level ${lv} tin ${n}, ${SZ(s).name}`},svg);
       const isSel=selLv===lv&&selTin===n;
@@ -3546,12 +3643,12 @@ function drawRack(){
         txt(tg,bx+bw/2,by+bh/2-1,"EMPTY",{"text-anchor":"middle","font-size":10.5,"font-weight":800,fill:"#e5e7eb"});txt(tg,bx+bw/2,by+bh/2+11,"scan a tin",{"text-anchor":"middle","font-size":7.5,fill:"#9ca3af"});}
       if(!isBinOn(r,lv,n)){el("path",{d:`M${bx} ${by} H${bx+bw} L${bx+bw-3} ${by+bh} H${bx+3} Z`,fill:"#1f2937",opacity:.88},tg);
         el("rect",{x:bx+bw/2-22,y:by+bh/2-9,width:44,height:18,rx:4,fill:"var(--off)"},tg);txt(tg,bx+bw/2,by+bh/2+4.5,"OFF",{"text-anchor":"middle","font-size":11,"font-weight":800,fill:"#fff"});}
-      el("title",{},tg).textContent=`${isBinOn(r,lv,n)?"":"[OFF] "}${binLabel(r)} · Column ${colNo(r,n)} · Level ${lv} · ${s==="CU"?`Custom ${capTxt(tinCap(r,lv,n))}`:SZ(s).name} · ${TINMODE()?"":"slots "}${slotLabel(r,lv,n,info)}`;
+      el("title",{},tg).textContent=`${isBinOn(r,lv,n)?"":"[OFF] "}${binLabel(r)} · Column ${colNo(r,n)} · Level ${lv} · ${s==="CU"?`Standard ${capTxt(tinCap(r,lv,n))}`:SZ(s).name} · ${TINMODE()?"":"slots "}${slotLabel(r,lv,n,info)}`;
       tg.addEventListener("click",e=>{e.stopPropagation();pickShelf(lv,n);});
       tg.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();e.stopPropagation();pickShelf(lv,n);}});
     }
   }
-  {const COLS="ABCDEF";for(let n=1;n<=PER;n++){const cx=px+8+(n-1)*(bw+gap)+bw/2;
+  {const COLS="ABCDEFGHIJKLMNOPQRSTUVWXYZ";for(let n=1;n<=perOf(r);n++){const cx=px+8+(n-1)*(bw+gap)+bw/2;
     el("rect",{x:cx-18,y:4,width:36,height:22,rx:5,fill:"var(--surface)",stroke:"var(--line)"},svg);
     txt(svg,cx,20.5,String(colNo(r,n)),{"text-anchor":"middle","font-size":15,"font-weight":800,fill:"var(--ink)"});}}
   [px,W-px].forEach(x=>{el("rect",{x:x-3.5,y:top-4,width:7,height:H-top-bot+12,rx:3,fill:"var(--ink)"},svg);
@@ -3575,8 +3672,8 @@ function drawShelf(){
   p.innerHTML=`<h2>Level ${lv}</h2><p class="sub">Rack ${r.id} · from above, aisle at the bottom · tins 1–6</p>
     <div class="row"><span class="label">Set this level</span><div class="seg" id="shSeg"></div></div>`;
   const seg=p.querySelector("#shSeg");
-  Object.keys(SIZES).forEach(k=>{const b=document.createElement("button");b.innerHTML=`${SZ(k).name}${sct(k)}`;
-    b.onclick=()=>{for(let n=1;n<=PER;n++)setTin(r,lv,n,k);save();refresh();};seg.appendChild(b);});
+  Object.keys(SIZES).forEach(k=>{const b=document.createElement("button");b.innerHTML=`${SZ(k).name}${sct(k)}`;if(!fitsRack(r,k)){b.disabled=true;b.title=rackNote(r);}
+    b.onclick=()=>{for(let n=1;n<=perOf(r);n++)setTin(r,lv,n,k);save();refresh();flushBlocked();};seg.appendChild(b);});
   const W=460,H=300,sx=30,sy=30,sw=400,sh=220;
   const svg=el("svg",{class:"shelf-svg",viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":`Level ${lv} from above`});
   const defs=el("defs",{},svg);
@@ -3606,14 +3703,14 @@ function drawShelf(){
 
 // ---------- tin top view ----------
 function customSVG(addr,cap,oc,head){oc=oc||[];
-  if(cap===0){const W=300,H=220,svg=el("svg",{class:"bin-svg",viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":`Custom tin ${addr}, no cap`});
+  if(cap===0){const W=300,H=220,svg=el("svg",{class:"bin-svg",viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":`Standard tin ${addr}, no cap`});
     el("rect",{x:6,y:6,width:W-12,height:H-12,rx:16,fill:"var(--bin)",stroke:"var(--bin-dark)","stroke-width":2},svg);
     el("rect",{x:26,y:52,width:W-52,height:H-78,rx:8,fill:"var(--bin-floor)",stroke:"var(--bin-dark)"},svg);
     txt(svg,W/2,34,`Tin ${addr} · no cap`,{"text-anchor":"middle","font-size":15,"font-weight":800,fill:"#fff"});
     txt(svg,W/2,118,"∞",{"text-anchor":"middle","font-size":46,"font-weight":800,fill:"#fff"});
     txt(svg,W/2,150,`${oc.length} item${oc.length===1?"":"s"} · slots assigned by the system`,{"text-anchor":"middle","font-size":11.5,"font-weight":600,fill:"#fff"});return svg;}// slots fill like the rack: slot 1 bottom-left, up the column to 10 at the top, then the next column
   const rows=Math.min(10,cap),cols=Math.ceil(cap/rows),cw=52,W=Math.max(300,cols*(cw+4)+40),ch=Math.min(34,300/rows),H=46+rows*(ch+4)+14;
-  const svg=el("svg",{class:"bin-svg",viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":`Custom tin ${addr}, ${cap} slots`});
+  const svg=el("svg",{class:"bin-svg",viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":`Standard tin ${addr}, ${cap} slots`});
   el("rect",{x:6,y:6,width:W-12,height:H-12,rx:16,fill:"var(--bin)",stroke:"var(--bin-dark)","stroke-width":2},svg);
   txt(svg,W/2,32,`${head||`Tin ${addr}`} · ${cap} slots`,{"text-anchor":"middle","font-size":15,"font-weight":800,fill:"#fff"});
   for(let k=1;k<=cap;k++){const c=Math.floor((k-1)/rows),rw=rows-1-((k-1)%rows),x=(W-cols*(cw+4))/2+c*(cw+4),y=44+rw*(ch+4);
@@ -3676,13 +3773,30 @@ function drawBin(){stopSlotCam();
   const r=selRack,lv=selLv,n=selTin,s=tinSize(r,lv,n),info=slotMap(r)[lv+"-"+n],num=info.idx,cu=s==="CU",cap=tinCap(r,lv,n);
   if(cuDraft&&(cuDraft.key!==r.id+lv+"-"+n))cuDraft=null;
   const hist=SLOG.filter(e=>e.id===r.id&&e.lv===lv&&e.n===n).slice(-4).reverse();
+  if(!binIdAt(r,lv,n)&&isBinOn(r,lv,n)&&!cuDraft){const dk=dKey(r,lv,n),loc=binCode(r,lv,n),nc=cu?cap:SZ(s).slots,nm=kName(dk),col=sizeFill(dk);
+    p.innerHTML=`<button class="btn binx" id="binX" aria-label="Close">✕ Close</button><h2>${binLabel(r)} · Column ${colNo(r,n)} · Level ${lv}</h2>
+    <p class="sub">Empty location · <b class="mono">${loc}</b> · no tin here yet</p>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:14px 0;padding:16px 18px;border:2px dashed ${col};border-radius:10px;background:color-mix(in srgb,${col} 7%,transparent)">
+      <span class="label" style="font-size:16px">This location takes a</span><span class="szp big" style="--c:${col}">${nm}</span><span class="cslots">${nc===0?"no cap":`${nc} slot${nc===1?"":"s"}`}</span><span class="label" style="font-size:16px">tin — fits ${takesTxt(locMax(r,lv,n))}</span></div>
+    <div class="alloc empty"><span class="label">Scan or type the barcode of a <b>${dk==="CX"?`Custom ${capTxt(nc)}`:nm}</b> tin (or smaller) to place it here</span><input id="allocIn" placeholder="BIN-00123" autocomplete="off"><button class="btn primary" id="allocGo">Place tin</button><button class="btn" id="allocCam">📷 Scan with camera</button></div>
+    <div id="allocMsg"></div>
+    <div class="row"><span class="label">Wrong size for this spot?</span><button class="btn" id="chgLoc">Change location size</button><span class="grow"></span><button class="btn" id="locOff">Turn this location off</button></div>`;
+    p.querySelector("#binX").onclick=closeBinPop;
+    const ai=p.querySelector("#allocIn"),msg=p.querySelector("#allocMsg");
+    const doA=()=>{const v=normBin(ai.value)||ai.value.trim();if(!v){msg.innerHTML='<p class="err">Scan or type a tin barcode first</p>';ai.focus();return;}const res=allocate(v,loc);if(res.err){msg.innerHTML=`<p class="err" style="font-size:16px;font-weight:700">✕ ${res.err}</p>`;ai.select();return;}save();refresh();};
+    ai.addEventListener("input",()=>{ai.value=ai.value.toUpperCase();msg.innerHTML="";});ai.onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();doA();}};p.querySelector("#allocGo").onclick=doA;setTimeout(()=>ai.focus(),30);
+    p.querySelector("#allocCam").onclick=()=>openScan({loc});
+    p.querySelector("#locOff").onclick=()=>{setBinOn(r,lv,n,false);save();refresh();};
+    p.querySelector("#chgLoc").onclick=()=>{const save0=TSEL;TSEL=new Set(["LOC:"+loc]);tinAction("size");TSEL=save0;const pop=document.getElementById("tSizePop");if(pop){const pill=pop.querySelector(`.szpill[data-k="${dk}"]`);if(pill)pill.click();if(dk==="CX"){if(nc===0){const inf=pop.querySelector("#tsInf");if(inf)inf.click();}else{const ci=pop.querySelector("#tsCap");if(ci)ci.value=nc;}}const nn=pop.querySelector(".szn");if(nn)nn.textContent=`Location ${loc}`;const gb=pop.querySelector("#tsGo");if(gb)gb.textContent="Apply";}};
+    {const lw=document.createElement("div");lw.className="bplabels";const b=document.createElement("div");b.className="bpl";b.innerHTML='<div class="label">Location label · on the shelf</div>';b.appendChild(locLabelSVG(loc,600));lw.appendChild(b);p.appendChild(lw);}
+    return;}
   p.innerHTML=`<button class="btn binx" id="binX" aria-label="Close">✕ Close</button><h2>${binLabel(r)} · Column ${colNo(r,n)} · Level ${lv}</h2>
-    <p class="sub">${TINMODE()?`Column ${colNo(r,n)} · Level ${lv} · ${cu?`Custom (${cap===0?"no cap":cap+" slots"})`:SZ(s).name} · ${slotLabel(r,lv,n,info)} · e.g. <b>${binLabel(r)} · Column ${colNo(r,n)} · Level ${lv} · Slot 1</b>`:`Level ${lv}, tin ${n} · tin ${num} of 60 · ${cu?`Custom (${cap===0?"no cap":cap+" slots"})`:SZ(s).name} · ${cu?`tin ${TINMODE()?tinCode(lv,n,r):info.start} · slots ${slotLabel(r,lv,n,info)}`:`slot${info.count>1?"s":""} ${slotLabel(r,lv,n,info)}`}${isFrozen(r)&&!TINMODE()?' · <span class="frz">numbers frozen</span>':""}`}</p>
+    <p class="sub">${TINMODE()?`Column ${colNo(r,n)} · Level ${lv} · ${cu?`${kName(dKey(r,lv,n))} (${cap===0?"no cap":cap+" slots"})`:SZ(s).name} · ${slotLabel(r,lv,n,info)} · e.g. <b>${binLabel(r)} · Column ${colNo(r,n)} · Level ${lv} · Slot 1</b>`:`Level ${lv}, tin ${n} · tin ${num} of 60 · ${cu?`${kName(dKey(r,lv,n))} (${cap===0?"no cap":cap+" slots"})`:SZ(s).name} · ${cu?`tin ${TINMODE()?tinCode(lv,n,r):info.start} · slots ${slotLabel(r,lv,n,info)}`:`slot${info.count>1?"s":""} ${slotLabel(r,lv,n,info)}`}${isFrozen(r)&&!TINMODE()?' · <span class="frz">numbers frozen</span>':""}`}</p>
     ${(()=>{const id=binIdAt(r,lv,n),loc=binCode(r,lv,n);return id?`<div class="alloc"><span class="label">Tin</span><b>#${binNo(id)}</b><span class="label mono">(${id})</span><span class="label">allocated to</span><b class="mono">${loc}</b><span class="grow"></span><button class="btn primary" id="bpCam">📷 Scan item in</button><button class="btn" id="allocMove">Move Tin</button><button class="btn" id="allocOut">Remove Tin</button></div>`
       :`<div class="alloc empty"><span class="label">No tin at <b class="mono">${loc}</b> — scan a tin barcode to allocate it here</span><input id="allocIn" placeholder="BIN-00123" autocomplete="off"><button class="btn primary" id="allocGo">Allocate</button><button class="btn" id="allocCam">📷 Scan with camera</button></div>`;})()}
     <div class="row"><span class="label">This tin</span><div class="seg" id="binOnSeg"><button data-on="1" aria-pressed="${isBinOn(r,lv,n)}">Active</button><button data-on="0" aria-pressed="${!isBinOn(r,lv,n)}" ${isBinOn(r,lv,n)?"":'class="off"'}>Off</button></div><span class="label">${!isOn(r,lv)?`Level ${lv} is off for the whole rack`:"Turning one tin off leaves the rest of its level and column unchanged."}</span></div>
     ${(()=>{const z=tinSize(r,lv,n),cp=z==="CU"?tinCap(r,lv,n):SZ(z).slots,busy=isOcc(r,lv,n),has=!!binIdAt(r,lv,n);
-      return `<div class="row cursize"><span class="label">Tin size</span><span class="szp big" style="--c:${sizeFill(z)}">${z==="CU"?"Custom":SZ(z).name}</span><span class="cslots">${cp===0?"no cap":`${cp} slot${cp===1?"":"s"}`}</span>
+      return `<div class="row cursize"><span class="label">Tin size</span><span class="szp big" style="--c:${sizeFill(dKey(r,lv,n))}">${kName(dKey(r,lv,n))}</span><span class="cslots">${cp===0?"no cap":`${cp} slot${cp===1?"":"s"}`}</span>
         <button class="btn primary" id="chgSize" ${busy||!has?"disabled":""} title="${busy?"Storage in use — empty the tin first":!has?"No tin here":"Change this tin's size"}">Change Tin Size</button></div>`;})()}
     <div class="row" hidden><span class="label">Tin size</span><div class="seg" id="binSeg"></div>
     <button class="btn" id="shelfBtn">Apply to level ${lv}</button></div>
@@ -3693,54 +3807,56 @@ function drawBin(){stopSlotCam();
     <div id="cuBox"></div>
     ${hist.length?`<div class="tlog"><b>Size history · this tin</b>${hist.map(e=>`<div>${new Date(e.at).toLocaleString()} · ${e.who} · ${e.from} → ${e.to}${e.ret&&e.ret.length&&!TINMODE()?` · retired ${fmtNums(e.ret)}`:""}${e.add&&e.add.length&&!TINMODE()?` · added ${fmtNums(e.add)}`:""}</div>`).join("")}</div>`:""}`;
   const seg=p.querySelector("#binSeg");
-  [...Object.keys(SIZES),"CU"].forEach(k=>{const b=document.createElement("button");b.innerHTML=`${k==="CU"?"Custom":SIZES[k].name}${sct(k)}`;b.setAttribute("aria-pressed",k===s);if(isOcc(r,lv,n)&&!(k==="CU"&&cu)){b.disabled=true;b.title="Storage in use — clear every slot first";}
-    if(k==="CU")b.style.boxShadow=`inset 0 -3px 0 ${SCOL.CU}`;
-    b.onclick=()=>{if(k==="CU"){cuDraft={key:r.id+lv+"-"+n,cap:cu?cap:CUSTOM.def,empty:false,edit:cu};drawBin();return;}
+  {const dk=dKey(r,lv,n);[...Object.keys(SIZES),"CU","CX"].forEach(k=>{const b=document.createElement("button");b.innerHTML=`${kName(k)}${sct(k)}`;b.setAttribute("aria-pressed",k===dk);if(isOcc(r,lv,n)&&!(k==="CX"&&dk==="CX")){b.disabled=true;b.title="Storage in use — clear every slot first";}else if(!fitsRack(r,k)){b.disabled=true;b.title=rackNote(r);}
+    if(k==="CU"||k==="CX")b.style.boxShadow=`inset 0 -3px 0 ${sizeFill(k)}`;
+    b.onclick=()=>{if(k==="CU"){if(dk==="CU")return;cuDraft={key:r.id+lv+"-"+n,cap:100,empty:false,edit:cu,std:true};drawBin();return;}
+      if(k==="CX"){cuDraft={key:r.id+lv+"-"+n,cap:dk==="CX"?cap:CUSTOM.def,empty:false,edit:cu,cx:true,same:dk==="CX"};drawBin();return;}
       if(cu&&!(cuDraft&&cuDraft.leave)){cuDraft={key:r.id+lv+"-"+n,leave:k,empty:false};drawBin();return;}
-      cuDraft=null;setTin(r,lv,n,k);save();refresh();flushBlocked();};seg.appendChild(b);});
+      cuDraft=null;setTin(r,lv,n,k);save();refresh();flushBlocked();};seg.appendChild(b);});}
   {const bx=p.querySelector("#binX");if(bx)bx.onclick=closeBinPop;}
   {const loc=binCode(r,lv,n),ai=p.querySelector("#allocIn"),ag=p.querySelector("#allocGo"),am=p.querySelector("#allocMove"),ao=p.querySelector("#allocOut");
     const doA=()=>{const res=allocate(ai.value,loc);if(res.err){blockNote(res.err);flushBlocked();return;}save();refresh();};
     if(ai){ai.addEventListener("input",()=>{ai.value=ai.value.toUpperCase();});ai.addEventListener("blur",()=>{const v=normBin(ai.value);if(v)ai.value=v;});ai.onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();const v=normBin(ai.value);if(v)ai.value=v;doA();}};ag.onclick=doA;setTimeout(()=>ai.focus(),30);}
     {const cz=p.querySelector("#chgSize");if(cz)cz.onclick=()=>{const save0=TSEL;TSEL=new Set(["LOC:"+binCode(r,lv,n)]);tinAction("size");TSEL=save0;
-      const pop=document.getElementById("tSizePop");if(pop){const z=tinSize(r,lv,n),pill=pop.querySelector(`.szpill[data-k="${z}"]`);if(pill)pill.click();
-        if(z==="CU"){const c0=tinCap(r,lv,n);if(c0===0){const inf=pop.querySelector("#tsInf");if(inf)inf.click();}else{const ci=pop.querySelector("#tsCap");if(ci)ci.value=c0;}}
+      const pop=document.getElementById("tSizePop");if(pop){const z=tinSize(r,lv,n),pill=pop.querySelector(`.szpill[data-k="${dKey(r,lv,n)}"]`);if(pill)pill.click();
+        if(z==="CU"&&isCx(r,lv,n)){const c0=tinCap(r,lv,n);if(c0===0){const inf=pop.querySelector("#tsInf");if(inf)inf.click();}else{const ci=pop.querySelector("#tsCap");if(ci)ci.value=c0;}}
         const nn=pop.querySelector(".szn");if(nn)nn.textContent=`Tin #${binNo(binIdAt(r,lv,n))} · ${binCode(r,lv,n)}`;const gb=pop.querySelector("#tsGo");if(gb)gb.textContent="Apply";}};}
     if(am)am.onclick=()=>openScan({bin:binIdAt(r,lv,n)});{const ac=p.querySelector("#allocCam");if(ac)ac.onclick=()=>openScan({loc});}if(ao)ao.onclick=()=>openRemove(r,lv,n);}
   p.querySelectorAll("#binOnSeg button").forEach(b=>b.onclick=()=>{const want=b.dataset.on==="1";if(!want&&isOcc(r,lv,n)){blockNote(`${binLabel(r)} · Column ${colNo(r,n)} · Level ${lv} · ${occName(r,lv,n)} occupied`);flushBlocked();return;}
-    if(want&&!isOn(r,lv)){setOn(r,lv,true);for(let j=1;j<=PER;j++)if(j!==n)setBinOn(r,lv,j,false);}setBinOn(r,lv,n,want);save();refresh();});
+    if(want&&!isOn(r,lv)){setOn(r,lv,true);for(let j=1;j<=perOf(r);j++)if(j!==n)setBinOn(r,lv,j,false);}setBinOn(r,lv,n,want);save();refresh();});
   {const oc=p.querySelector("#occClear");if(oc)oc.onclick=()=>{clearOcc(r,lv,n);refresh();};}
-  p.querySelector("#shelfBtn").onclick=()=>{if(cu){cuDraft={key:r.id+lv+"-"+n,shelf:true,cap,empty:false};drawBin();return;}for(let j=1;j<=PER;j++)if(tinSize(r,lv,j)!=="CU")setTin(r,lv,j,s);save();refresh();flushBlocked();};
+  p.querySelector("#shelfBtn").onclick=()=>{if(cu){cuDraft={key:r.id+lv+"-"+n,shelf:true,cap,empty:false,cx:isCx(r,lv,n)};drawBin();return;}for(let j=1;j<=perOf(r);j++)if(tinSize(r,lv,j)!=="CU")setTin(r,lv,j,s);save();refresh();flushBlocked();};
   const box=p.querySelector("#cuBox");
   if(cuDraft&&cuDraft.shelf){const c=cuDraft,sm2=slotMap(r),todo=[];
-    for(let j=1;j<=PER;j++){const z=tinSize(r,lv,j),inf=sm2[lv+"-"+j],nm=inf.nums||[inf.start];if(z==="CU"&&tinCap(r,lv,j)===c.cap)continue;if(isOcc(r,lv,j)){(c.skip||(c.skip=new Set())).add(tinCode(lv,j,r));continue;}todo.push({j,z,addr:nm[0],ret:z==="CU"?[]:nm.slice(1),oldCap:z==="CU"?tinCap(r,lv,j):null});}
+    for(let j=1;j<=perOf(r);j++){const z=tinSize(r,lv,j),inf=sm2[lv+"-"+j],nm=inf.nums||[inf.start];if(z==="CU"&&tinCap(r,lv,j)===c.cap&&isCx(r,lv,j)===!!c.cx)continue;if(!fitsRack(r,c.cx?"CX":"CU"))continue;if(isOcc(r,lv,j)){(c.skip||(c.skip=new Set())).add(tinCode(lv,j,r));continue;}todo.push({j,z,addr:nm[0],ret:z==="CU"?[]:nm.slice(1),oldCap:z==="CU"?tinCap(r,lv,j):null});}
     const allRet=todo.flatMap(t=>t.ret);c.empty=true; // tins holding items were already skipped above
-    box.innerHTML=`<div class="cubox"><b>Apply Custom ${capTxt(c.cap)} to level ${lv}</b>${c.skip&&c.skip.size?`<p class="occwarn">🔒 Skipped — storage in use: ${[...c.skip].join(", ")}</p>`:""}${todo.length?`<ul>${todo.map(t=>`<li>Tin ${t.j}: ${t.z==="CU"?`Custom ${capTxt(t.oldCap)} → Custom ${capTxt(c.cap)}`:`${SZ(t.z).name} → Custom ${capTxt(c.cap)}`} · <b>${TINMODE()?tinCode(lv,t.j,r):t.addr}</b> (${c.cap===0?"no cap":slotRangeT(TINMODE()?tinCode(lv,t.j,r):t.addr,1,c.cap)})${t.ret.length&&!TINMODE()?` · retires ${fmtNums(t.ret)}`:""}</li>`).join("")}
+    box.innerHTML=`<div class="cubox"><b>Apply ${cuL(c.cx,c.cap)} to level ${lv}</b>${c.skip&&c.skip.size?`<p class="occwarn">🔒 Skipped — storage in use: ${[...c.skip].join(", ")}</p>`:""}${todo.length?`<ul>${todo.map(t=>`<li>Tin ${t.j}: ${t.z==="CU"?`${cuL(isCx(r,lv,t.j),t.oldCap)} → ${cuL(c.cx,c.cap)}`:`${SZ(t.z).name} → ${cuL(c.cx,c.cap)}`} · <b>${TINMODE()?tinCode(lv,t.j,r):t.addr}</b> (${c.cap===0?"no cap":slotRangeT(TINMODE()?tinCode(lv,t.j,r):t.addr,1,c.cap)})${t.ret.length&&!TINMODE()?` · retires ${fmtNums(t.ret)}`:""}</li>`).join("")}
       ${allRet.length&&!TINMODE()?`<li>${allRet.length} number${allRet.length>1?"s":""} retired in total — never reused, so nothing else on the bin shifts.</li>`:""}</ul>
 
-      <div class="row"><button class="btn" id="cuCancel">Cancel</button><button class="btn primary" id="cuOk" ${c.empty?"":"disabled"}>Convert ${todo.length} tin${todo.length>1?"s":""}</button></div>`:`<p class="label">Every tin on level ${lv} is already Custom ${capTxt(c.cap)}.</p><div class="row"><button class="btn" id="cuCancel">Close</button></div>`}</div>`;
+      <div class="row"><button class="btn" id="cuCancel">Cancel</button><button class="btn primary" id="cuOk" ${c.empty?"":"disabled"}>Convert ${todo.length} tin${todo.length>1?"s":""}</button></div>`:`<p class="label">Every tin on level ${lv} is already ${cuL(c.cx,c.cap)}.</p><div class="row"><button class="btn" id="cuCancel">Close</button></div>`}</div>`;
     const ce=box.querySelector("#cuEmpty");if(ce)ce.onchange=e=>{c.empty=e.target.checked;drawBin();};
     box.querySelector("#cuCancel").onclick=()=>{cuDraft=null;drawBin();};
-    const ok=box.querySelector("#cuOk");if(ok)ok.onclick=()=>{if(!c.empty)return;cuDraft=null;todo.forEach(t=>setTin(r,lv,t.j,"CU",c.cap));save();refresh();};}
+    const ok=box.querySelector("#cuOk");if(ok)ok.onclick=()=>{if(!c.empty)return;cuDraft=null;todo.forEach(t=>setTin(r,lv,t.j,c.cx?"CX":"CU",c.cap));save();refresh();};}
   else if(cuDraft&&!cuDraft.leave){cuDraft.empty=!isOcc(r,lv,n);const c=cuDraft,cur=info.nums||[info.start],keep=cur[0],AD=TINMODE()?tinCode(lv,n,r):keep,ret=cur.slice(1),valid=c.cap===0||(c.cap>=CUSTOM.min&&c.cap<=CUSTOM.max&&Number.isInteger(c.cap)),shrink=c.edit&&c.cap!==0&&(cap===0||c.cap<cap);
-    box.innerHTML=`<div class="cubox"><b>${c.edit?"Change capacity":"Convert to Custom tin"}</b>
-      <div class="row"><label class="cuchk"><input type="checkbox" id="cuCapOn" ${c.cap!==0?"checked":""}> Cap the count</label><input type="number" id="cuCap" min="${CUSTOM.min}" max="${CUSTOM.max}" value="${c.cap||c.last||CUSTOM.def}" ${c.cap===0?"disabled":""}><span class="label">${c.cap===0?"No cap — the tin takes any number of items; the system assigns each slot":`${CUSTOM.min}–${CUSTOM.max} slots · grid 5 × ${Math.ceil((valid?c.cap:CUSTOM.def)/5)}`}</span></div>
+    const WD=c.cx?"Custom":"Standard";
+    box.innerHTML=`<div class="cubox"><b>${c.std?(c.edit?"Make it Standard (100 slots)":"Convert to Standard tin"):c.same?"Change capacity":c.edit?"Make it Custom":"Convert to Custom tin"}</b>
+      ${c.std?`<p class="label">Standard tins are always 100 slots. Pick Custom for any other count.</p>`:`<div class="row"><label class="cuchk"><input type="checkbox" id="cuCapOn" ${c.cap!==0?"checked":""}> Cap the count</label><input type="number" id="cuCap" min="${CUSTOM.min}" max="${CUSTOM.max}" value="${c.cap||c.last||CUSTOM.def}" ${c.cap===0?"disabled":""}><span class="label">${c.cap===0?"No cap — the tin takes any number of items; the system assigns each slot":`${CUSTOM.min}–${CUSTOM.max} slots · grid 5 × ${Math.ceil((valid?c.cap:CUSTOM.def)/5)}`}</span></div>`}
       <ul>${c.edit?`<li>Tin <b>${AD}</b> becomes ${c.cap===0?"no cap (slots assigned by the system)":slotRangeT(AD,1,valid?c.cap:cap)}. Nothing else moves.</li>${shrink?`<li>${slotRangeT(AD,c.cap+1,cap)} go away — they must be empty.</li>`:""}`
-        :`${TINMODE()?`<li>Tin <b>${AD}</b> becomes Custom with ${c.cap===0?"no cap (slots assigned by the system)":slotRangeT(AD,1,valid?c.cap:CUSTOM.def)}.</li><li>Nothing else on the bin changes. Switching back to Small, Medium, Large or X-Large later gives it slots 1–N again.</li>`:`<li>Tin keeps its bin-level number <b>${keep}</b>, like X-Large. Its slots become sub-addresses ${slotRange(keep,1,valid?c.cap:CUSTOM.def)}.</li>`}
+        :`${TINMODE()?`<li>Tin <b>${AD}</b> becomes ${WD} with ${c.cap===0?"no cap (slots assigned by the system)":slotRangeT(AD,1,valid?c.cap:CUSTOM.def)}.</li><li>Nothing else on the bin changes. Switching back to Small, Medium, Large or X-Large later gives it slots 1–N again.</li>`:`<li>Tin keeps its bin-level number <b>${keep}</b>, like X-Large. Its slots become sub-addresses ${slotRange(keep,1,valid?c.cap:CUSTOM.def)}.</li>`}
         ${TINMODE()?"":ret.length?`<li>Numbers <b>${fmtNums(ret)}</b> become <b>retired</b> — reserved, never reused — so nothing after this tin shifts.</li>`:"<li>The bin's global count stays the same length.</li>"}
         ${!isFrozen(r)&&!TINMODE()?"<li>This bin's slot numbers are frozen first, so later size changes can't re-address stored items.</li>":""}`}</ul>
       ${isOcc(r,lv,n)?`<p class="err">This tin holds items (${occName(r,lv,n)}) — empty it before changing its size.</p>`:""}
-      <div class="row"><button class="btn" id="cuCancel">Cancel</button><button class="btn primary" id="cuOk" ${valid&&c.empty?"":"disabled"}>${c.edit?"Save capacity":"Convert to Custom"}</button>${!valid?`<span class="err">Use ${CUSTOM.min}–${CUSTOM.max}</span>`:""}</div></div>`;
-    box.querySelector("#cuCapOn").onchange=e=>{if(e.target.checked){c.cap=c.last||CUSTOM.def;}else{c.last=c.cap||c.last;c.cap=0;}drawBin();};
+      <div class="row"><button class="btn" id="cuCancel">Cancel</button><button class="btn primary" id="cuOk" ${valid&&c.empty?"":"disabled"}>${c.same?"Save capacity":`Make it ${WD}`}</button>${!valid?`<span class="err">Use ${CUSTOM.min}–${CUSTOM.max}</span>`:""}</div></div>`;
+    if(!c.std){box.querySelector("#cuCapOn").onchange=e=>{if(e.target.checked){c.cap=c.last||CUSTOM.def;}else{c.last=c.cap||c.last;c.cap=0;}drawBin();};
     box.querySelector("#cuCap").oninput=e=>{c.cap=Math.round(+e.target.value);c.last=c.cap;const ok=c.cap>=CUSTOM.min&&c.cap<=CUSTOM.max;box.querySelector("#cuOk").disabled=!(ok&&c.empty);};
-    box.querySelector("#cuCap").onchange=()=>drawBin();
+    box.querySelector("#cuCap").onchange=()=>drawBin();}
         box.querySelector("#cuCancel").onclick=()=>{cuDraft=null;drawBin();};
-    box.querySelector("#cuOk").onclick=()=>{if(!(valid&&c.empty))return;cuDraft=null;setTin(r,lv,n,"CU",c.cap);save();refresh();flushBlocked();};}
+    box.querySelector("#cuOk").onclick=()=>{if(!(valid&&c.empty))return;cuDraft=null;setTin(r,lv,n,c.cx?"CX":"CU",c.cap);save();refresh();flushBlocked();};}
   else if(cuDraft&&cuDraft.leave){const c=cuDraft,k=c.leave;
     // empty tin: change straight away, no confirm box. Tin with items: can't change size until it's emptied
     if(!isOcc(r,lv,n)){cuDraft=null;setTin(r,lv,n,k);save();setTimeout(()=>{refresh();flushBlocked();},0);return;}
     else{cuDraft=null;blockNote(`${binLabel(r)} · Column ${colNo(r,n)} · Level ${lv} holds items (${occName(r,lv,n)}) — empty the tin before changing its size`);setTimeout(()=>{flushBlocked();drawBin();},0);return;}
-    box.innerHTML=`<div class="cubox"><b>Change Custom tin ${TINMODE()?tinCode(lv,n,r):info.start} to ${SIZES[k].name}</b><ul><li>Slots ${slotLabel(r,lv,n,info)} go away.</li>
+    box.innerHTML=`<div class="cubox"><b>Change Standard tin ${TINMODE()?tinCode(lv,n,r):info.start} to ${SIZES[k].name}</b><ul><li>Slots ${slotLabel(r,lv,n,info)} go away.</li>
       <li>${TINMODE()?`Tin ${tinCode(lv,n,r)} gets ${SIZES[k].slots>1?`slots ${tinCode(lv,n,r)}-1 … ${tinCode(lv,n,r)}-${SIZES[k].slots}`:"1 slot"}.`:SIZES[k].slots>1?`The tin keeps number ${info.start} and gets ${SIZES[k].slots-1} new number${SIZES[k].slots>2?"s":""} after the bin's highest, so nothing shifts.`:`The tin keeps number ${info.start}.`}</li></ul>
       <label class="cuchk"><input type="checkbox" id="cuEmpty" ${c.empty?"checked":""}> This tin is empty</label>
       <div class="row"><button class="btn" id="cuCancel">Cancel</button><button class="btn primary" id="cuOk" ${c.empty?"":"disabled"}>Change to ${SIZES[k].name}</button></div></div>`;
@@ -3749,7 +3865,7 @@ function drawBin(){stopSlotCam();
     box.querySelector("#cuOk").onclick=()=>{if(!c.empty)return;cuDraft=null;setTin(r,lv,n,k);save();refresh();flushBlocked();};}
   box.classList.toggle("cupop",!!box.querySelector(".cubox"));box.onclick=e=>{if(e.target===box){const c=box.querySelector("#cuCancel");if(c)c.click();}};
   {const f=box.querySelector("#cuCap");if(f&&document.activeElement===document.body)f.focus();}
-  {const sv=cu?customSVG(TINMODE()?tinCode(lv,n,r):info.start,cap,occ(r,lv,n),binIdAt(r,lv,n)?`Tin #${binNo(binIdAt(r,lv,n))}`:"No tin"):binSVG(s,info.start,TINMODE()?[...Array(SZ(s).slots)].map((_,i)=>i+1):info.nums,occ(r,lv,n));
+  {const sv=cu&&!(cuDraft&&cuDraft.std)?customSVG(TINMODE()?tinCode(lv,n,r):info.start,cap,occ(r,lv,n),binIdAt(r,lv,n)?`Tin #${binNo(binIdAt(r,lv,n))}`:"No tin"):binSVG(s,info.start,TINMODE()?[...Array(SZ(s).slots)].map((_,i)=>i+1):info.nums,occ(r,lv,n));
 
     const key=r.id+"|"+lv+"|"+n;if(selSlot&&selSlot.key!==key)selSlot=null;
     if(selSlot){const g=sv.querySelector(`[data-slot="${selSlot.k}"]`);if(g)g.querySelectorAll("circle,rect").forEach(e=>{if(e.getAttribute("fill")!=="transparent"){e.setAttribute("stroke","#FACC15");e.setAttribute("stroke-width","4");}});}
@@ -3818,7 +3934,7 @@ function drawBin(){stopSlotCam();
 const allOff10=()=>racks.every(r=>!isOn(r,10));
 function drawStats(){
   let slots=0;const c={S:0,M:0,L:0,XL:0,CU:0};
-  let tins=0;racks.forEach(r=>{tins+=activeTins(r);slots+=rackSlots(r);for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=PER;n++)c[tinSize(r,lv,n)]++;});
+  let tins=0;racks.forEach(r=>{tins+=activeTins(r);slots+=rackSlots(r);for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=perOf(r);n++)c[tinSize(r,lv,n)]++;});
   document.getElementById("stats").innerHTML=`<span><b>${racks.length}</b> locations</span><span><b>${tins.toLocaleString()}</b> tins</span><span><button class="btn" id="s10">${allOff10()?"Make level 10 active (all bins)":"Make level 10 inactive (all bins)"}</button></span><span><button class="btn" id="resetDemo" title="Clear every saved change in this browser and start fresh">Reset demo</button></span>`;
   {const rd=document.getElementById("resetDemo");rd.onclick=()=>{if(rd.dataset.arm!=="1"){rd.dataset.arm="1";rd.textContent="Click again to reset everything";rd.classList.add("danger");setTimeout(()=>{if(rd.isConnected&&rd.dataset.arm==="1"){rd.dataset.arm="";rd.textContent="Reset demo";rd.classList.remove("danger");}},4000);return;}
     try{Object.keys(localStorage).filter(k=>k.startsWith("vault-")&&k!=="vault-who").forEach(k=>localStorage.removeItem(k));}catch(e){}location.reload();};}
@@ -3843,19 +3959,21 @@ const RULES=`<details class="rules"><summary>Location naming &amp; labels (Q1)</
   <li><b>Structure:</b> Aisle → Column / Level → Slot, e.g. <b>Aisle 1 · Column 13 · Level 5 · Slot 1</b>. Bay is no longer part of the name.</li>
   <li><b>Sequencing:</b> columns run down the aisle alternating sides — odds on one side (1, 3, 5…), evens on the other (2, 4, 6…), so facing columns are neighbours.</li>
   <li><b>Barcodes:</b> rack <code>A01-C013-023</code>, tin <code>A01-C013-L05</code>, slot <code>A01-C013-L05-S01</code> (Code 128 — faster to scan than QR).</li>
-  <li><b>Mixed item types:</b> cards, watches and coins share one system; tin size (Small 6 · Medium 3 · Large 2 · X-Large 1 · Custom 25–50) sets the slots.</li>
-  <li><b>Flexible:</b> sizes, custom tins and numbering can change as the layout evolves without re-addressing stored items.</li></ol></details>
+  <li><b>Mixed item types:</b> cards, watches and coins share one system; tin size (Small 6 · Medium 3 · Large 2 · X-Large 1 · Standard 100 · Custom 1–100) sets the slots.</li>
+  <li><b>Standard vs Custom:</b> Standard tins are always 100 slots and follow the rack-size rule (Standard racks only). Custom tins take any count from ${CUSTOM.min}–${CUSTOM.max}, or no cap, and fit in any rack.</li>
+  <li><b>Rack size sets what fits:</b> a rack accepts bins its size and smaller, never larger. Small rack → S only · Medium → S, M · Large → S, M, L (never XL) · X-Large → S, M, L, XL. Standard racks have no limit.</li>
+  <li><b>Flexible:</b> sizes, standard tins and numbering can change as the layout evolves without re-addressing stored items.</li></ol></details>
 <details class="rules"><summary>How slot numbers work</summary><ol>
-  <li><b>Tin slots (default label).</b> Each tin is named by column and level (C3-L7 = column 3, level 7) and its slots count 1–N inside the tin — Slots 1–6 for Small, Slots 1–50 for Custom. Example: Aisle 1 · Column 3 · Level 7 · Slot 43. Changing any tin's size never moves another tin's labels. Switch to Global numbers in a bin to see the bin-wide numbering below.</li>
+  <li><b>Tin slots (default label).</b> Each tin is named by column and level (C3-L7 = column 3, level 7) and its slots count 1–N inside the tin — Slots 1–6 for Small, Slots 1–100 for Standard. Example: Aisle 1 · Column 3 · Level 7 · Slot 43. Changing any tin's size never moves another tin's labels. Switch to Global numbers in a bin to see the bin-wide numbering below.</li>
   <li><b>Slot numbers are frozen.</b> Slot numbers used to be positional — counted through the bin by tin size, so changing one tin's capacity shifted every number after it. Once numbering is frozen, every slot keeps its number for good.</li>
   <li><b>Custom tins</b> hold ${CUSTOM.min}–${CUSTOM.max} slots in a grid of 5 × 5 up to 5 × 10. The tin keeps the single bin-level number it already has, the way X-Large tins do (e.g. “46”). Its slots become sub-addresses 46-01 … 46-40, so the bin's global sequence never changes length, labels stay readable (bin 2, slot 46-17), and capacity can change later (30 → 45) without touching anything else.</li>
-  <li><b>Guardrails.</b> A tin can only become Custom if it's empty, or every taken slot fits the new layout. Numbers a tin gives up (e.g. a Small tin's 6) become <b>retired</b> — reserved, never reused — leaving a gap instead of a shift.</li>
+  <li><b>Guardrails.</b> A tin can only become Standard if it's empty, or every taken slot fits the new layout. Numbers a tin gives up (e.g. a Small tin's 6) become <b>retired</b> — reserved, never reused — leaving a gap instead of a shift.</li>
   <li><b>Every size change is logged</b> — who, when, old size → new size.</li>
   <li><b>Don't</b> renumber after a tin. If a bin really needs fresh numbers, it must be empty first (Renumber this bin).</li></ol></details>`;
 function drawNumbering(){const side=document.getElementById("side");if(!side)return;let c=document.getElementById("numCard");if(!c){c=document.createElement("div");c.id="numCard";c.className="numcard";side.appendChild(c);}
-  const nf=Object.keys(FROZ.bins).length,ret=Object.values(FROZ.bins).reduce((t,b)=>t+b.ret.length,0),cus=racks.reduce((t,r)=>{let k=0;for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=PER;n++)if(tinSize(r,lv,n)==="CU")k++;return t+k;},0);
+  const nf=Object.keys(FROZ.bins).length,ret=Object.values(FROZ.bins).reduce((t,b)=>t+b.ret.length,0),cus=racks.reduce((t,r)=>{let k=0;for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=perOf(r);n++)if(tinSize(r,lv,n)==="CU")k++;return t+k;},0);
   const last=SLOG.slice(-6).reverse();
-  c.innerHTML=`<div class="sidehead"><div><h2>Slot numbering</h2><p class="sub" style="margin:0">${FROZ.frozenAt?`<span class="frz">Frozen</span> since ${new Date(FROZ.frozenAt).toLocaleDateString()} · ${nf} bin${nf===1?"":"s"} frozen · ${ret} retired number${ret===1?"":"s"}${cus?` · ${cus} custom tin${cus===1?"":"s"}`:""}`:`<span class="live">Live</span> · numbers are counted from tin sizes, so a size change shifts the slots after it.${nf?` ${nf} bin${nf===1?" is":"s are"} frozen (custom tins).`:""}`}</p></div>
+  c.innerHTML=`<div class="sidehead"><div><h2>Slot numbering</h2><p class="sub" style="margin:0">${FROZ.frozenAt?`<span class="frz">Frozen</span> since ${new Date(FROZ.frozenAt).toLocaleDateString()} · ${nf} bin${nf===1?"":"s"} frozen · ${ret} retired number${ret===1?"":"s"}${cus?` · ${cus} standard tin${cus===1?"":"s"}`:""}`:`<span class="live">Live</span> · numbers are counted from tin sizes, so a size change shifts the slots after it.${nf?` ${nf} bin${nf===1?" is":"s are"} frozen (standard tins).`:""}`}</p></div>
     ${FROZ.frozenAt?"":`<button class="btn primary" id="freezeBtn">Freeze slot numbers</button>`}</div>
     <div class="row"><span class="label">Logged as</span><input id="whoIn" value="${(WHO||"").replace(/"/g,"&quot;")}" placeholder="Your name"></div>
     ${RULES}
@@ -3892,7 +4010,7 @@ const numbered=()=>racks.filter(r=>r.num).sort((a,b)=>a.num-b.num);
 function thumb(r){let o=`<svg viewBox="0 0 62 70" aria-hidden="true"><rect x="0" y="0" width="2" height="70" fill="var(--muted)"/><rect x="60" y="0" width="2" height="70" fill="var(--muted)"/>`;
   for(let lv=1;lv<=LEVELS;lv++){const y=70-lv*6.8,on=isOn(r,lv);
     o+=`<rect x="2" y="${y+5.6}" width="58" height="1" fill="var(--muted)"/>`;
-    for(let n=1;n<=PER;n++){const x=3+(n-1)*9.5;o+=`<rect x="${x}" y="${y+1}" width="8.5" height="4.6" rx=".8" fill="${on?"var(--tin)":"var(--off)"}" opacity="${on?1:.45}"/>`;}}
+    for(let n=1;n<=perOf(r);n++){const x=3+(n-1)*9.5;o+=`<rect x="${x}" y="${y+1}" width="8.5" height="4.6" rx=".8" fill="${on?"var(--tin)":"var(--off)"}" opacity="${on?1:.45}"/>`;}}
   return o+"</svg>";}
 function drawVault(){
   const list=numbered(),c={S:0,M:0,L:0,XL:0,CU:0,MIX:0,NONE:0};let tins=0,slots=0;
@@ -3927,7 +4045,7 @@ function drawRanges(){
     const d=document.createElement("div");d.className="rrow";
     const err=rg.bad?(rg.to<rg.from?"End is before start":`Use BIN 1–${max}`):over.length?`Overlaps range ${[...new Set(over)].join(", ")}; this one wins`:"";
     d.innerHTML=`<i class="sw" style="border-color:${SCOL[rg.size]}"></i>
-      <select aria-label="Size for range ${i+1}">${["CU",...Object.keys(SIZES)].map(k=>`<option value="${k}"${k===rg.size?" selected":""}>${k==="CU"?"Custom 100":SZ(k).name}</option>`).join("")}</select>
+      <select aria-label="Size for range ${i+1}">${["CU",...Object.keys(SIZES)].map(k=>`<option value="${k}"${k===rg.size?" selected":""}>${k==="CU"?"Standard 100":SZ(k).name}</option>`).join("")}</select>
       <span class="label">BIN</span><input type="number" min="1" max="${max}" value="${rg.from}" aria-label="From BIN">
       <span class="label">to</span><input type="number" min="1" max="${max}" value="${rg.to}" aria-label="To BIN">
       <span class="label">${rg.bad?"":rg.from===rg.to?"1 bin":`${rg.to-rg.from+1} bins`}</span>
@@ -4005,11 +4123,11 @@ function drawBulk(){
     const on=pend.size===k;b.setAttribute("aria-pressed",on);
     b.style.boxShadow=k?`inset 0 -3px 0 ${SCOL[k]}`:"";if(on)b.style.cssText+=k?`;background:${SCOL[k]};color:#111`:";background:var(--muted);color:#fff";
     b.onclick=()=>{pend.size=on?undefined:k;drawBulk();};seg.appendChild(b);});
-  {const on=pend.size==="CU",b=document.createElement("button");b.textContent="Custom";b.setAttribute("aria-pressed",on);b.style.boxShadow=`inset 0 -3px 0 ${SCOL.CU}`;if(on)b.style.cssText+=`;background:${SCOL.CU};color:#111`;
-    b.onclick=()=>{pend.size=on?undefined:"CU";bulkCu.empty=false;drawBulk();};seg.appendChild(b);}
-  if(pend.size==="CU"){const w=document.createElement("span");w.className="bcu";const valid=bulkCu.cap===0||(bulkCu.cap>=CUSTOM.min&&bulkCu.cap<=CUSTOM.max);
-    const tins=sel.reduce((t,r)=>t+cuPlan(r,ACTIVE(r),bulkCu.cap).length,0);
-    w.innerHTML=`<label class="cuchk"><input type="checkbox" class="bcon" ${bulkCu.cap!==0?"checked":""}> Cap</label><input type="number" min="${CUSTOM.min}" max="${CUSTOM.max}" value="${bulkCu.cap||bulkCu.last||CUSTOM.def}" ${bulkCu.cap===0?"disabled":""} aria-label="Custom capacity"><span class="label">${bulkCu.cap===0?"no cap":"slots"} · ${tins} tins on active levels</span><label class="cuchk"><input type="checkbox" class="bcempty" ${bulkCu.empty?"checked":""}> Tins are empty</label>`;
+  ["CU","CX"].forEach(kk=>{const on=pend.size===kk,b=document.createElement("button");b.textContent=kName(kk);b.setAttribute("aria-pressed",on);b.style.boxShadow=`inset 0 -3px 0 ${SCOL[kk]}`;if(on)b.style.cssText+=`;background:${SCOL[kk]};color:#fff`;
+    b.onclick=()=>{pend.size=on?undefined:kk;bulkCu.empty=false;drawBulk();};seg.appendChild(b);});
+  if(pend.size==="CU"||pend.size==="CX"){const BX=pend.size==="CX",w=document.createElement("span");w.className="bcu";const valid=!BX||bulkCu.cap===0||(bulkCu.cap>=CUSTOM.min&&bulkCu.cap<=CUSTOM.max);
+    const tins=sel.reduce((t,r)=>t+cuPlan(r,ACTIVE(r),bulkCu.cap,BX).length,0);
+    w.innerHTML=`<label class="cuchk"${BX?"":" hidden"}><input type="checkbox" class="bcon" ${bulkCu.cap!==0?"checked":""}> Cap</label><input type="number" min="${CUSTOM.min}" max="${CUSTOM.max}" value="${bulkCu.cap||bulkCu.last||CUSTOM.def}" ${bulkCu.cap===0?"disabled":""} ${BX?"":"hidden"} aria-label="Custom capacity"><span class="label">${BX?(bulkCu.cap===0?"no cap":"slots"):"Standard 100 slots"} · ${tins} tins on active levels</span><label class="cuchk"><input type="checkbox" class="bcempty" ${bulkCu.empty?"checked":""}> Tins are empty</label>`;
     seg.after(w);const ci=w.querySelector("input[type=number]"),ck=w.querySelector(".bcempty"),co=w.querySelector(".bcon");co.onchange=e=>{if(e.target.checked){bulkCu.cap=bulkCu.last||CUSTOM.def;}else{bulkCu.last=bulkCu.cap||bulkCu.last;bulkCu.cap=0;}drawBulk();};ci.onchange=e=>{bulkCu.cap=Math.round(+e.target.value);bulkCu.last=bulkCu.cap;drawBulk();};ck.onchange=e=>{bulkCu.empty=e.target.checked;drawBulk();};
     const okb=bar.querySelector("#bOk");if(okb&&!(valid&&bulkCu.empty))okb.disabled=true;}
   const bt=bar.querySelector("#bType");
@@ -4021,7 +4139,7 @@ function drawBulk(){
   bar.querySelector("#bDesel").onclick=()=>{picked.clear();drawMap();drawBulk();};
   if(has)bar.querySelector("#bClear").onclick=()=>{pend={size:undefined,s10:undefined,type:undefined};drawBulk();};
   bar.querySelector("#bOk").onclick=()=>{
-    if(pend.size==="CU"){if(!bulkCu.empty)return;sel.forEach(r=>{customizeBin(r,ACTIVE(r),bulkCu.cap);if(cuPlan.skip.length)blockNote(`${rackName(r)} — ${cuPlan.skip.length} tin${cuPlan.skip.length>1?"s":""} in use skipped (${cuPlan.skip.slice(0,4).join(", ")})`);});bulkCu.empty=false;}
+    if(pend.size==="CU"||pend.size==="CX"){if(!bulkCu.empty)return;sel.forEach(r=>{customizeBin(r,ACTIVE(r),bulkCu.cap,pend.size==="CX");if(cuPlan.skip.length)blockNote(`${rackName(r)} — ${cuPlan.skip.length} tin${cuPlan.skip.length>1?"s":""} in use skipped (${cuPlan.skip.slice(0,4).join(", ")})`);});bulkCu.empty=false;}
     else if(pend.size!==undefined)sel.forEach(r=>setBinSize(r,pend.size));
     if(pend.s10!==undefined)sel.forEach(r=>setOn(r,10,pend.s10));
     if(pend.type!==undefined)sel.forEach(r=>setType(r,pend.type));
@@ -4079,18 +4197,18 @@ document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;const c=docum
     .observe(document.body,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:ATTR});
   walk(document.body);
   document.title=conv(document.title);}
-// starting layout: every bin in every rack is Custom with 100 slots (runs once; Reset demo runs it again)
+// starting layout: every bin in every rack is Standard with 100 slots (runs once; Reset demo runs it again)
 {let done=false;try{["vault-binRanges-v1","vault-binRanges-v1-applied"].forEach(k=>localStorage.removeItem(k));}catch(e){}try{done=localStorage.getItem("vault-seed-cu100-v3")==="1";}catch(e){}
   if(!done){racks.forEach(r=>{if(!FROZ.bins[r.id])freezeBin(r);state[r.id]=state[r.id]||{};delete state[r.id]._size;
-      for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=PER;n++){const from=tinSize(r,lv,n);state[r.id][lv+"-"+n]="CU";reslot(r,lv,n,from,"CU",100);}});
-    saveFroz();save();SLOG.push({at:new Date().toISOString(),who:WHO||"(name not set)",bin:"All racks",scope:"all",from:"Starting layout",to:"Custom 100",note:"every tin starts as Custom 100"});saveLog();
+      for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=perOf(r);n++){const from=tinSize(r,lv,n);state[r.id][lv+"-"+n]="CU";reslot(r,lv,n,from,"CU",100);}});
+    saveFroz();save();SLOG.push({at:new Date().toISOString(),who:WHO||"(name not set)",bin:"All racks",scope:"all",from:"Starting layout",to:"Standard 100",note:"every tin starts as Standard 100"});saveLog();
     try{localStorage.setItem("vault-seed-cu100-v3","1");}catch(e){}}}
 // ---------- size by tin (bin) number ----------
 {const K="vault-binRanges-v2";let BR=[],APPL=[];
   try{const v=JSON.parse(localStorage.getItem(K)||"null");if(Array.isArray(v))BR=v;APPL=JSON.parse(localStorage.getItem(K+"-applied")||"[]");}catch(e){}
   const saveBR=()=>{try{localStorage.setItem(K,JSON.stringify(BR));localStorage.setItem(K+"-applied",JSON.stringify(APPL));}catch(e){}};
   const maxBin=()=>Math.max(...racks.map(r=>binBase(r)+60).filter(x=>x<20000));
-  const SZL=k=>k==="CU"?"Custom 100":SZ(k).name;
+  const SZL=k=>k==="CU"?"Standard 100":SZ(k).name;
   const rows=()=>BR.map(g=>{const f=+g.from,t=+g.to;return {...g,f,t,bad:!(Number.isInteger(f)&&Number.isInteger(t)&&f>=1&&t>=f&&t<=maxBin())};});
   function draw(){const box=document.getElementById("tranges");if(!box)return;box.innerHTML="";const max=maxBin();
     rows().forEach((g,i)=>{const d=document.createElement("div");d.className="rrow";
@@ -4101,7 +4219,7 @@ document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;const c=docum
       sel.onchange=e=>{BR[i].size=e.target.value;saveBR();draw();};a.onchange=e=>{BR[i].from=+e.target.value;saveBR();draw();};b.onchange=e=>{BR[i].to=+e.target.value;saveBR();draw();};
       d.querySelector(".rx").onclick=()=>{BR.splice(i,1);saveBR();draw();};box.appendChild(d);});
     const ok=rows().filter(g=>!g.bad),n=new Set();ok.forEach(g=>{for(let k=g.f;k<=g.t;k++)n.add(k);});
-    document.getElementById("trSum").textContent=BR.length?`${n.size} tins in ranges · ${max-n.size} stay Custom 100`:"No ranges · every tin is Custom 100";}
+    document.getElementById("trSum").textContent=BR.length?`${n.size} tins in ranges · ${max-n.size} stay Standard 100`:"No ranges · every tin is Standard 100";}
   const add=one=>{const last=BR.length?+BR[BR.length-1].to:0,f=Math.min(last+1,maxBin());BR.push({size:"S",from:f,to:one?f:Math.min(f+19,maxBin())});saveBR();draw();};
   document.getElementById("trAdd").onclick=()=>add(false);document.getElementById("trOne").onclick=()=>add(true);
   document.getElementById("trClear").onclick=()=>{BR=[];saveBR();draw();};
@@ -4113,26 +4231,26 @@ document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;const c=docum
       state[r.id]=state[r.id]||{};state[r.id][lv+"-"+n]=to;reslot(r,lv,n,from,to,to==="CU"?100:undefined);cnt[to]=(cnt[to]||0)+1;};
     Object.entries(want).forEach(([num,size])=>{const loc=binLocOf(`BIN-${pad(+num,5)}`),L=loc&&locFromCode(loc);if(!L){missing.push(+num);return;}apply(L.r,L.lv,L.n,size);});
     const inR=new Set(Object.keys(want).map(Number));
-    racks.forEach(r=>{for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=PER;n++){const id=binIdAt(r,lv,n),no=id?binNo(id):null;if(no!=null&&inR.has(no))continue;
+    racks.forEach(r=>{for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=perOf(r);n++){const id=binIdAt(r,lv,n),no=id?binNo(id):null;if(no!=null&&inR.has(no))continue;
       if(rest||(no!=null&&APPL.includes(no)))apply(r,lv,n,"CU");}});
     APPL=[...inR];saveBR();saveFroz();save();
     SLOG.push({at:new Date().toISOString(),who:WHO||"(name not set)",bin:"All racks",scope:"all",from:"Size by tin number",to:Object.entries(cnt).map(([k,v])=>`${v} ${SZL(k)}`).join(", ")||"no change",note:rs.map(g=>`#${g.f}–${g.t} ${SZL(g.size)}`).join(" · ")+(skipped.length?` · ${skipped.length} skipped (in use)`:"")});saveLog();
     const st=document.getElementById("trStatus");st.hidden=false;st.textContent=`✓ ${Object.entries(cnt).map(([k,v])=>`${v} → ${SZL(k)}`).join(", ")||"Nothing to change"}${skipped.length?` · ${skipped.length} skipped (in use)`:""}${missing.length?` · ${missing.length} tin numbers not on a shelf`:""}`;
     if(skipped.length){skipped.slice(0,6).forEach(x=>blockNote(`${x} occupied`));flushBlocked();}refresh();draw();};
   draw();}
-function sizeTin(r,lv,n,to,cap,acc){if(!isBinOn(r,lv,n)){acc.off++;return;}if(!FROZ.bins[r.id])freezeBin(r);const from=tinSize(r,lv,n),c0=from==="CU"?tinCap(r,lv,n):null,c1=to==="CU"?(cap??100):null;
-  if(from===to&&c0===c1){acc.same++;return;}if(isOcc(r,lv,n)){acc.busy.push(`${binLabel(r)} · Column ${colNo(r,n)} · Level ${lv}`);return;}
-  state[r.id]=state[r.id]||{};state[r.id][lv+"-"+n]=to;reslot(r,lv,n,from,to,c1??undefined);acc.n++;}
+function sizeTin(r,lv,n,to,cap,acc){const wasOff=!isBinOn(r,lv,n);if(!fitsRack(r,to)){acc.big=(acc.big||0)+1;return;}const cx=to==="CX";if(cx)to="CU";if(!FROZ.bins[r.id])freezeBin(r);const from=tinSize(r,lv,n),c0=from==="CU"?tinCap(r,lv,n):null,c1=to==="CU"?(cx?(cap??100):100):null;
+  if(from===to&&c0===c1&&(to!=="CU"||isCx(r,lv,n)===cx)){acc.same++;return;}if(isOcc(r,lv,n)){acc.busy.push(`${binLabel(r)} · Column ${colNo(r,n)} · Level ${lv}`);return;}
+  state[r.id]=state[r.id]||{};state[r.id][lv+"-"+n]=to;if(state[r.id]._max)delete state[r.id]._max[lv+"-"+n];CXNEXT=cx;try{reslot(r,lv,n,from,to,c1??undefined);}finally{CXNEXT=false;}acc.n++;if(wasOff)acc.off++;}
 // level on/off for one rack, and everything on/off for racks
-function levelOn(r,lv){if(!isOn(r,lv))return false;for(let n=1;n<=PER;n++)if(isBinOn(r,lv,n))return true;return false;}
-function setLevel(r,lv,on){if(!on){const busy=[];for(let n=1;n<=PER;n++)if(isOcc(r,lv,n))busy.push(n);
+function levelOn(r,lv){if(!isOn(r,lv))return false;for(let n=1;n<=perOf(r);n++)if(isBinOn(r,lv,n))return true;return false;}
+function setLevel(r,lv,on){if(!on){const busy=[];for(let n=1;n<=perOf(r);n++)if(isOcc(r,lv,n))busy.push(n);
     if(busy.length){busy.forEach(n=>blockNote(`${binLabel(r)} · Column ${colNo(r,n)} · Level ${lv} · ${occName(r,lv,n)} occupied`));flushBlocked();return false;}}
-  setOn(r,lv,on);if(on)for(let n=1;n<=PER;n++)setBinOn(r,lv,n,true);save();logSize(r,{scope:"rack",from:on?"level off":"level on",to:on?"level on":"level off",note:`Level ${lv} ${on?"turned on":"turned off"}`});return true;}
-const rackAllOn=r=>{for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=PER;n++)if(!isBinOn(r,lv,n))return false;return true;};
+  setOn(r,lv,on);if(on)for(let n=1;n<=perOf(r);n++)setBinOn(r,lv,n,true);save();logSize(r,{scope:"rack",from:on?"level off":"level on",to:on?"level on":"level off",note:`Level ${lv} ${on?"turned on":"turned off"}`});return true;}
+const rackAllOn=r=>{for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=perOf(r);n++)if(!isBinOn(r,lv,n))return false;return true;};
 const aisleAllOn=a=>racks.filter(r=>aisleOf(r)===a).every(rackAllOn);
-function setRackAll(rs,on){if(!on){const busy=[];rs.forEach(r=>{for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=PER;n++)if(isOcc(r,lv,n))busy.push(`${binLabel(r)} · Column ${colNo(r,n)} · Level ${lv}`);});
+function setRackAll(rs,on){if(!on){const busy=[];rs.forEach(r=>{for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=perOf(r);n++)if(isOcc(r,lv,n))busy.push(`${binLabel(r)} · Column ${colNo(r,n)} · Level ${lv}`);});
     if(busy.length){busy.slice(0,6).forEach(x=>blockNote(`${x} occupied — nothing was turned off`));flushBlocked();return false;}}
-  rs.forEach(r=>{for(let lv=1;lv<=LEVELS;lv++){setOn(r,lv,on);for(let n=1;n<=PER;n++)setBinOn(r,lv,n,on);}});save();
+  rs.forEach(r=>{for(let lv=1;lv<=LEVELS;lv++){setOn(r,lv,on);for(let n=1;n<=perOf(r);n++)setBinOn(r,lv,n,on);}});save();
   SLOG.push({at:new Date().toISOString(),who:WHO||"(name not set)",bin:rs.length===1?rackName(rs[0]):`${rs.length} racks`,scope:"all",from:on?"off":"on",to:on?"all on":"all off",note:"every column and level"});saveLog();return true;}
 // column on/off: every level of one column in one rack
 function columnOn(r,n){for(let lv=1;lv<=LEVELS;lv++)if(isOn(r,lv)&&isBinOn(r,lv,n))return true;return false;}
@@ -4145,29 +4263,32 @@ let AR_MODE="bin";try{AR_MODE=localStorage.getItem("vault-armode")||"bin";}catch
 let selAisle=null;try{selAisle=+localStorage.getItem("vault-aisle")||null;}catch(e){}
 const aisleNums=()=>[...new Set(racks.map(aisleOf).filter(Boolean))].sort((a,b)=>a-b);
 function aisleRacks(a){const rs=racks.filter(r=>aisleOf(r)===a);return {odd:rs.filter(aisleColOdd).sort((x,y)=>rackSeq(x)-rackSeq(y)),even:rs.filter(r=>!aisleColOdd(r)).sort((x,y)=>rackSeq(x)-rackSeq(y))};}
-const sizeFill=k=>({S:"#C026D3",M:"#EAB308",L:"#92582E",XL:"#06B6D4",CU:"#2563EB"})[k]||"#2563EB";
-function miniRack(r){const W=386,H=278,lx=50,top=48,cw=(W-lx-14)/PER,rh=(H-top-4)/LEVELS,ct=24;
+const sizeFill=k=>({S:"#C026D3",M:"#EAB308",L:"#92582E",XL:"#06B6D4",CU:"#2563EB",CX:"#7C3AED"})[k]||"#2563EB";
+function miniRack(r){const W=Math.max(386,64+perOf(r)*54),H=278,lx=50,top=48,cw=(W-lx-14)/perOf(r),rh=(H-top-4)/LEVELS,ct=24;
   let o=`<svg class="mini" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMin meet" role="img" aria-label="Columns ${colRange(r)}">`;
   o+=`<text x="${lx+(W-lx-14)/2}" y="9" text-anchor="middle" font-size="11" font-weight="800" letter-spacing="1.5" fill="#6B7280">COLUMN →</text>`;
   o+=`<text transform="translate(9 ${top+(H-top)/2}) rotate(-90)" text-anchor="middle" font-size="11" font-weight="800" letter-spacing="1.5" fill="#6B7280">LEVEL →</text>`;
-  for(let n=1;n<=PER;n++){const on=columnOn(r,n);o+=`<g class="ch" data-r="${r.id}" data-n="${n}" style="cursor:pointer"><title>Column ${colNo(r,n)} — click to turn ${on?"off":"on"}</title><rect x="${lx+(n-1)*cw+4}" y="${ct-4}" width="${cw-8}" height="20" rx="4" fill="${on?"#F3F4F6":"#FEE2E2"}" stroke="${on?"#E5E7EB":"#FCA5A5"}"/><text x="${lx+(n-.5)*cw}" y="${ct+10.5}" text-anchor="middle" font-size="13.5" font-weight="800" fill="${on?"#111827":"#B91C1C"}">${colNo(r,n)}</text></g>`;}
+  for(let n=1;n<=perOf(r);n++){const on=columnOn(r,n);o+=`<g class="ch" data-r="${r.id}" data-n="${n}" style="cursor:pointer"><title>Column ${colNo(r,n)} — click to turn ${on?"off":"on"}</title><rect x="${lx+(n-1)*cw+4}" y="${ct-4}" width="${cw-8}" height="20" rx="4" fill="${on?"#F3F4F6":"#FEE2E2"}" stroke="${on?"#E5E7EB":"#FCA5A5"}"/><text x="${lx+(n-.5)*cw}" y="${ct+10.5}" text-anchor="middle" font-size="13.5" font-weight="800" fill="${on?"#111827":"#B91C1C"}">${colNo(r,n)}</text></g>`;}
   for(let lv=1;lv<=LEVELS;lv++){const y=top+(LEVELS-lv)*rh;const lon=levelOn(r,lv);o+=`<g class="lh" data-r="${r.id}" data-lv="${lv}" style="cursor:pointer"><title>Level ${lv} — click to turn ${lon?"off":"on"}</title><rect x="20" y="${y+3}" width="26" height="${rh-6}" rx="4" fill="${lon?"#F3F4F6":"#FEE2E2"}" stroke="${lon?"#E5E7EB":"#FCA5A5"}"/><text x="33" y="${y+rh/2+4}" text-anchor="middle" font-size="12" font-weight="800" fill="${lon?"#374151":"#B91C1C"}">${lv}</text></g>`;
-    for(let n=1;n<=PER;n++){const x=lx+(n-1)*cw,on=isBinOn(r,lv,n),z=tinSize(r,lv,n),id=binIdAt(r,lv,n),oc=occ(r,lv,n).length,cap=z==="CU"?tinCap(r,lv,n):SZ(z).slots;
-      const fill=!on?"#FEE2E2":!id?"#F9FAFB":sizeFill(z),txtc=!on?"#B91C1C":!id?"#6B7280":"#fff";
-      o+=`<g class="c" data-r="${r.id}" data-lv="${lv}" data-n="${n}"><title>Aisle ${aisleOf(r)} · Column ${colNo(r,n)} · Level ${lv}${id?` · Tin #${binNo(id)}`:" · empty"}${on?"":" · OFF"} · ${z==="CU"?`Custom ${capTxt(cap)}`:SZ(z).name}</title>
-        <rect class="b" x="${x+2}" y="${y+2}" width="${cw-4}" height="${rh-4}" rx="3" fill="${fill}" stroke="${!on?"#FCA5A5":!id?"#9CA3AF":"none"}" stroke-dasharray="${!on?"0":"3 2"}"/>
+    for(let n=1;n<=perOf(r);n++){const x=lx+(n-1)*cw,on=isBinOn(r,lv,n),z=tinSize(r,lv,n),dk=dKey(r,lv,n),id=binIdAt(r,lv,n),oc=occ(r,lv,n).length,cap=z==="CU"?tinCap(r,lv,n):SZ(z).slots;
+      const fill=!on?"#FEE2E2":sizeFill(dk),txtc=!on?"#B91C1C":!id?sizeFill(dk):"#fff";
+      o+=`<g class="c" data-r="${r.id}" data-lv="${lv}" data-n="${n}"><title>Aisle ${aisleOf(r)} · Column ${colNo(r,n)} · Level ${lv}${id?` · Tin #${binNo(id)}`:" · empty"}${on?"":" · OFF"} · ${z==="CU"?cuL(dk==="CX",cap):SZ(z).name}</title>
+        <rect class="b" x="${x+2}" y="${y+2}" width="${cw-4}" height="${rh-4}" rx="3" fill="${fill}" fill-opacity="${on&&!id?.1:1}" stroke="${!on?"#FCA5A5":!id?sizeFill(dk):"none"}" stroke-width="${on&&!id?1.6:1}" stroke-dasharray="${!on?"0":"4 2.5"}"/>
         <text x="${x+cw/2}" y="${y+rh/2+4}" text-anchor="middle" font-size="10.5" font-weight="700" fill="${txtc}">${!on?"OFF":id?`#${binNo(id)}`:"empty"}</text>
         ${oc?`<circle cx="${x+cw-8}" cy="${y+8}" r="5" fill="#DC2626"/>`:""}</g>`;}}
   return o+"</svg>";}
 function rackCard(r,side){const z=binSize(r),tins=activeTins(r);
-  return `<div class="rcard ${side}" data-rid="${r.id}"><div class="rt rt1"><b>Columns ${colRange(r)}</b><span>${rackCode(r)} · ${z?(z==="MIX"?"Mixed":SZ(z).name):"Custom"} · ${tins} tins · ${rackSlots(r).toLocaleString()} slots</span></div><div class="rt rt2"><button class="open del" data-delx="${r.id}">Remove location</button><span class="tgl"><span>${rackAllOn(r)?"All on":"All off"}</span><button class="sw${rackAllOn(r)?" on":""}" data-rall="${r.id}" aria-pressed="${rackAllOn(r)}" title="Turn every column and level in this rack ${rackAllOn(r)?"off":"on"}"><i></i></button></span><span class="grow"></span><button class="open" data-open="${r.id}">Detail view</button></div>${miniRack(r)}</div>`;}
+  return `<div class="rcard ${side}" data-rid="${r.id}"><div class="rt rt1"><b>Columns ${colRange(r)}</b><span>${rackCode(r)} · ${rackSize(r)?`${SZ(rackSize(r)).name} rack${z&&z!==rackSize(r)?(z==="MIX"?" (mixed)":` (${SZ(z).name})`):""}`:z?(z==="MIX"?"Mixed":SZ(z).name):"Standard"} · ${tins} tins · ${rackSlots(r).toLocaleString()} slots</span></div><div class="rt rt2"><button class="open del" data-delx="${r.id}">Remove location</button><button class="open plbl" data-plbl="${r.id}" title="Print a location label for every shelf spot in this rack">🖨 Print location labels</button><button class="open plbl" data-pbin="${r.id}" title="Print a tin label for every tin on this rack">🖨 Print tins</button><span class="tgl"><span>${rackAllOn(r)?"All on":"All off"}</span><button class="sw${rackAllOn(r)?" on":""}" data-rall="${r.id}" aria-pressed="${rackAllOn(r)}" title="Turn every column and level in this rack ${rackAllOn(r)?"off":"on"}"><i></i></button></span><span class="grow"></span><button class="open" data-open="${r.id}">Detail view</button></div>${miniRack(r)}</div>`;}
+const rackTinIds=r=>{const ids=[];if(r)for(let n=1;n<=perOf(r);n++)for(let lv=1;lv<=LEVELS;lv++){const id=binIdAt(r,lv,n);if(id)ids.push(id);}return ids;};
+const rackLocCodes=r=>{const out=[];for(let n=1;n<=perOf(r);n++)for(let lv=1;lv<=LEVELS;lv++)out.push(binCode(r,lv,n));return out.sort();};
+const pbinState=root=>root.querySelectorAll("[data-pbin]").forEach(b=>{const r=racks.find(x=>x.id===b.dataset.pbin);const none=!rackTinIds(r).length;b.disabled=none;b.title=none?"No tins on this rack yet — scan tins in first":"Print a tin label for every tin on this rack";});
 function drawAisles(){const grid=document.getElementById("aGrid"),det=document.getElementById("aDetail"),list=document.getElementById("aList");if(!grid)return;
   const as=aisleNums();document.getElementById("aSub").textContent=`${as.length} aisles · odd columns left, even right · click an aisle to open it`;
   {const rb=document.getElementById("aRestore");if(rb){rb.hidden=!REMOVED.length;rb.textContent=`↺ Restore ${REMOVED.length} removed location${REMOVED.length===1?"":"s"}`;rb.onclick=()=>{if(rb.dataset.arm!=="1"){rb.dataset.arm="1";rb.textContent="Click again to restore";return;}REMOVED=[];try{localStorage.setItem(RMKEY,JSON.stringify(REMOVED));}catch(e){}location.reload();};}}
   // only build the aisle list when it is on screen — inside an aisle it is hidden, so skip that work
   if(!(selAisle&&as.includes(selAisle))){
-  grid.innerHTML=as.map(a=>{const {odd,even}=aisleRacks(a),all=[...odd,...even];let t=0,sl=0,oc=0;all.forEach(r=>{t+=activeTins(r);sl+=rackSlots(r);for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=PER;n++)if(isOcc(r,lv,n))oc++;});
-    const rng=rs=>rs.length?`${Math.min(...rs.map(r=>colNo(r,1)))}–${Math.max(...rs.map(r=>colNo(r,PER)))}`:"—",on=ASEL.has(a);
+  grid.innerHTML=as.map(a=>{const {odd,even}=aisleRacks(a),all=[...odd,...even];let t=0,sl=0,oc=0;all.forEach(r=>{t+=activeTins(r);sl+=rackSlots(r);for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=perOf(r);n++)if(isOcc(r,lv,n))oc++;});
+    const rng=rs=>rs.length?`${Math.min(...rs.map(r=>colNo(r,1)))}–${Math.max(...rs.map(r=>colNo(r,perOf(r))))}`:"—",on=ASEL.has(a);
     return `<div class="acard${on?" sel":""}" data-a="${a}" role="button" tabindex="0"><div class="ah"><h3>Aisle ${a}</h3><span class="grow"></span><label class="achk" title="Select for bulk sizing"><input type="checkbox" data-sel="${a}" ${on?"checked":""}> Select</label></div>
       <div class="meta">${all.length} racks</div>
       <div class="stk"><div class="k bins"><span>Tins</span><b>${t.toLocaleString()}</b></div><div class="k slots"><span>Slots</span><b>${sl.toLocaleString()}</b></div><div class="k used"><span>Used</span><b>${oc}</b></div></div>
@@ -4178,62 +4299,68 @@ function drawAisles(){const grid=document.getElementById("aGrid"),det=document.g
   {const bar=document.getElementById("aBulk");if(bar){const sel=[...ASEL].filter(a=>as.includes(a)).sort((x,y)=>x-y);let tins=0;sel.forEach(a=>{const {odd,even}=aisleRacks(a);[...odd,...even].forEach(r=>tins+=activeTins(r));});
     bar.innerHTML=`<label class="achk"><input type="checkbox" id="abAll" ${sel.length===as.length?"checked":""}> Select all</label>
       <span class="abinfo">${sel.length?`<b>${sel.length} aisle${sel.length>1?"s":""}</b> selected (${sel.map(a=>`A${a}`).join(", ")}) · ${tins.toLocaleString()} tins`:"Select aisles to change their tin size together"}</span><span class="grow"></span>
-      <span class="label">Tin size</span><select id="abSz" ${sel.length?"":"disabled"}>${["CU",...Object.keys(SIZES)].map(k=>`<option value="${k}">${k==="CU"?"Custom":`${SZ(k).name} (${SZ(k).slots})`}</option>`).join("")}</select>
+      <span class="label">Tin size</span><select id="abSz" ${sel.length?"":"disabled"}>${["CU","CX",...Object.keys(SIZES)].map(k=>`<option value="${k}">${k==="CU"?"Standard (100)":k==="CX"?"Custom":`${SZ(k).name} (${SZ(k).slots})`}</option>`).join("")}</select>
       <input type="number" id="abCap" min="1" max="100" value="100" ${sel.length?"":"disabled"} title="Custom slots"><span class="label" id="abCapL">slots</span>
       <button class="btn primary" id="abGo" ${sel.length?"":"disabled"}>Apply to ${sel.length||""} aisle${sel.length===1?"":"s"}</button>${sel.length?'<button class="btn" id="abClr">Clear</button>':""}<span class="label" id="abMsg">${ABMSG}</span>`;
-    const sz=bar.querySelector("#abSz"),cap=bar.querySelector("#abCap"),capL=bar.querySelector("#abCapL"),sync=()=>{cap.hidden=capL.hidden=sz.value!=="CU";};sz.onchange=sync;sync();
+    const sz=bar.querySelector("#abSz"),cap=bar.querySelector("#abCap"),capL=bar.querySelector("#abCapL"),sync=()=>{cap.hidden=capL.hidden=sz.value!=="CX";};sz.onchange=sync;sync();
     bar.querySelector("#abAll").onchange=e=>{ASEL=new Set(e.target.checked?as:[]);ABMSG="";drawAisles();};
     const clr=bar.querySelector("#abClr");if(clr)clr.onclick=()=>{ASEL.clear();ABMSG="";drawAisles();};
-    bar.querySelector("#abGo").onclick=()=>{const to=sz.value,cp=Math.round(+cap.value);if(to==="CU"&&!(cp>=1&&cp<=100)){bar.querySelector("#abMsg").innerHTML='<span class="err">Custom slots must be 1–100</span>';return;}
-      const acc={n:0,same:0,off:0,busy:[]};sel.forEach(a=>{const {odd,even}=aisleRacks(a);[...odd,...even].forEach(r=>{for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=PER;n++)sizeTin(r,lv,n,to,to==="CU"?cp:undefined,acc);});});
-      saveFroz();save();const lbl=to==="CU"?`Custom ${cp}`:SZ(to).name;
-      SLOG.push({at:new Date().toISOString(),who:WHO||"(name not set)",bin:`Aisles ${sel.join(", ")}`,scope:"all",from:"aisles",to:lbl,note:`${acc.n} tins${acc.busy.length?` · ${acc.busy.length} skipped (in use)`:""}${acc.off?` · ${acc.off} off`:""}`});saveLog();
+    bar.querySelector("#abGo").onclick=()=>{const to=sz.value,cp=Math.round(+cap.value);if(to==="CX"&&!(cp>=1&&cp<=100)){bar.querySelector("#abMsg").innerHTML='<span class="err">Custom slots must be 1–100</span>';return;}
+      const acc={n:0,same:0,off:0,busy:[]};sel.forEach(a=>{const {odd,even}=aisleRacks(a);[...odd,...even].forEach(r=>{for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=perOf(r);n++)sizeTin(r,lv,n,to,to==="CX"?cp:undefined,acc);});});
+      saveFroz();save();const lbl=to==="CX"?`Custom ${cp}`:to==="CU"?"Standard 100":SZ(to).name;
+      SLOG.push({at:new Date().toISOString(),who:WHO||"(name not set)",bin:`Aisles ${sel.join(", ")}`,scope:"all",from:"aisles",to:lbl,note:`${acc.n} tins${acc.busy.length?` · ${acc.busy.length} skipped (in use)`:""}${acc.off?` · ${acc.off} of them off (still off)`:""}`});saveLog();
       if(acc.busy.length){acc.busy.slice(0,6).forEach(x=>blockNote(`${x} occupied`));flushBlocked();}
-      ABMSG=`<span class="okm">✓ ${acc.n.toLocaleString()} tins → ${lbl}${acc.same?` · ${acc.same.toLocaleString()} already`:""}${acc.off?` · ${acc.off} off`:""}${acc.busy.length?` · ${acc.busy.length} in use skipped`:""}</span>`;refresh();drawAisles();};}}
+      ABMSG=`<span class="okm">✓ ${acc.n.toLocaleString()} tins → ${lbl}${acc.same?` · ${acc.same.toLocaleString()} already`:""}${acc.off?` · ${acc.off} of them off (still off)`:""}${acc.big?` · ${acc.big} too big for their rack`:""}${acc.busy.length?` · ${acc.busy.length} in use skipped`:""}</span>`;refresh();drawAisles();};}}
   }
   if(!selAisle||!as.includes(selAisle)){list.hidden=false;det.hidden=true;return;}
   list.hidden=true;det.hidden=false;const a=selAisle,{odd,even}=aisleRacks(a),rows=Math.max(0,...[...odd,...even].map(r=>rackSeq(r)+1));
   const sameA=[...odd,...even],startA=sameA.length?Math.min(...(odd.length?odd:sameA).map(rackPos)):0;
   let h=`<div class="ahead"><button class="btn" id="aBack">← All aisles</button><h2>Aisle ${a}</h2><span class="sub">${odd.length+even.length} racks · odd columns left, even columns right</span><span class="grow"></span>
-    <button class="btn" id="aPrev" ${a===as[0]?"hidden":""}>‹ Aisle ${as[as.indexOf(a)-1]??""}</button><button class="btn" id="aNext" ${a===as[as.length-1]?"hidden":""}>Aisle ${as[as.indexOf(a)+1]??""} ›</button><button class="btn" id="aL10">${[...odd,...even].every(r=>!isOn(r,10))?`Make level 10 active (Aisle ${a})`:`Make level 10 inactive (Aisle ${a})`}</button><span class="tgl big"><span>All columns &amp; levels</span><button class="sw${aisleAllOn(a)?" on":""}" id="aAllSw" aria-pressed="${aisleAllOn(a)}" title="Turn every column and level in Aisle ${a} ${aisleAllOn(a)?"off":"on"}"><i></i></button></span><button class="btn primary" id="scanBtnD">Scan tin → location</button></div>
+    <button class="btn" id="aPrev" ${a===as[0]?"hidden":""}>‹ Aisle ${as[as.indexOf(a)-1]??""}</button><button class="btn" id="aNext" ${a===as[as.length-1]?"hidden":""}>Aisle ${as[as.indexOf(a)+1]??""} ›</button><button class="btn primary" id="aPrint" title="Print a 6 × 1.5 in location label for every shelf position in this aisle">🖨 Print location barcodes</button><button class="btn" id="aL10">${[...odd,...even].every(r=>!isOn(r,10))?`Make level 10 active (Aisle ${a})`:`Make level 10 inactive (Aisle ${a})`}</button><span class="tgl big"><span>All columns &amp; levels</span><button class="sw${aisleAllOn(a)?" on":""}" id="aAllSw" aria-pressed="${aisleAllOn(a)}" title="Turn every column and level in Aisle ${a} ${aisleAllOn(a)?"off":"on"}"><i></i></button></span><button class="btn primary" id="scanBtnD">Scan tin → location</button></div>
     <div class="arange"><b>Tin sizes by range</b>
       <div class="seg armode"><button data-m="bin" aria-pressed="${AR_MODE==="bin"}">Tin #</button><button data-m="col" aria-pressed="${AR_MODE==="col"}">Columns &amp; levels</button></div>
       ${AR_MODE==="bin"?`<span class="label">Tin #</span><input type="number" id="arB1" min="1" value="${binNo(binIdAt(odd[0]||even[0],1,1))||1}"><span class="label">to</span><input type="number" id="arB2" min="1" value="${(binNo(binIdAt(odd[0]||even[0],1,1))||1)+19}">`
-      :`<span class="label">Columns</span><input type="number" id="arC1" value="${Math.min(...[...odd,...even].map(r=>colNo(r,1)))}"><span class="label">to</span><input type="number" id="arC2" value="${Math.max(...[...odd,...even].map(r=>colNo(r,PER)))}">
+      :`<span class="label">Columns</span><input type="number" id="arC1" value="${Math.min(...[...odd,...even].map(r=>colNo(r,1)))}"><span class="label">to</span><input type="number" id="arC2" value="${Math.max(...[...odd,...even].map(r=>colNo(r,perOf(r))))}">
       <span class="label">Levels</span><input type="number" id="arL1" min="1" max="10" value="1"><span class="label">to</span><input type="number" id="arL2" min="1" max="10" value="10">`}
-      <select id="arSz">${["CU",...Object.keys(SIZES)].map(k=>`<option value="${k}">${k==="CU"?"Custom":SZ(k).name}</option>`).join("")}</select><input type="number" id="arCap" min="1" max="100" value="100" title="Custom slots"><span class="label" id="arCapL">slots</span>
+      <select id="arSz">${["CU","CX",...Object.keys(SIZES)].map(k=>`<option value="${k}">${kName(k)}</option>`).join("")}</select><input type="number" id="arCap" min="1" max="100" value="100" title="Custom slots"><span class="label" id="arCapL">slots</span>
       <span class="grow"></span><button class="btn primary" id="arGo">${AR_MODE==="bin"?"Apply to tins":`Apply to Aisle ${a}`}</button><span class="label" id="arMsg"></span></div>
     <div class="row adelrow">${CAISLES.some(c=>c.a===a)?`<span class="label">Created aisle · not on the overhead map yet</span>`:""}<span class="grow"></span><button class="btn del" id="aDel">🗑 Delete Aisle ${a}</button></div>
     <div class="acols"><div class="sh o">Odd columns · left side</div><div></div><div class="sh e">Even columns · right side</div>`;
   for(let k=0;k<rows;k++){const L=odd.find(r=>rackSeq(r)===k),R=even.find(r=>rackSeq(r)===k);
-    h+=`<div>${L?rackCard(L,"o"):`<button class="rempty add" data-add="1" data-pos="${startA+k}">+ Add location here<span>odd side · columns ${12*k+1}–${12*k+11}</span></button>`}</div><div class="walk"><span class="wtag">AISLE ${a}</span></div><div>${R?rackCard(R,"e"):`<button class="rempty add" data-add="0" data-pos="${startA+k}">+ Add location here<span>even side · columns ${12*k+2}–${12*k+12}</span></button>`}</div>`;}
+    h+=`<div>${L?rackCard(L,"o"):`<button class="rempty add" data-add="1" data-pos="${startA+k}">+ Add location here<span>odd side · pick 6, 8 or a custom number of tins</span></button>`}</div><div class="walk"><span class="wtag">AISLE ${a}</span></div><div>${R?rackCard(R,"e"):`<button class="rempty add" data-add="0" data-pos="${startA+k}">+ Add location here<span>even side · pick 6, 8 or a custom number of tins</span></button>`}</div>`;}
   h+=`<div><button class="rempty add end" data-add="1" data-pos="${startA+rows}">+ Add location to the odd side</button></div><div></div><div><button class="rempty add end" data-add="0" data-pos="${startA+rows}">+ Add location to the even side</button></div>`;
   h+=`<div></div><div class="walkcap"><span>AISLE ${a}</span></div><div></div>`;
   det.innerHTML=h+"</div>";
-  det.querySelectorAll("[data-add]").forEach(b=>b.onclick=()=>{const odd1=b.dataset.add==="1",pos=+b.dataset.pos,id=`X${a}-${odd1?"O":"E"}${pos}-${Date.now().toString(36).slice(-4)}`;
-    XRACKS.push({id,a,odd:odd1,pos,type:"std"});try{localStorage.setItem(XKEY,JSON.stringify(XRACKS));}catch(e){}buildCreated();
-    logSize({id:`Aisle ${a}`},{scope:"all",from:"—",to:"rack added",note:`Aisle ${a} · ${odd1?"odd":"even"} side · 60 tins Custom 100`});refresh();drawAisles();});
-  det.querySelectorAll("[data-delx]").forEach(b=>b.onclick=()=>{const r=racks.find(x=>x.id===b.dataset.delx);if(!r)return;
+  det.querySelectorAll("[data-add]").forEach(b=>b.onclick=()=>{const odd1=b.dataset.add==="1",pos=+b.dataset.pos;
+    const w=document.createElement("div");w.className="cupop";w.id="aAddPop";
+    w.innerHTML=`<div class="cubox"><b>Add location · Aisle ${a}</b><p class="label">${odd1?"Odd side (left)":"Even side (right)"} · 10 levels. Every spot starts empty — scan tins in.</p>${rtPick("adR",6)}<div id="adMsg" class="label"></div><div class="row"><button class="btn" id="adX">Cancel</button><button class="btn primary" id="adGo">Add location</button></div></div>`;
+    document.body.appendChild(w);const close=()=>w.remove();w.querySelector("#adX").onclick=close;w.onclick=e=>{if(e.target===w)close();};
+    const per=rtWire(w,"adR");w.querySelector("#adGo").onclick=()=>{const pr=per();if(!pr){w.querySelector("#adMsg").innerHTML='<span class="err">Enter tins per level (1–30)</span>';return;}close();
+    const id=`X${a}-${odd1?"O":"E"}${pos}-${Date.now().toString(36).slice(-4)}`;
+    XRACKS.push({id,a,odd:odd1,pos,type:"std",per:pr});try{localStorage.setItem(XKEY,JSON.stringify(XRACKS));}catch(e){}buildCreated();
+    {const nr=racks.find(x=>x.id===id);if(nr){for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=perOf(nr);n++)BALLOC.byLoc[binCode(nr,lv,n)]=null;saveAlloc();}} // new location starts with no bins in it
+    logSize({id:`Aisle ${a}`},{scope:"all",from:"—",to:"rack added",note:`Aisle ${a} · ${odd1?"odd":"even"} side · ${pr} tins per level · ${pr*LEVELS} empty spots`});refresh();drawAisles();};});
+  const bindDelx=root=>root.querySelectorAll("[data-delx]").forEach(b=>b.onclick=()=>{const r=racks.find(x=>x.id===b.dataset.delx);if(!r)return;
     if(holdsItems(r)){blockNote(`${rackCode(r)} holds items — clear it first`);flushBlocked();return;}
     if(b.dataset.arm!=="1"){b.dataset.arm="1";b.textContent="Click again to remove";return;}
-    const code=rackCode(r);removeRacks([r]);SLOG.push({at:new Date().toISOString(),who:WHO||"(name not set)",bin:`Aisle ${a}`,scope:"all",from:code,to:"location removed",note:"60 tins"});saveLog();refresh();drawAisles();});
+    const code=rackCode(r);removeRacks([r]);SLOG.push({at:new Date().toISOString(),who:WHO||"(name not set)",bin:`Aisle ${a}`,scope:"all",from:code,to:"location removed",note:`${perOf(r)*LEVELS} tins`});saveLog();refresh();drawAisles();});bindDelx(det);
   det.querySelector("#aBack").onclick=()=>{selAisle=null;try{localStorage.removeItem("vault-aisle");}catch(e){}drawAisles();};
   det.querySelector("#aPrev").onclick=()=>{selAisle=as[as.indexOf(a)-1];drawAisles();};det.querySelector("#aNext").onclick=()=>{selAisle=as[as.indexOf(a)+1];drawAisles();};
   det.querySelector("#scanBtnD").onclick=()=>openScan();
-  {const sz=det.querySelector("#arSz"),cap=det.querySelector("#arCap"),capL=det.querySelector("#arCapL");const sync=()=>{cap.hidden=capL.hidden=sz.value!=="CU";};sz.onchange=sync;sync();
+  {const sz=det.querySelector("#arSz"),cap=det.querySelector("#arCap"),capL=det.querySelector("#arCapL");const sync=()=>{cap.hidden=capL.hidden=sz.value!=="CX";};sz.onchange=sync;sync();
     det.querySelectorAll(".armode button").forEach(b=>b.onclick=()=>{AR_MODE=b.dataset.m;try{localStorage.setItem("vault-armode",AR_MODE);}catch(e){}drawAisles();});
     det.querySelector("#arGo").onclick=()=>{const to=sz.value,cp=Math.round(+cap.value),msg=det.querySelector("#arMsg"),acc={n:0,same:0,off:0,busy:[]};let note="",missing=0;
-      if(to==="CU"&&!(cp>=1&&cp<=100)){msg.innerHTML='<span class="err">Custom slots must be 1–100</span>';return;}
+      if(to==="CX"&&!(cp>=1&&cp<=100)){msg.innerHTML='<span class="err">Custom slots must be 1–100</span>';return;}
       if(AR_MODE==="bin"){const b1=+det.querySelector("#arB1").value,b2=+det.querySelector("#arB2").value;
         if(!(Number.isInteger(b1)&&Number.isInteger(b2)&&b1>=1&&b2>=b1&&b2-b1<20000)){msg.innerHTML='<span class="err">Check the tin numbers</span>';return;}
-        for(let k=b1;k<=b2;k++){const loc=binLocOf(`BIN-${pad(k,5)}`),L=loc&&locFromCode(loc);if(!L){missing++;continue;}sizeTin(L.r,L.lv,L.n,to,to==="CU"?cp:undefined,acc);}note=`Tin #${b1}–${b2}`;}
+        for(let k=b1;k<=b2;k++){const loc=binLocOf(`BIN-${pad(k,5)}`),L=loc&&locFromCode(loc);if(!L){missing++;continue;}sizeTin(L.r,L.lv,L.n,to,to==="CX"?cp:undefined,acc);}note=`Tin #${b1}–${b2}`;}
       else{const c1=+det.querySelector("#arC1").value,c2=+det.querySelector("#arC2").value,l1=+det.querySelector("#arL1").value,l2=+det.querySelector("#arL2").value;
         if(!(c1<=c2&&l1>=1&&l2<=10&&l1<=l2)){msg.innerHTML='<span class="err">Check the numbers</span>';return;}
-        [...odd,...even].forEach(r=>{for(let n=1;n<=PER;n++){const c=colNo(r,n);if(c<c1||c>c2)continue;for(let lv=l1;lv<=l2;lv++)sizeTin(r,lv,n,to,to==="CU"?cp:undefined,acc);}});note=`Aisle ${a} · Columns ${c1}–${c2} · Levels ${l1}–${l2}`;}
-      saveFroz();save();const lbl=to==="CU"?`Custom ${cp}`:SZ(to).name;
+        [...odd,...even].forEach(r=>{for(let n=1;n<=perOf(r);n++){const c=colNo(r,n);if(c<c1||c>c2)continue;for(let lv=l1;lv<=l2;lv++)sizeTin(r,lv,n,to,to==="CX"?cp:undefined,acc);}});note=`Aisle ${a} · Columns ${c1}–${c2} · Levels ${l1}–${l2}`;}
+      saveFroz();save();const lbl=to==="CX"?`Custom ${cp}`:to==="CU"?"Standard 100":SZ(to).name;
       SLOG.push({at:new Date().toISOString(),who:WHO||"(name not set)",bin:AR_MODE==="bin"?"All racks":`Aisle ${a}`,scope:"all",from:"range",to:lbl,note:`${note} · ${acc.n} tins${acc.busy.length?` · ${acc.busy.length} skipped (in use)`:""}`});saveLog();
       if(acc.busy.length){acc.busy.slice(0,6).forEach(x=>blockNote(`${x} occupied`));flushBlocked();}
-      refresh();const m2=document.querySelector("#arMsg");if(m2)m2.innerHTML=`<span class="okm">✓ ${acc.n} tins → ${lbl}${acc.same?` · ${acc.same} already`:""}${acc.off?` · ${acc.off} off`:""}${acc.busy.length?` · ${acc.busy.length} in use skipped`:""}${missing?` · ${missing} not on a shelf`:""}</span>`;};}
+      refresh();const m2=document.querySelector("#arMsg");if(m2)m2.innerHTML=`<span class="okm">✓ ${acc.n} tins → ${lbl}${acc.same?` · ${acc.same} already`:""}${acc.off?` · ${acc.off} of them off (still off)`:""}${acc.big?` · ${acc.big} too big for their rack`:""}${acc.busy.length?` · ${acc.busy.length} in use skipped`:""}${missing?` · ${missing} not on a shelf`:""}</span>`;};}
   {const d=det.querySelector("#aDel");if(d)d.onclick=()=>{const rs=[...odd,...even];if(rs.some(holdsItems)){blockNote(`Aisle ${a} holds items — clear it first`);flushBlocked();return;}
     if(d.dataset.arm!=="1"){d.dataset.arm="1";d.textContent=`Click again to delete Aisle ${a} (${rs.length} locations)`;return;}
     if(CAISLES.some(c=>c.a===a)){CAISLES=CAISLES.filter(c=>c.a!==a);try{localStorage.setItem(CAKEY,JSON.stringify(CAISLES));}catch(e){}}
@@ -4241,34 +4368,39 @@ function drawAisles(){const grid=document.getElementById("aGrid"),det=document.g
     SLOG.push({at:new Date().toISOString(),who:WHO||"(name not set)",bin:`Aisle ${a}`,scope:"all",from:`Aisle ${a}`,to:"aisle deleted",note:`${rs.length} locations`});saveLog();
     selAisle=null;try{localStorage.removeItem("vault-aisle");}catch(e){}refresh();drawAisles();};}
   // one click handler for every rack card (fast), and toggles only redraw the card that changed
-  const quick=r=>{ROWCACHE={};DATAV++;drawStats();const el=det.querySelector(`.rcard[data-rid="${CSS.escape(r.id)}"]`);if(el){el.outerHTML=rackCard(r,el.classList.contains("o")?"o":"e");}
+  const quick=r=>{ROWCACHE={};DATAV++;drawStats();const el=det.querySelector(`.rcard[data-rid="${CSS.escape(r.id)}"]`);if(el){el.outerHTML=rackCard(r,el.classList.contains("o")?"o":"e");const ne=det.querySelector(`.rcard[data-rid="${CSS.escape(r.id)}"]`);if(ne){bindDelx(ne);pbinState(ne);}}
     const sw=det.querySelector("#aAllSw");if(sw){const on=aisleAllOn(a);sw.classList.toggle("on",on);sw.setAttribute("aria-pressed",on);}};
   const byId=id=>racks.find(x=>x.id===id);
   det.onclick=e=>{const t=e.target;let g;
+    if((g=t.closest("[data-plbl]"))){e.stopPropagation();const r=byId(g.dataset.plbl);if(r)printLabels("loc",rackLocCodes(r));return;}
+    if((g=t.closest("[data-pbin]"))){e.stopPropagation();const ids=rackTinIds(byId(g.dataset.pbin));if(ids.length)printLabels("tin",ids);return;}
     if((g=t.closest(".mini .lh"))){e.stopPropagation();const r=byId(g.dataset.r),lv=+g.dataset.lv;if(setLevel(r,lv,!levelOn(r,lv)))quick(r);return;}
     if((g=t.closest(".mini .ch"))){e.stopPropagation();const r=byId(g.dataset.r),n=+g.dataset.n;if(setColumn(r,n,!columnOn(r,n)))quick(r);return;}
     if((g=t.closest("[data-rall]"))){const r=byId(g.dataset.rall);if(setRackAll([r],!rackAllOn(r)))quick(r);return;}
     if((g=t.closest(".mini .c"))){openBinOnly(byId(g.dataset.r),+g.dataset.lv,+g.dataset.n);return;}
     if((g=t.closest("[data-open]"))){pickRack(byId(g.dataset.open));return;}};
+  {const rackCodes=r=>{const out=[];for(let n=1;n<=perOf(r);n++)for(let lv=1;lv<=LEVELS;lv++)out.push(binCode(r,lv,n));return out;};
+    const pa=det.querySelector("#aPrint");if(pa)pa.onclick=()=>printLabels("loc",[...odd,...even].flatMap(rackCodes).sort());
+    pbinState(det);}
   {const l10=det.querySelector("#aL10");if(l10)l10.onclick=()=>{const rs=[...odd,...even],turnOn=rs.every(r=>!isOn(r,10));
-    if(!turnOn){const busy=[];rs.forEach(r=>{for(let n=1;n<=PER;n++)if(isOcc(r,10,n))busy.push(`${binLabel(r)} · Column ${colNo(r,n)} · Level 10`);});if(busy.length){busy.slice(0,6).forEach(x=>blockNote(`${x} occupied — level 10 was not changed`));flushBlocked();return;}}
-    rs.forEach(r=>{setOn(r,10,turnOn);if(turnOn)for(let n=1;n<=PER;n++)setBinOn(r,10,n,true);});save();
+    if(!turnOn){const busy=[];rs.forEach(r=>{for(let n=1;n<=perOf(r);n++)if(isOcc(r,10,n))busy.push(`${binLabel(r)} · Column ${colNo(r,n)} · Level 10`);});if(busy.length){busy.slice(0,6).forEach(x=>blockNote(`${x} occupied — level 10 was not changed`));flushBlocked();return;}}
+    rs.forEach(r=>{setOn(r,10,turnOn);if(turnOn)for(let n=1;n<=perOf(r);n++)setBinOn(r,10,n,true);});save();
     SLOG.push({at:new Date().toISOString(),who:WHO||"(name not set)",bin:`Aisle ${a}`,scope:"all",from:turnOn?"level 10 off":"level 10 on",to:turnOn?"level 10 on":"level 10 off",note:`${rs.length} racks`});saveLog();refresh();};}
   {const sw=det.querySelector("#aAllSw");if(sw)sw.onclick=()=>{const rs=[...odd,...even];if(setRackAll(rs,!aisleAllOn(a)))refresh();};}
 }
 {const _rf=refresh;refresh=function(){_rf();if(tab==="aisles")drawAisles();if(tab==="tins")drawTins();if(tab==="locs")drawLocs();};}
 // ---------- Locations list: every shelf position, its label, and which tin sits there ----------
 let LPAGE=0,LSEL=new Set(),LLIST=[],LMSG="",LLAST=null;const LPER=100;
-function locRows(){if(ROWCACHE.locs)return ROWCACHE.locs;const out=[];racks.forEach(r=>{for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=PER;n++){const id=binIdAt(r,lv,n),z=tinSize(r,lv,n);
-  out.push({loc:binCode(r,lv,n),r,lv,n,a:aisleOf(r),c:colNo(r,n),odd:aisleColOdd(r),id,no:id?binNo(id):null,z,cap:z==="CU"?tinCap(r,lv,n):SZ(z).slots,used:occ(r,lv,n).length,on:isBinOn(r,lv,n)});}});
+function locRows(){if(ROWCACHE.locs)return ROWCACHE.locs;const out=[];racks.forEach(r=>{for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=perOf(r);n++){const id=binIdAt(r,lv,n),z=tinSize(r,lv,n);
+  out.push({loc:binCode(r,lv,n),r,lv,n,a:aisleOf(r),c:colNo(r,n),odd:aisleColOdd(r),id,no:id?binNo(id):null,z,k:dKey(r,lv,n),cap:z==="CU"?tinCap(r,lv,n):SZ(z).slots,used:occ(r,lv,n).length,on:isBinOn(r,lv,n)});}});
   return ROWCACHE.locs=out.sort((x,y)=>x.a-y.a||x.c-y.c||x.lv-y.lv);}
 function drawLocs(){const tb=document.getElementById("lRows");if(!tb)return;const all=locRows();
   const as=document.getElementById("lAisle");if(as.options.length<=1)aisleNums().forEach(a=>{const o=document.createElement("option");o.value=a;o.textContent=`Aisle ${a}`;as.appendChild(o);});
   const ls=document.getElementById("lLevel");if(ls.options.length<=1)for(let lv=1;lv<=LEVELS;lv++){const o=document.createElement("option");o.value=lv;o.textContent=`Level ${lv}`;ls.appendChild(o);}
-  const q=document.getElementById("lQ").value.trim().toUpperCase(),fa=+as.value||0,fl=+ls.value||0,fs=document.getElementById("lStat").value,fz=document.getElementById("lSize").value;
-  {const sig=[DATAV,q,fa,fl,fs,fz,LPAGE,LSEL.size,LMSG].join("|");if(sig===drawLocs._sig&&tb.children.length)return;drawLocs._sig=sig;}
+  const q=document.getElementById("lQ").value.trim().toUpperCase(),fa=+as.value||0,fl=+ls.value||0,fs=document.getElementById("lStat").value,fz=document.getElementById("lSize").value,cmn=parseInt(document.getElementById("lMin").value,10),cmx=parseInt(document.getElementById("lMax").value,10);
+  {const sig=[DATAV,q,fa,fl,fs,fz,cmn,cmx,LPAGE,LSEL.size,LMSG].join("|");if(sig===drawLocs._sig&&tb.children.length)return;drawLocs._sig=sig;}
   const list=all.filter(t=>{if(q){const m=/^(?:#|BIN-?)?0*(\d+)$/.exec(q);if(m){if(t.no!==+m[1])return false;}else if(!t.loc.includes(q))return false;}
-    if(fa&&t.a!==fa)return false;if(fl&&t.lv!==fl)return false;if(fz&&t.z!==fz)return false;
+    if(fa&&t.a!==fa)return false;if(fl&&t.lv!==fl)return false;if(fz&&t.k!==fz)return false;if(!isNaN(cmn)&&t.c<cmn)return false;if(!isNaN(cmx)&&t.c>cmx)return false;
     if(fs==="has"&&!t.id)return false;if(fs==="empty"&&t.id)return false;if(fs==="used"&&!t.used)return false;if(fs==="off"&&t.on)return false;return true;});
   LLIST=list;const has=all.filter(t=>t.id).length,used=all.filter(t=>t.used).length,off=all.filter(t=>!t.on).length;
   const box=(v,l,c)=>`<div class="ts"${c?` style="border-top:3px solid ${c}"`:""}><b>${v.toLocaleString()}</b><span>${l}</span></div>`;
@@ -4279,7 +4411,7 @@ function drawLocs(){const tb=document.getElementById("lRows");if(!tb)return;cons
   tb.innerHTML=page.map((t,i)=>{const st=!t.on?'<span class="st off">Off</span>':!t.id?'<span class="st none">Empty</span>':t.used?'<span class="st used">In use</span>':'<span class="st ok">Active</span>';
     return `<tr data-i="${i}" class="go${LSEL.has(t.loc)?" picked":""}"><td class="cb"><input type="checkbox" data-lpick="${t.loc}" ${LSEL.has(t.loc)?"checked":""} aria-label="Select ${t.loc}"></td><td class="mono"><b>${t.loc}</b></td><td class="bcc"></td>
       <td>${t.a}</td><td>${t.c}</td><td>${t.lv}</td><td><span class="sidep ${t.odd?"o":"e"}">${t.odd?"Odd":"Even"}</span></td><td>${t.id?`<b>#${t.no}</b>`:'<span class="label">—</span>'}</td>
-      <td><span class="szp" style="--c:${sizeFill(t.z)}">${t.z==="CU"?"Custom":SZ(t.z).name}</span></td><td>${capTxt(t.cap)}</td><td>${t.used}</td><td>${st}</td></tr>`;}).join("")||'<tr><td colspan="12" class="label" style="padding:18px">No locations match.</td></tr>';
+      <td><span class="szp" style="--c:${sizeFill(t.k)}">${kName(t.k)}</span></td><td>${capTxt(t.cap)}</td><td>${t.used}</td><td>${st}</td></tr>`;}).join("")||'<tr><td colspan="12" class="label" style="padding:18px">No locations match.</td></tr>';
   const syncHead=()=>{const ap=document.getElementById("lAllPg");ap.checked=page.length>0&&page.every(t=>LSEL.has(t.loc));ap.indeterminate=!ap.checked&&page.some(t=>LSEL.has(t.loc));};syncHead();
   document.getElementById("lAllPg").onchange=e=>{page.forEach(t=>e.target.checked?LSEL.add(t.loc):LSEL.delete(t.loc));tb.querySelectorAll("[data-lpick]").forEach(c=>{c.checked=LSEL.has(c.dataset.lpick);c.closest("tr").classList.toggle("picked",c.checked);});drawLAct();};
   const pickAt=(c,shift)=>{const i=LPAGE*LPER+(+c.closest("tr").dataset.i),on=c.checked;
@@ -4295,28 +4427,53 @@ function drawLAct(){const bar=document.getElementById("lAct");if(!bar)return;con
     ${LLIST.length&&n<LLIST.length?`<button class="lnk" id="lSelAll">Select all ${LLIST.length.toLocaleString()} matching</button>`:""}${n?'<button class="lnk" id="lSelNone">Clear selection</button>':""}
     <span class="grow"></span><span class="label">${LMSG}</span>
     <div class="dd"><button class="btn primary" id="lActBtn" ${n?"":"disabled"}>Actions ▾</button><div class="ddm" id="lActMenu" hidden>
-      <button data-lact="size">Change size…</button><button data-lact="on">Turn on</button><button data-lact="off">Turn off</button><button data-lact="scan" ${n===1?"":"disabled"}>Scan a tin in…</button><button data-lact="remove">Remove tin</button><hr><button data-lact="clear">Clear selection</button></div></div>`;
+      <button data-lact="size">Change size…</button><button data-lact="on">Turn on</button><button data-lact="off">Turn off</button><button data-lact="scan" ${n===1?"":"disabled"}>Scan a tin in…</button><button data-lact="remove">Remove tin</button><button data-lact="print">🖨 Print label${n>1?`s (${n.toLocaleString()})`:""}</button><hr><button data-lact="clear">Clear selection</button></div></div>`;
   const sa=bar.querySelector("#lSelAll");if(sa)sa.onclick=()=>{LLIST.forEach(t=>LSEL.add(t.loc));LMSG="";drawLocs();};
   const sn=bar.querySelector("#lSelNone");if(sn)sn.onclick=()=>{LSEL.clear();LMSG="";drawLocs();};
   const btn=bar.querySelector("#lActBtn"),menu=bar.querySelector("#lActMenu");btn.onclick=e=>{e.stopPropagation();menu.hidden=!menu.hidden;};document.addEventListener("click",()=>{menu.hidden=true;},{once:true});
   menu.querySelectorAll("[data-lact]").forEach(b=>b.onclick=e=>{e.stopPropagation();menu.hidden=true;locAction(b.dataset.lact);});}
 function locAction(act){const locs=[...LSEL];if(!locs.length)return;
+  if(["on","off","remove"].includes(act)&&!locAction._ok){confirmAct("loc",act,locs,()=>{locAction._ok=true;try{locAction(act);}finally{locAction._ok=false;}});return;}
+  if(act==="print"){printLabels("loc",locs);return;}
   if(act==="clear"){LSEL.clear();LMSG="";drawLocs();return;}
   if(act==="scan"){openScan({loc:locs[0]});return;}
   if(act==="size"){const ids=locs.map(l=>binIdAt(locFromCode(l).r,locFromCode(l).lv,locFromCode(l).n)).filter(Boolean);
     // reuse the tin size pop-up, applied to these locations
     const save0=TSEL;TSEL=new Set(locs.map(l=>"LOC:"+l));tinAction("size");TSEL=save0;return;}
   let n=0,skip=0;locs.forEach(loc=>{const L=locFromCode(loc);if(!L)return;
-    if(act==="on"){if(!isBinOn(L.r,L.lv,L.n)){if(!isOn(L.r,L.lv)){setOn(L.r,L.lv,true);for(let j=1;j<=PER;j++)if(j!==L.n)setBinOn(L.r,L.lv,j,false);}setBinOn(L.r,L.lv,L.n,true);n++;}}
+    if(act==="on"){if(!isBinOn(L.r,L.lv,L.n)){if(!isOn(L.r,L.lv)){setOn(L.r,L.lv,true);for(let j=1;j<=perOf(L.r);j++)if(j!==L.n)setBinOn(L.r,L.lv,j,false);}setBinOn(L.r,L.lv,L.n,true);n++;}}
     else if(act==="off"){if(isOcc(L.r,L.lv,L.n)){skip++;return;}if(isBinOn(L.r,L.lv,L.n)){setBinOn(L.r,L.lv,L.n,false);n++;}}
-    else if(act==="remove"){const id=binIdAt(L.r,L.lv,L.n);if(!id)return;if(isOcc(L.r,L.lv,L.n)){skip++;return;}rememberSize(id,L.r,L.lv,L.n);BALLOC.byLoc[loc]=null;BALLOC.byBin[id]=null;n++;}});
+    else if(act==="remove"){const id=binIdAt(L.r,L.lv,L.n);if(!id)return;if(isOcc(L.r,L.lv,L.n)){skip++;return;}rememberSize(id,L.r,L.lv,L.n);BALLOC.byLoc[loc]=null;BALLOC.byBin[id]=null;restoreLoc(L.r,L.lv,L.n);n++;}});
   if(act==="remove")saveAlloc();save();const verb={on:"turned on",off:"turned off",remove:"emptied"}[act];
   SLOG.push({at:new Date().toISOString(),who:WHO||"(name not set)",bin:"Locations list",scope:"all",from:"selection",to:verb,note:`${n} locations${skip?` · ${skip} skipped (in use)`:""}`});saveLog();
   LMSG=`<span class="okm">✓ ${n} location${n===1?"":"s"} ${verb}${skip?` · ${skip} skipped (in use)`:""}</span>`;refresh();drawLocs();}
-{const re=()=>{LPAGE=0;LLAST=null;drawLocs();};document.getElementById("lQ").oninput=re;["lAisle","lLevel","lStat","lSize"].forEach(id=>document.getElementById(id).onchange=re);
+{const re=()=>{LPAGE=0;LLAST=null;drawLocs();};["lQ","lMin","lMax"].forEach(id=>document.getElementById(id).oninput=re);["lAisle","lLevel","lStat","lSize"].forEach(id=>document.getElementById(id).onchange=re);
   document.getElementById("lPrev").onclick=()=>{LPAGE--;drawLocs();};document.getElementById("lNext").onclick=()=>{LPAGE++;drawLocs();};document.getElementById("lScan").onclick=()=>openScan();document.getElementById("lStore").onclick=()=>openStore();}
 // ---------- Tins (bins) list: every tin, where it is, its size and status ----------
 // location label = 6 in × 1.5 in: barcode on the left, then A#-C#-L# on one row
+// print sheet: one label per page, sized for the label printer (tin 4 × 1.5 in, location 6 × 1.5 in)
+/* which tin labels have been printed, when, and how many times */
+const PRKEY="vault-binprinted-v1";let PRINTED={};try{PRINTED=JSON.parse(localStorage.getItem(PRKEY)||"{}")||{};}catch(e){}
+const savePrinted=()=>{ROWCACHE={};DATAV++;try{localStorage.setItem(PRKEY,JSON.stringify(PRINTED));}catch(e){}};
+{let k=0,ch=false;BTYPE.created.forEach(id=>{if(isShipId(id)){const n=binNo(id);if(n>k)k=n;}});
+  BTYPE.created=BTYPE.created.map(id=>{if(!isShipId(id)&&BTYPE.type[id]==="ship"){const nid=`SHIP-${pad(++k,5)}`;delete BTYPE.type[id];if(PRINTED[id]){PRINTED[nid]=PRINTED[id];delete PRINTED[id];}ch=true;return nid;}return id;});
+  if(ch){saveBT();savePrinted();}}
+const prTxt=id=>{const p=PRINTED[id];if(!p)return '<span class="prd none">—</span>';const d=new Date(p.at);return `<span class="prd" title="Printed ${p.n} time${p.n>1?"s":""} · last ${d.toLocaleString()}${p.who?" by "+p.who:""}">${d.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"})}</span>`;};
+function printLabels(kind,codes){if(!codes.length)return;const old=document.getElementById("printSheet");if(old)old.remove();
+  const tin=kind==="tin",Wi=tin?4:6,sheet=document.createElement("div");sheet.id="printSheet";
+  const css=document.createElement("style");css.id="printCss";css.textContent=`#printSheet{position:fixed;inset:0;z-index:2000;background:#fff;overflow:auto;padding:16px}
+    #printSheet .plbar{position:sticky;top:0;display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:#fff;padding:8px 0 14px;border-bottom:1px solid #E5E7EB;margin-bottom:14px;z-index:1}
+    #printSheet .plgrid{display:flex;flex-wrap:wrap;gap:12px}#printSheet .pllab{width:${Wi}in;max-width:100%;height:1.5in}#printSheet .pllab svg{width:100%;height:100%;display:block}
+    @media print{@page{size:${Wi}in 1.5in;margin:0}body>*:not(#printSheet){display:none!important}#printSheet{position:static;padding:0;overflow:visible}#printSheet .plbar{display:none}#printSheet .plgrid{display:block}
+      #printSheet .pllab{width:${Wi}in;height:1.5in;break-after:page;page-break-after:always}#printSheet .pllab:last-child{break-after:auto;page-break-after:auto}#printSheet .pllab svg rect:first-child{stroke:none}}`;
+  sheet.innerHTML=`<div class="plbar"><b style="font-size:20px">${codes.length.toLocaleString()} ${tin?"tin":"location"} label${codes.length>1?"s":""}</b><span class="label">${Wi} × 1.5 in · one label per page</span><span class="grow"></span><button class="btn" id="plX">✕ Close</button><button class="btn primary" id="plGo">🖨 Print</button></div><div class="plgrid"></div>`;
+  const g=sheet.querySelector(".plgrid");codes.forEach(c=>{const d=document.createElement("div");d.className="pllab";d.appendChild(tin?binLabelSVG(c,420):locLabelSVG(c,600));g.appendChild(d);});
+  document.head.appendChild(css);document.body.appendChild(sheet);
+  const close=()=>{sheet.remove();css.remove();document.removeEventListener("keydown",esc,true);},esc=e=>{if(e.key==="Escape"){e.stopImmediatePropagation();close();}};
+  document.addEventListener("keydown",esc,true);sheet.querySelector("#plX").onclick=close;
+  let marked=false;const mark=()=>{if(marked||!tin)return;marked=true;const at=new Date().toISOString();codes.forEach(id=>{const o=PRINTED[id]||{n:0};PRINTED[id]={n:o.n+1,at,who:WHO||""};});savePrinted();try{drawTins();}catch(e){}};
+  const done=()=>{if(document.body.contains(sheet))close();};
+  sheet.querySelector("#plGo").onclick=()=>{mark();window.addEventListener("afterprint",()=>setTimeout(done,50),{once:true});try{window.print();}catch(e){}setTimeout(done,50);};setTimeout(()=>{try{sheet.querySelector("#plGo").focus();}catch(e){}},50);}
 function locLabelSVG(code,W){W=W||560;const H=W*1.5/6,svg=el("svg",{viewBox:`0 0 ${W} ${H}`,class:"bc-svg loclabel",role:"img","aria-label":`Location label ${code}`,"shape-rendering":"crispEdges"});
   el("rect",{x:1.5,y:1.5,width:W-3,height:H-3,rx:H*.08,fill:"#fff",stroke:"#9CA3AF","stroke-width":2},svg);
   const bx=W*.04,bw=W*.50,bt=H*.13,bh=H*.74,bits=c128bits(code),mw=bw/bits.length;let d="";
@@ -4331,7 +4488,7 @@ function binLabelSVG(code,W){W=W||420;const H=W*1.5/4,svg=el("svg",{viewBox:`0 0
   for(let i=0;i<bits.length;){let j=i;while(j<bits.length&&bits[j]===bits[i])j++;if(bits[i]==="1")d+=`M${bx+i*mw} ${bt}h${(j-i)*mw}v${bh}h${-(j-i)*mw}z`;i=j;}
   el("path",{d,fill:"#000"},svg);
   const num=`#${binNo(code)}`,tw=W*.33,cx=W*.04+tw/2,f1=Math.min(bh*.40,tw/(3*.66)),f2=Math.min(bh*.52,tw/(num.length*.66));
-  txt(svg,cx,bt+f1*.80,"Tin",{"text-anchor":"middle","font-size":f1,"font-weight":800,fill:"#000"});txt(svg,cx,bt+bh-f2*.06,num,{"text-anchor":"middle","font-size":f2,"font-weight":800,fill:"#000"});return svg;}
+  txt(svg,cx,bt+f1*.80,isShipId(code)?"Ship":"Tin",{"text-anchor":"middle","font-size":f1,"font-weight":800,fill:"#000"});txt(svg,cx,bt+bh-f2*.06,num,{"text-anchor":"middle","font-size":f2,"font-weight":800,fill:"#000"});return svg;}
 let TPAGE=0;const TPER=100;
 // hover a small barcode in a table to see a large, scannable version of it
 function bcHover(cell,code,big,sub){let pk=document.getElementById("bcPeek");if(!pk){pk=document.createElement("div");pk.id="bcPeek";pk.hidden=true;document.body.appendChild(pk);}
@@ -4342,56 +4499,85 @@ function bcHover(cell,code,big,sub){let pk=document.getElementById("bcPeek");if(
     document.addEventListener("click",hide,true);document.addEventListener("keydown",hide,true);window.addEventListener("scroll",hide,true);window.addEventListener("blur",hide);
     document.addEventListener("mousemove",e=>{if(!e.target.closest||!e.target.closest(".ttab .bcc"))hide();},true);}}let TSEL=new Set(),TLIST=[],TMSG="",TLAST=null;
 const tinAt=id=>{const loc=binLocOf(id),L=loc&&locFromCode(loc);return L?{...L,loc}:null;};
-function drawTAct(){const bar=document.getElementById("tAct");if(!bar)return;const n=TSEL.size;
+function drawTAct(){const bar=document.getElementById("tAct");if(!bar)return;const n=TSEL.size;document.querySelectorAll("body > #tActMenu, body > #tActShade").forEach(x=>x.remove());
   bar.innerHTML=`<span class="tsel">${n?`<b>${n.toLocaleString()} tin${n>1?"s":""} selected</b>`:"Select tins with the checkboxes — one or many"}</span>
     ${TLIST.length&&n<TLIST.length?`<button class="lnk" id="tSelAll">Select all ${TLIST.length.toLocaleString()} matching</button>`:""}${n?'<button class="lnk" id="tSelNone">Clear selection</button>':""}
     <span class="grow"></span><span class="label">${TMSG}</span>
     <div class="dd"><button class="btn primary" id="tActBtn" ${n?"":"disabled"} aria-haspopup="true" aria-expanded="false">Actions ▾</button>
-      <div class="ddm" id="tActMenu" hidden>
+      <div class="actshade" id="tActShade" hidden></div><div class="ddm actpanel" id="tActMenu" hidden role="dialog" aria-label="Actions">
+        <div class="aph"><div><div class="apt">Actions</div><div class="aps">${n.toLocaleString()} tin${n>1?"s":""} selected</div></div><button class="apx" id="tActX" aria-label="Close">✕</button></div>
         <button data-act="size">Change size…</button><button data-act="on">Turn on</button><button data-act="off">Turn off</button>
-        <button data-act="move" ${n===1?"":"disabled"}>Move to location…</button><button data-act="remove">Remove from shelf</button><hr><button data-act="clear">Clear selection</button></div></div>`;
+        <button data-act="move" ${n===1?"":"disabled"}>Move to location…</button><button data-act="remove">Remove from shelf</button><button data-act="print">🖨 Print label${n>1?`s (${n.toLocaleString()})`:""}</button><hr><button data-act="clear">Clear selection</button></div></div>`;
   const sa=bar.querySelector("#tSelAll");if(sa)sa.onclick=()=>{TLIST.forEach(t=>TSEL.add(t.id));TMSG="";drawTins();};
   const sn=bar.querySelector("#tSelNone");if(sn)sn.onclick=()=>{TSEL.clear();TMSG="";drawTins();};
   const btn=bar.querySelector("#tActBtn"),menu=bar.querySelector("#tActMenu");
-  btn.onclick=e=>{e.stopPropagation();menu.hidden=!menu.hidden;btn.setAttribute("aria-expanded",!menu.hidden);};
-  document.addEventListener("click",()=>{menu.hidden=true;},{once:true});
-  menu.querySelectorAll("[data-act]").forEach(b=>b.onclick=e=>{e.stopPropagation();menu.hidden=true;tinAction(b.dataset.act);});}
+  const shade=bar.querySelector("#tActShade");document.body.appendChild(shade);document.body.appendChild(menu);/* panel lives on the page body so it sits above the top bar */const show=v=>{menu.hidden=!v;shade.hidden=!v;btn.setAttribute("aria-expanded",v);};
+  btn.onclick=e=>{e.stopPropagation();show(menu.hidden);};menu.onclick=e=>e.stopPropagation();shade.onclick=()=>show(false);menu.querySelector("#tActX").onclick=()=>show(false);
+  document.addEventListener("keydown",function k(e){if(e.key==="Escape"&&!menu.hidden){e.stopImmediatePropagation();show(false);}if(!document.body.contains(menu))document.removeEventListener("keydown",k,true);},true);
+  menu.querySelectorAll("[data-act]").forEach(b=>b.onclick=e=>{e.stopPropagation();show(false);tinAction(b.dataset.act);});}
+/* confirm on / off / remove before anything changes: shows which tins and which locations */
+function confirmAct(kind,act,list,go){const old=document.getElementById("actConfirm");if(old)old.remove();
+  const rows=[];list.forEach(x=>{let id,loc,L;
+    if(kind==="tin"){id=String(x);if(id.startsWith("LOC:")){loc=id.slice(4);L=locFromCode(loc);id=L?binIdAt(L.r,L.lv,L.n):null;}else{L=tinAt(id);loc=L?L.loc:null;}}
+    else{loc=x;L=locFromCode(loc);id=L?binIdAt(L.r,L.lv,L.n):null;}
+    let why="";if(act==="remove"){if(!id)why="no tin here";else if(!L)why="not on a shelf";else if(isOcc(L.r,L.lv,L.n))why="holds items";}
+    else if(!L)why="not on a shelf";else if(act==="off"){if(isOcc(L.r,L.lv,L.n))why="holds items";else if(!isBinOn(L.r,L.lv,L.n))why="already off";}
+    else if(act==="on"&&isBinOn(L.r,L.lv,L.n))why="already on";
+    rows.push({id,loc,why});});
+  const ok=rows.filter(r=>!r.why),skip=rows.filter(r=>r.why);
+  const binRanges=arr=>{const ns=[...new Set(arr.filter(r=>r.id).map(r=>binNo(r.id)))].sort((a,b)=>a-b);const out=[];let a=null,b=null;ns.forEach(n=>{if(a===null){a=b=n;}else if(n===b+1)b=n;else{out.push(a===b?`#${a}`:`#${a}–#${b}`);a=b=n;}});if(a!==null)out.push(a===b?`#${a}`:`#${a}–#${b}`);return out;};
+  const locRanges=arr=>{const g={};arr.filter(r=>r.loc).forEach(r=>{const m=/^(A\d+-C\d+)-L(\d+)$/.exec(r.loc);if(!m)return;(g[m[1]]=g[m[1]]||[]).push(+m[2]);});
+    return Object.keys(g).sort().map(k=>{const v=g[k].sort((a,b)=>a-b);const lo=v[0],hi=v[v.length-1];return v.length===1?`${k}-L${pad(lo,2)}`:(hi-lo+1===v.length?`${k} · L${pad(lo,2)}–L${pad(hi,2)}`:`${k} · ${v.map(x=>"L"+pad(x,2)).join(", ")}`);});};
+  const N=ok.length,verb={remove:"Remove",off:"Turn off",on:"Turn on"}[act],what=act==="remove"?`${N.toLocaleString()} tin${N===1?"":"s"} from ${N===1?"its location":"their locations"}`:`${N.toLocaleString()} tin${N===1?"":"s"}`;
+  const br=binRanges(ok),lr=locRanges(ok),more=(a,k)=>a.length>k?a.slice(0,k).join(", ")+` … +${(a.length-k).toLocaleString()} more`:a.join(", ");
+  const w=document.createElement("div");w.className="cupop";w.id="actConfirm";
+  w.innerHTML=`<div class="cubox acbox"><div class="ach ${act}"><b>${verb} ${what}?</b></div>
+    ${N?`<div class="acsum"><div><span>Tins</span><b>${more(br,12)||"—"}</b></div><div><span>Locations</span><b>${more(lr,10)||"—"}</b></div></div>
+    <div class="aclist"><table><thead><tr><th>Tin</th><th>Location</th></tr></thead><tbody>${ok.slice(0,300).map(r=>`<tr><td>${r.id?"#"+binNo(r.id):"—"}</td><td class="mono">${r.loc||"—"}</td></tr>`).join("")}${ok.length>300?`<tr><td colspan="2" class="label">+ ${(ok.length-300).toLocaleString()} more</td></tr>`:""}</tbody></table></div>`:`<p class="label">Nothing to change.</p>`}
+    ${skip.length?`<p class="acskip">${skip.length.toLocaleString()} will be skipped: ${[...new Set(skip.map(r=>r.why))].map(y=>`${skip.filter(r=>r.why===y).length.toLocaleString()} ${y}`).join(" · ")}</p>`:""}
+    ${act==="remove"&&N?`<p class="label">The tins go to <b>Not on a shelf</b> and the locations become empty.</p>`:""}
+    <div class="row acbtns"><button class="btn" id="acX">Cancel</button><button class="btn primary ${act==="remove"?"danger":""}" id="acGo" ${N?"":"disabled"}>${verb} ${N.toLocaleString()} tin${N===1?"":"s"}</button></div></div>`;
+  document.body.appendChild(w);const close=()=>w.remove();w.querySelector("#acX").onclick=close;w.onclick=e=>{if(e.target===w)close();};
+  w.querySelector("#acGo").onclick=()=>{close();go();};setTimeout(()=>{const g=w.querySelector("#acGo");if(g&&!g.disabled)g.focus();},30);}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){const w=document.getElementById("actConfirm");if(w){e.stopImmediatePropagation();w.remove();}}},true);
 function tinAction(act){const ids=[...TSEL];if(!ids.length)return;
+  if(["on","off","remove"].includes(act)&&!tinAction._ok){confirmAct("tin",act,ids,()=>{tinAction._ok=true;try{tinAction(act);}finally{tinAction._ok=false;}});return;}
+  if(act==="print"){printLabels("tin",ids.filter(id=>!String(id).startsWith("LOC:")));return;}
   if(act==="clear"){TSEL.clear();TMSG="";drawTins();return;}
   if(act==="move"){openScan({bin:ids[0]});return;}
   if(act==="size"){const w=document.createElement("div");w.className="cupop";w.id="tSizePop";
-    const opts=[["CU","Custom","1–100"],...Object.keys(SIZES).map(k=>[k,SZ(k).name,SZ(k).slots])];
+    const opts=[["CU","Standard",100],["CX","Custom","1–100"],...Object.keys(SIZES).map(k=>[k,SZ(k).name,SZ(k).slots])];
     w.innerHTML=`<div class="cubox szbox"><div class="szh"><b>Change size</b><span class="szn">${ids.length.toLocaleString()} tin${ids.length>1?"s":""} selected</span></div>
       <div class="szcols"><div><div class="szl">Choose a size</div>
         <div class="szpills">${opts.map(([k,n,c])=>`<button class="szpill${k==="CU"?" on":""}" data-k="${k}" style="--c:${sizeFill(k)}"><b>${n}</b><span>${c} slot${c===1?"":"s"}</span></button>`).join("")}</div></div>
-      <div class="szsum"><div class="szrow"><span>Size</span><b class="szchip" id="tsChip" style="--c:${sizeFill("CU")}">Custom</b></div>
-        <div class="szrow"><span>Slots</span><input type="number" id="tsCap" min="1" max="100" value="100" inputmode="numeric"><button type="button" class="szinf" id="tsInf" aria-pressed="false">∞ No cap</button></div>
-        <div class="szhint" id="tsHint">Type 1–100</div></div></div>
+      <div class="szsum"><div class="szrow"><span>Size</span><b class="szchip" id="tsChip" style="--c:${sizeFill("CU")}">Standard</b></div>
+        <div class="szrow"><span>Slots</span><input type="number" id="tsCap" min="1" max="100" value="100" inputmode="numeric" disabled><button type="button" class="szinf" id="tsInf" aria-pressed="false">∞ No cap</button></div>
+        <div class="szhint" id="tsHint">Standard is always 100 slots</div></div></div>
       <input type="hidden" id="tsSz" value="CU">
-      <ul class="sznote"><li>Tins that are off or hold items are skipped.</li><li>Tins not on a shelf are skipped.</li></ul>
+      <ul class="sznote"><li>Tins that hold items are skipped — a tin with items can't change size.</li><li>Off locations still change size and stay off.</li><li>Tins not on a shelf are skipped.</li></ul>
       <div class="row szbtns"><button class="btn" id="tsX">Cancel</button><button class="btn primary" id="tsGo">Apply to ${ids.length.toLocaleString()} tin${ids.length>1?"s":""}</button></div></div>`;
     document.body.appendChild(w);const sz=w.querySelector("#tsSz"),cap=w.querySelector("#tsCap"),hint=w.querySelector("#tsHint");
     const chip=w.querySelector("#tsChip");
-    const pick=k=>{sz.value=k;w.querySelectorAll(".szpill").forEach(b=>b.classList.toggle("on",b.dataset.k===k));chip.textContent=k==="CU"?"Custom":SZ(k).name;chip.style.setProperty("--c",sizeFill(k));
-      if(k==="CU"){hint.textContent="Type 1–100, or pick No cap";if(!cap.value&&!(typeof INF!=="undefined"&&INF))cap.value=100;}else{cap.value=SZ(k).slots;hint.textContent="Type a number to make it Custom";}};
+    const pick=k=>{sz.value=k;w.querySelectorAll(".szpill").forEach(b=>b.classList.toggle("on",b.dataset.k===k));chip.textContent=kName(k);chip.style.setProperty("--c",sizeFill(k));
+      if(k==="CX"){cap.disabled=false;hint.textContent="Type 1–100, or pick No cap";if(!cap.value)cap.value=100;}else if(k==="CU"){cap.disabled=true;cap.value=100;hint.textContent="Standard is always 100 slots";}else{cap.disabled=false;cap.value=SZ(k).slots;hint.textContent="Type a number to make it Custom";}};
     w.querySelectorAll(".szpill").forEach(b=>b.onclick=()=>pick(b.dataset.k));
     let INF=false;const inf=w.querySelector("#tsInf");
-    const setInf=on=>{INF=on;inf.setAttribute("aria-pressed",on);inf.classList.toggle("on",on);cap.disabled=on;if(on){cap.value="";cap.placeholder="∞";chip.textContent="Custom · no cap";hint.textContent="No cap — the tin takes any number of items";}else{cap.placeholder="";if(!cap.value)cap.value=100;chip.textContent=sz.value==="CU"?"Custom":SZ(sz.value).name;hint.textContent=sz.value==="CU"?"Type 1–100, or pick No cap":"Type a number to make it Custom";}};
-    inf.onclick=()=>{if(!INF){pick("CU");setInf(true);}else setInf(false);};
+    const setInf=on=>{INF=on;inf.setAttribute("aria-pressed",on);inf.classList.toggle("on",on);cap.disabled=on||sz.value==="CU";if(on){cap.value="";cap.placeholder="∞";chip.textContent="Custom · no cap";hint.textContent="No cap — the tin takes any number of items";}else{cap.placeholder="";if(!cap.value)cap.value=100;pick(sz.value);}};
+    inf.onclick=()=>{if(!INF){pick("CX");setInf(true);}else setInf(false);};
     cap.addEventListener("blur",()=>{if(!INF&&!cap.value)cap.value=100;});
     w.querySelectorAll(".szpill").forEach(b=>b.onclick=()=>{if(INF)setInf(false);pick(b.dataset.k);});
-    cap.oninput=()=>{if(sz.value!=="CU"&&+cap.value!==SZ(sz.value).slots)pick("CU");};
+    cap.oninput=()=>{if(sz.value!=="CX"&&sz.value!=="CU"&&+cap.value!==SZ(sz.value).slots)pick("CX");};
     setTimeout(()=>cap.select(),30);
     const close=()=>w.remove();w.querySelector("#tsX").onclick=close;w.onclick=e=>{if(e.target===w)close();};
-    w.querySelector("#tsGo").onclick=()=>{const to=sz.value,cp=INF&&to==="CU"?0:Math.round(+cap.value||100);if(to==="CU"&&!(cp===0||(cp>=1&&cp<=100)))return;const acc={n:0,same:0,off:0,busy:[]};let miss=0;
-      ids.forEach(id=>{const L=String(id).startsWith("LOC:")?locFromCode(id.slice(4)):tinAt(id);if(!L){miss++;return;}sizeTin(L.r,L.lv,L.n,to,to==="CU"?cp:undefined,acc);});saveFroz();save();
-      const lbl=to==="CU"?`Custom ${capTxt(cp)}`:SZ(to).name;SLOG.push({at:new Date().toISOString(),who:WHO||"(name not set)",bin:"Tins list",scope:"all",from:"selection",to:lbl,note:`${acc.n} tins${acc.busy.length?` · ${acc.busy.length} skipped (in use)`:""}`});saveLog();
+    w.querySelector("#tsGo").onclick=()=>{const to=sz.value,cp=INF&&to==="CX"?0:Math.round(+cap.value||100);if(to==="CX"&&!(cp===0||(cp>=1&&cp<=100)))return;const acc={n:0,same:0,off:0,busy:[]};let miss=0;
+      ids.forEach(id=>{const L=String(id).startsWith("LOC:")?locFromCode(id.slice(4)):tinAt(id);if(!L){miss++;return;}sizeTin(L.r,L.lv,L.n,to,to==="CX"?cp:undefined,acc);});saveFroz();save();
+      const lbl=to==="CX"?`Custom ${capTxt(cp)}`:to==="CU"?"Standard 100":SZ(to).name;SLOG.push({at:new Date().toISOString(),who:WHO||"(name not set)",bin:"Tins list",scope:"all",from:"selection",to:lbl,note:`${acc.n} tins${acc.busy.length?` · ${acc.busy.length} skipped (in use)`:""}`});saveLog();
       if(acc.busy.length){acc.busy.slice(0,6).forEach(x=>blockNote(`${x} occupied`));flushBlocked();}
       if(ids.some(x=>String(x).startsWith("LOC:")))LMSG=`<span class="okm">✓ ${acc.n} → ${lbl}${acc.busy.length?` · ${acc.busy.length} in use`:""}</span>`;
-      TMSG=`<span class="okm">✓ ${acc.n} → ${lbl}${acc.same?` · ${acc.same} already`:""}${acc.off?` · ${acc.off} off`:""}${acc.busy.length?` · ${acc.busy.length} in use`:""}${miss?` · ${miss} not on a shelf`:""}</span>`;close();refresh();drawTins();};return;}
+      TMSG=`<span class="okm">✓ ${acc.n} → ${lbl}${acc.same?` · ${acc.same} already`:""}${acc.off?` · ${acc.off} of them off (still off)`:""}${acc.big?` · ${acc.big} too big for their rack`:""}${acc.busy.length?` · ${acc.busy.length} in use`:""}${miss?` · ${miss} not on a shelf`:""}</span>`;close();refresh();drawTins();};return;}
   let n=0,skip=0;
   ids.forEach(id=>{const L=tinAt(id);if(!L){skip++;return;}
-    if(act==="on"){if(!isBinOn(L.r,L.lv,L.n)){if(!isOn(L.r,L.lv)){setOn(L.r,L.lv,true);for(let j=1;j<=PER;j++)if(j!==L.n)setBinOn(L.r,L.lv,j,false);}setBinOn(L.r,L.lv,L.n,true);n++;}}
+    if(act==="on"){if(!isBinOn(L.r,L.lv,L.n)){if(!isOn(L.r,L.lv)){setOn(L.r,L.lv,true);for(let j=1;j<=perOf(L.r);j++)if(j!==L.n)setBinOn(L.r,L.lv,j,false);}setBinOn(L.r,L.lv,L.n,true);n++;}}
     else if(act==="off"){if(isOcc(L.r,L.lv,L.n)){skip++;return;}if(isBinOn(L.r,L.lv,L.n)){setBinOn(L.r,L.lv,L.n,false);n++;}}
     else if(act==="remove"){if(isOcc(L.r,L.lv,L.n)){skip++;return;}rememberSize(id,L.r,L.lv,L.n);BALLOC.byLoc[L.loc]=null;BALLOC.byBin[id]=null;n++;}});
   if(act==="remove")saveAlloc();save();
@@ -4399,33 +4585,35 @@ function tinAction(act){const ids=[...TSEL];if(!ids.length)return;
   TMSG=`<span class="okm">✓ ${n} tin${n===1?"":"s"} ${{on:"turned on",off:"turned off",remove:"removed from shelf"}[act]}${skip?` · ${skip} skipped (in use or not on a shelf)`:""}</span>`;refresh();drawTins();}
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){const w=document.getElementById("tSizePop");if(w){e.stopImmediatePropagation();w.remove();}}},true);
 function tinRows(){if(ROWCACHE.tins)return ROWCACHE.tins;const __r=(()=>{const out=[],seen=new Set();
-  racks.forEach(r=>{for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=PER;n++){const id=binIdAt(r,lv,n);if(!id)continue;seen.add(id);const z=tinSize(r,lv,n),cap=z==="CU"?tinCap(r,lv,n):SZ(z).slots;
-    out.push({id,no:binNo(id),r,lv,n,loc:binCode(r,lv,n),a:aisleOf(r),c:colNo(r,n),z,cap,used:occ(r,lv,n).length,on:isBinOn(r,lv,n)});}});
-  const off=id=>{if(seen.has(id))return;seen.add(id);out.push({id,no:binNo(id),r:null,loc:null,z:null,cap:null,used:0,on:false});}; // off a shelf = no size
+  racks.forEach(r=>{for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=perOf(r);n++){const id=binIdAt(r,lv,n);if(!id)continue;seen.add(id);const z=tinSize(r,lv,n),cap=z==="CU"?tinCap(r,lv,n):SZ(z).slots;
+    out.push({id,no:binNo(id),r,lv,n,loc:binCode(r,lv,n),a:aisleOf(r),c:colNo(r,n),z,k:dKey(r,lv,n),cap,used:occ(r,lv,n).length,on:isBinOn(r,lv,n)});}});
+  const off=id=>{if(seen.has(id))return;seen.add(id);out.push({id,no:binNo(id),r:null,loc:null,z:null,k:null,cap:null,used:0,on:false});}; // off a shelf = no size
   // any tin with no valid shelf position: removed from a shelf, bumped by a move, or its location was deleted
   Object.keys(BALLOC.byBin).forEach(id=>{const l=binLocOf(id);if(!l||!locFromCode(l))off(id);});
-  GONE.forEach(r=>{for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=PER;n++){const id=defBinId(r,lv,n);const l=BALLOC.byBin[id];if(l===undefined||!l||!locFromCode(l))off(id);}});
-  return out.sort((x,y)=>x.no-y.no);})();return ROWCACHE.tins=__r;}
+  BTYPE.created.forEach(id=>{const l=binLocOf(id);if(!l||!locFromCode(l))off(id);});
+  out.forEach(t=>{t.bt=binType(t.id);});
+  GONE.forEach(r=>{if(r.virt)return;for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=perOf(r);n++){const id=defBinId(r,lv,n);const l=BALLOC.byBin[id];if(l===undefined||!l||!locFromCode(l))off(id);}});
+  out.forEach(t=>{t.bt=binType(t.id);});return out.sort((x,y)=>(x.bt==="ship")-(y.bt==="ship")||x.no-y.no);})();return ROWCACHE.tins=__r;}
 function drawTins(){const tb=document.getElementById("tRows");if(!tb)return;const all=tinRows();
   const as=document.getElementById("tAisle");if(as.options.length<=1)aisleNums().forEach(a=>{const o=document.createElement("option");o.value=a;o.textContent=`Aisle ${a}`;as.appendChild(o);});
-  const q=document.getElementById("tQ").value.trim().toUpperCase(),fz=document.getElementById("tSize").value,fs=document.getElementById("tStat").value,fa=+as.value||0,mn=parseInt(document.getElementById("tMin").value,10),mx=parseInt(document.getElementById("tMax").value,10);
-  {const sig=[DATAV,q,fz,fs,fa,mn,mx,TPAGE,TSEL.size,TMSG].join("|");if(sig===drawTins._sig&&tb.children.length)return;drawTins._sig=sig;} // nothing changed: keep the table as it is
-  const list=all.filter(t=>{if(!isNaN(mn)&&t.no<mn)return false;if(!isNaN(mx)&&t.no>mx)return false;if(q){const m=/^(?:#|BIN-?)?0*(\d+)$/.exec(q);if(m){if(t.no!==+m[1])return false;}else if(!(t.loc&&t.loc.includes(q)))return false;}
-    if(fz&&fs!=="none"&&(fz==="NONE"?t.z!==null:t.z!==fz))return false;if(fa&&t.a!==fa)return false;
-    if(fs==="on"&&!(t.loc&&t.on))return false;if(fs==="used"&&!t.used)return false;if(fs==="off"&&!(t.loc&&!t.on))return false;if(fs==="none"&&t.loc)return false;return true;});
-  const cnt={},onS=all.filter(t=>t.loc).length;all.forEach(t=>{if(t.z)cnt[t.z]=(cnt[t.z]||0)+1;});
+  const q=document.getElementById("tQ").value.trim().toUpperCase(),fz=document.getElementById("tSize").value,fs=document.getElementById("tStat").value,fa=+as.value||0,mn=parseInt(document.getElementById("tMin").value,10),mx=parseInt(document.getElementById("tMax").value,10),ft=document.getElementById("tType").value,fp=document.getElementById("tPrn").value;
+  {const sig=[DATAV,q,fz,fs,fa,mn,mx,ft,fp,TPAGE,TSEL.size,TMSG].join("|");if(sig===drawTins._sig&&tb.children.length)return;drawTins._sig=sig;} // nothing changed: keep the table as it is
+  const list=all.filter(t=>{if(ft&&t.bt!==ft)return false;if(fp&&(fp==="y")!==!!PRINTED[t.id])return false;if(!isNaN(mn)&&t.no<mn)return false;if(!isNaN(mx)&&t.no>mx)return false;if(q){const m=/^(?:#|BIN-?|(SHIP)-?\s*#?)?0*(\d+)$/.exec(q);if(m){if(t.no!==+m[2]||(m[1]&&t.bt!=="ship"))return false;}else if(!(t.loc&&t.loc.includes(q)))return false;}
+    if(fz&&fs!=="none"&&(fz==="NONE"?t.z!==null:t.k!==fz))return false;if(fa&&t.a!==fa)return false;
+    if(fs==="on"&&!(t.loc&&t.on))return false;if(fs==="used"&&!t.used)return false;if(fs==="off"&&!(t.loc&&!t.on))return false;if(fs==="none"&&(t.loc||t.bt==="ship"))return false;return true;});
+  const cnt={},onS=all.filter(t=>t.loc).length,shipN=all.filter(t=>t.bt==="ship").length;all.forEach(t=>{if(t.k)cnt[t.k]=(cnt[t.k]||0)+1;});
   const used=all.filter(t=>t.used).length,off=all.filter(t=>t.loc&&!t.on).length;
   document.getElementById("tSub").textContent=`Every tin in Mt Hood #3 · tins keep their number when they move · click a row to open it`;
   const box=(v,l,c)=>`<div class="ts"${c?` style="border-top:3px solid ${c}"`:""}><b>${v.toLocaleString()}</b><span>${l}</span></div>`;
-  document.getElementById("tStats").innerHTML=box(all.length,"tins")+box(onS,"on a shelf")+box(all.length-onS,"not on a shelf")+box(used,"in use")+box(off,"off")+
-    ["CU","S","M","L","XL"].map(k=>box(cnt[k]||0,k==="CU"?"Custom":SZ(k).name,sizeFill(k))).join("");
+  document.getElementById("tStats").innerHTML=box(all.length,"tins")+box(all.length-shipN,"storage",BTCOL.store)+box(shipN,"shipping",BTCOL.ship)+box(all.filter(t=>PRINTED[t.id]).length,"labels printed","#16A34A")+box(onS,"on a shelf")+box(all.length-onS-shipN,"not on a shelf")+box(used,"in use")+box(off,"off")+
+    ["CU","CX","S","M","L","XL"].map(k=>box(cnt[k]||0,kName(k),sizeFill(k))).join("");
   const pages=Math.max(1,Math.ceil(list.length/TPER));TPAGE=Math.min(TPAGE,pages-1);const page=list.slice(TPAGE*TPER,TPAGE*TPER+TPER);
   document.getElementById("tCount").textContent=`${list.length.toLocaleString()} tin${list.length===1?"":"s"}`;document.getElementById("tPage").textContent=`Page ${TPAGE+1} of ${pages}`;
   document.getElementById("tPrev").disabled=TPAGE===0;document.getElementById("tNext").disabled=TPAGE>=pages-1;
-  tb.innerHTML=page.map((t,i)=>{const st=!t.loc?'<span class="st none">Not on a shelf</span>':!t.on?'<span class="st off">Off</span>':t.used?'<span class="st used">In use</span>':'<span class="st ok">Active</span>';
-    return `<tr data-i="${i}" class="${t.loc?"go":""}${TSEL.has(t.id)?" picked":""}"><td class="cb"><input type="checkbox" data-pick="${t.id}" ${TSEL.has(t.id)?"checked":""} aria-label="Select tin #${t.no}"></td><td><b>#${t.no}</b></td><td class="bcc"></td><td class="mono">${t.loc||"—"}</td><td>${t.loc?t.a:"—"}</td><td>${t.loc?t.c:"—"}</td><td>${t.loc?t.lv:"—"}</td>
-      <td>${t.z?`<span class="szp" style="--c:${sizeFill(t.z)}">${t.z==="CU"?"Custom":SZ(t.z).name}</span>`:"—"}</td><td>${t.cap==null?"—":capTxt(t.cap)}</td><td>${t.loc?t.used:"—"}</td><td>${st}</td>
-      <td><button class="btn sm" data-mv="${t.id}">${t.loc?"Move":"Allocate"}</button></td></tr>`;}).join("")||'<tr><td colspan="12" class="label" style="padding:18px">No tins match.</td></tr>';
+  tb.innerHTML=page.map((t,i)=>{const st=t.bt==="ship"&&!t.loc?'<span class="st ship">Shipping tin</span>':!t.loc?'<span class="st none">Not on a shelf</span>':!t.on?'<span class="st off">Off</span>':t.used?'<span class="st used">In use</span>':'<span class="st ok">Active</span>';
+    return `<tr data-i="${i}" class="${t.loc?"go":""}${TSEL.has(t.id)?" picked":""}"><td class="cb"><input type="checkbox" data-pick="${t.id}" ${TSEL.has(t.id)?"checked":""} aria-label="Select tin #${t.no}"></td><td><b>${t.bt==="ship"?"Ship ":""}#${t.no}</b></td><td><span class="btp" style="--c:${BTCOL[t.bt]}">${BTNAME[t.bt]}</span></td><td class="bcc"></td><td class="mono">${t.loc||"—"}</td><td>${t.loc?t.a:"—"}</td><td>${t.loc?t.c:"—"}</td><td>${t.loc?t.lv:"—"}</td>
+      <td>${t.k?`<span class="szp" style="--c:${sizeFill(t.k)}">${kName(t.k)}</span>`:"—"}</td><td>${t.cap==null?"—":capTxt(t.cap)}</td><td>${t.loc?t.used:"—"}</td><td>${st}</td><td>${prTxt(t.id)}</td>
+      <td>${t.bt==="ship"?"":`<button class="btn sm" data-mv="${t.id}">${t.loc?"Move":"Allocate"}</button>`}</td></tr>`;}).join("")||'<tr><td colspan="14" class="label" style="padding:18px">No tins match.</td></tr>';
   TLIST=list;
   {const ap=document.getElementById("tAllPg");ap.checked=page.length>0&&page.every(t=>TSEL.has(t.id));ap.indeterminate=!ap.checked&&page.some(t=>TSEL.has(t.id));ap.onchange=()=>{page.forEach(t=>ap.checked?TSEL.add(t.id):TSEL.delete(t.id));tb.querySelectorAll("[data-pick]").forEach(c=>{c.checked=TSEL.has(c.dataset.pick);c.closest("tr").classList.toggle("picked",c.checked);});drawTAct();};}
   drawTAct();
@@ -4441,31 +4629,58 @@ function drawTins(){const tb=document.getElementById("tRows");if(!tb)return;cons
   tb.addEventListener("mousedown",e=>{if(e.shiftKey&&e.target.closest("td.cb"))e.preventDefault();});
   tb.querySelectorAll("tr[data-i]").forEach(tr=>{const t=page[+tr.dataset.i];tr.querySelector(".bcc").appendChild(barcodeSVG(t.id,{h:26,mod:.9}));bcHover(tr.querySelector(".bcc"),t.id,`Tin #${t.no}`,"Tin label");
     if(t.loc)tr.onclick=e=>{if(e.target.closest("[data-mv]"))return;openBinOnly(t.r,t.lv,t.n);};
-    tr.querySelector("[data-mv]").onclick=e=>{e.stopPropagation();openScan({bin:t.id});};});}
-{const re=()=>{TPAGE=0;TLAST=null;drawTins();};["tQ","tMin","tMax"].forEach(id=>document.getElementById(id).oninput=re);["tSize","tStat","tAisle"].forEach(id=>document.getElementById(id).onchange=re);
-  document.getElementById("tPrev").onclick=()=>{TPAGE--;drawTins();};document.getElementById("tNext").onclick=()=>{TPAGE++;drawTins();};document.getElementById("tScan").onclick=()=>openScan();document.getElementById("tStore").onclick=()=>openStore();}
+    {const mv=tr.querySelector("[data-mv]");if(mv)mv.onclick=e=>{e.stopPropagation();openScan({bin:t.id});};}});}
+{const re=()=>{TPAGE=0;TLAST=null;drawTins();};["tQ","tMin","tMax"].forEach(id=>document.getElementById(id).oninput=re);["tSize","tStat","tAisle","tType","tPrn"].forEach(id=>document.getElementById(id).onchange=re);
+  document.getElementById("tPrev").onclick=()=>{TPAGE--;drawTins();};document.getElementById("tNext").onclick=()=>{TPAGE++;drawTins();};document.getElementById("tScan").onclick=()=>openScan();document.getElementById("tStore").onclick=()=>openStore();
+  // print tins: the selected tins, or every tin the filters show (up to 1,000)
+  const __pb=document.getElementById("tPrintB");if(__pb)__pb.onclick=()=>{const ids=TSEL.size?[...TSEL]:TLIST.map(t=>t.id);
+    if(!ids.length){TMSG="Nothing to print";drawTAct();return;}
+    if(ids.length>1000){TMSG=`${ids.length.toLocaleString()} tins — select tins or narrow the filters to 1,000 or fewer to print`;drawTAct();return;}
+    printLabels("tin",ids.slice().sort((a,b)=>binNo(a)-binNo(b)));};
+  document.getElementById("tMake").onclick=openMakeBins;}
+function openMakeBins(){const old=document.getElementById("tMakePop");if(old)old.remove();
+  let start=nextBinNo();const w=document.createElement("div");w.className="cupop";w.id="tMakePop";let kind="store";
+  const code=n=>kind==="ship"?`SHIP-${pad(n,5)}`:`BIN-${pad(n,5)}`,lab=n=>kind==="ship"?`Ship #${n}`:`#${n}`;
+  w.innerHTML=`<div class="cubox"><b>Create tins</b><p class="label">New tins get the next numbers in order and start off a shelf. Shipping tins have their own count (Ship #1, #2…). Storage tins go on locations with Scan tin → location; shipping tins never go on a shelf.</p>
+    <div class="row"><span class="label">Next tin</span><span class="nb" id="mkNb">#${start}</span><span class="label mono" id="mkCode">BIN-${pad(start,5)}</span></div>
+    <div class="row"><span class="label">Tin type</span><div class="seg2"><button class="btn on" data-k="store">Storage</button><button class="btn" data-k="ship">Shipping</button></div></div>
+    <div class="row"><span class="label">How many</span><input type="number" id="mkN" min="1" max="1000" value="1"><span class="label" id="mkRange"></span></div>
+    <label class="cuchk"><input type="checkbox" id="mkPrint" checked> Print labels when created</label>
+    <div id="mkMsg" class="label"></div><div class="row"><button class="btn" id="mkX">Cancel</button><button class="btn primary" id="mkGo">Create tins</button></div></div>`;
+  document.body.appendChild(w);const close=()=>w.remove();w.querySelector("#mkX").onclick=close;w.onclick=e=>{if(e.target===w)close();};
+  const nIn=w.querySelector("#mkN"),rg=w.querySelector("#mkRange");
+  const upd=()=>{w.querySelector("#mkNb").textContent=lab(start);w.querySelector("#mkCode").textContent=code(start);const n=Math.round(+nIn.value)||0;rg.textContent=n>=1?(n===1?`= ${lab(start)}`:`= ${lab(start)}–#${start+n-1}`):"";};nIn.oninput=upd;upd();
+  w.querySelectorAll(".seg2 button").forEach(b=>b.onclick=()=>{kind=b.dataset.k;start=kind==="ship"?nextShipNo():nextBinNo();w.querySelectorAll(".seg2 button").forEach(x=>x.classList.toggle("on",x===b));upd();});
+  w.querySelector("#mkGo").onclick=()=>{const n=Math.round(+nIn.value);if(!(n>=1&&n<=1000)){w.querySelector("#mkMsg").innerHTML='<span class="err">Enter 1–1,000 tins</span>';return;}
+    const ids=[];for(let i=0;i<n;i++){const id=code(start+i);ids.push(id);BTYPE.created.push(id);}saveBT();
+    SLOG.push({at:new Date().toISOString(),who:WHO||"",rack:"Tins",scope:"all",from:"—",to:`${n} ${BTNAME[kind].toLowerCase()} tin${n>1?"s":""} created`,note:n===1?ids[0]:`${ids[0]} – ${ids[n-1]}`});try{saveLog();}catch(e){}
+    close();document.getElementById("tMin").value=start;document.getElementById("tMax").value=start+n-1;document.getElementById("tType").value=kind;TPAGE=0;TSEL.clear();TMSG=`✓ ${n} ${BTNAME[kind].toLowerCase()} tin${n>1?"s":""} created: ${lab(start)}${n>1?`–#${start+n-1}`:""}`;refresh();drawTins();
+    if(w.querySelector("#mkPrint").checked)printLabels("tin",ids);};
+  setTimeout(()=>nIn.select(),30);}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){const w=document.getElementById("tMakePop");if(w){e.stopImmediatePropagation();w.remove();}}},true);
 document.getElementById("aCreate").onclick=()=>{const next=Math.max(0,...aisleNums())+1;const w=document.createElement("div");w.className="cupop";w.id="aCreatePop";
-  w.innerHTML=`<div class="cubox"><b>Create aisle</b><p class="label">Adds racks that work like the rest: 6 columns × 10 levels each, every tin Custom 100. Odd columns go on the left, even on the right. A created aisle isn't drawn on the overhead map yet.</p>
+  w.innerHTML=`<div class="cubox"><b>Create aisle</b><p class="label">Adds racks of 6 or 8 tins per level × 10 levels, or a custom number. Every location starts empty — scan bins in with Scan bin → location. Odd columns go on the left, even on the right. A created aisle isn't drawn on the overhead map yet.</p>
     <div class="row"><span class="label">Aisle number</span><input type="number" id="caA" min="1" value="${next}"></div>
     <div class="row"><span class="label">Racks on the odd side (left)</span><input type="number" id="caO" min="0" max="20" value="4"></div>
     <div class="row"><span class="label">Racks on the even side (right)</span><input type="number" id="caE" min="0" max="20" value="4"></div>
-    <div class="row"><span class="label">Rack type</span><select id="caT"><option value="comic">Cards</option><option value="std">Watches</option><option value="item">Items</option></select></div>
+    ${rtPick("caR",6)}
     <div id="caMsg" class="label"></div><div class="row"><button class="btn" id="caX">Cancel</button><button class="btn primary" id="caGo">Create aisle</button></div></div>`;
   document.body.appendChild(w);const close=()=>w.remove();w.querySelector("#caX").onclick=close;w.onclick=e=>{if(e.target===w)close();};
-  const go=()=>{const a=+w.querySelector("#caA").value,o=+w.querySelector("#caO").value,e2=+w.querySelector("#caE").value,m=w.querySelector("#caMsg");
+  const per=rtWire(w,"caR");const go=()=>{const a=+w.querySelector("#caA").value,o=+w.querySelector("#caO").value,e2=+w.querySelector("#caE").value,m=w.querySelector("#caMsg");
     if(!(Number.isInteger(a)&&a>=1)){m.innerHTML='<span class="err">Enter an aisle number</span>';return;}if(aisleNums().includes(a)){m.innerHTML=`<span class="err">Aisle ${a} already exists</span>`;return;}
     if(!(o>=0&&e2>=0&&o+e2>=1&&o<=20&&e2<=20)){m.innerHTML='<span class="err">Add at least one rack (up to 20 per side)</span>';return;}
-    CAISLES.push({a,odd:o,even:e2,type:w.querySelector("#caT").value});try{localStorage.setItem(CAKEY,JSON.stringify(CAISLES));}catch(e){}buildCreated();
-    logSize({id:`Aisle ${a}`},{scope:"all",from:"—",to:`Aisle ${a} created`,note:`${o} odd + ${e2} even racks · ${(o+e2)*60} tins Custom 100`});
+    const pr=per();if(!pr){m.innerHTML='<span class="err">Enter tins per level (1–30)</span>';return;}
+    CAISLES.push({a,odd:o,even:e2,type:"comic",per:pr});try{localStorage.setItem(CAKEY,JSON.stringify(CAISLES));}catch(e){}buildCreated();
+    logSize({id:`Aisle ${a}`},{scope:"all",from:"—",to:`Aisle ${a} created`,note:`${o} odd + ${e2} even racks · ${(o+e2)*pr*LEVELS} empty locations · ${pr} tins per level`});
     close();selAisle=a;refresh();drawAisles();};w.querySelector("#caGo").onclick=go;setTimeout(()=>w.querySelector("#caO").focus(),30);};
-document.addEventListener("keydown",e=>{if(e.key==="Escape"){const w=document.getElementById("aCreatePop");if(w){e.stopImmediatePropagation();w.remove();}}},true);
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){const w=document.getElementById("aCreatePop")||document.getElementById("aAddPop");if(w){e.stopImmediatePropagation();w.remove();}}},true);
 // ---------- landing: vault list ----------
 {const rows=[{n:1,name:"Staging",ico:"☺"},{n:2,name:"Davos",ico:"▦"},{n:3,name:"Mt Hood #3",ico:"⛰",setup:true}];
   const draw=()=>{const qn=(document.getElementById("vName").value||"").toLowerCase(),qq=document.getElementById("vNum").value;
     const tb=document.getElementById("vRows");tb.innerHTML="";
     rows.filter(v=>(!qn||v.name.toLowerCase().includes(qn))&&(!qq||String(v.n)===qq)).forEach(v=>{const tr=document.createElement("tr");if(v.setup)tr.className="go";
       let tins=0,sl=0;if(v.setup)racks.forEach(r=>{tins+=activeTins(r);sl+=rackSlots(r);});
-      let locs=0;if(v.setup)racks.forEach(r=>{for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=PER;n++)locs++;});
+      let locs=0;if(v.setup)racks.forEach(r=>{for(let lv=1;lv<=LEVELS;lv++)for(let n=1;n<=perOf(r);n++)locs++;});
       tr.innerHTML=`<td class="c">${v.n}</td><td class="c nm">${v.name}</td><td class="ic"><div class="vico">${v.ico}</div></td><td><div class="blank"></div></td><td><div class="blank"></div></td>
         <td class="c num">${v.setup?racks.length.toLocaleString():""}</td><td class="c num">${v.setup?tins.toLocaleString():""}</td><td class="c num">${v.setup?sl.toLocaleString():""}</td>
         <td class="lbl"><div class="vlabel"><span class="lq"></span><div class="vl"><div class="vl1"><b>#${v.n}</b><span class="vic">${v.ico}</span><span class="vv">Vault</span></div><div class="vl2">${v.name}</div><div class="vl3">Vault</div></div>${v.setup?'<button class="setup sbtn" title="Open Mt Hood #3 setup">Setup</button>':""}</div></td>`;
@@ -4485,5 +4700,11 @@ document.getElementById("scanBtn").onclick=()=>openScan();document.getElementByI
 refresh();setTab(tab);
 })();
 </script>
+<script>/* Return closes the tin pop-up, like Esc — unless you're typing in a box or another pop-up is on top */
+document.addEventListener("keydown",e=>{if(e.key!=="Enter"||e.shiftKey||e.metaKey||e.ctrlKey||e.altKey||e.repeat)return;
+  const m=document.getElementById("modal");if(!m||m.hidden)return;
+  const a=document.activeElement;if(a&&a!==document.body&&a.closest&&(a.closest("input,textarea,select,[contenteditable=true]")||(a.tagName==="BUTTON"&&a.id!=="binX")))return;
+  if(document.querySelector(".cupop,#slotPop,#printSheet,#scanModal:not([hidden]),.scanpop"))return;
+  const x=document.getElementById("binX");if(x&&x.offsetParent!==null){e.preventDefault();e.stopImmediatePropagation();x.click();}},true);</script>
 </body>
 </html>
