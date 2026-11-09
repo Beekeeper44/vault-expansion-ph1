@@ -283,6 +283,16 @@ body.sizelocked .rangebox::after{content:"🔒 Sizes are locked. Unlock to make 
 #tActMenu [data-act]:disabled{opacity:.45;cursor:not-allowed}
 #tActMenu [data-act="remove"]{color:#B91C1C!important}#tActMenu [data-act="remove"]:hover{background:#FEF2F2!important;border-color:#FCA5A5!important}
 #tActMenu hr{border:0;border-top:1px solid #E5E7EB;margin:8px 0}
+#lActMenu.actpanel{position:fixed!important;top:0!important;right:0!important;left:auto!important;bottom:0!important;width:min(420px,92vw)!important;max-height:none!important;height:100vh;margin:0!important;border-radius:0!important;border:0!important;border-left:1px solid #E5E7EB!important;box-shadow:-12px 0 40px rgba(0,0,0,.18)!important;background:#fff!important;z-index:99991!important;padding:20px 20px 28px!important;overflow:auto;display:flex;flex-direction:column;gap:8px}
+#lActMenu.actpanel[hidden]{display:none!important}
+#lActMenu .aph{display:flex;align-items:flex-start;justify-content:space-between;padding:4px 4px 14px;border-bottom:1px solid #E5E7EB;margin-bottom:8px}
+#lActMenu .apt{font-size:24px;font-weight:800;color:#111827}#lActMenu .aps{font-size:16px;color:#4B5563;margin-top:2px}
+#lActMenu .apx{border:1px solid #D1D5DB;background:#fff;border-radius:8px;font-size:18px;width:40px;height:40px;cursor:pointer}
+#lActMenu [data-lact]{display:block!important;width:100%!important;text-align:left!important;font-size:19px!important;font-weight:600!important;padding:15px 18px!important;border:1px solid #E5E7EB!important;border-radius:10px!important;background:#F9FAFB!important;color:#111827!important;cursor:pointer}
+#lActMenu [data-lact]:hover:not(:disabled){background:#EFF6FF!important;border-color:#93C5FD!important;color:#1D4ED8!important}
+#lActMenu [data-lact]:disabled{opacity:.45;cursor:not-allowed}
+#lActMenu [data-lact="remove"]{color:#B91C1C!important}#lActMenu [data-lact="remove"]:hover{background:#FEF2F2!important;border-color:#FCA5A5!important}
+#lActMenu hr{border:0;border-top:1px solid #E5E7EB;margin:8px 0}
 #actConfirm .acbox{width:min(640px,94vw);max-height:88vh;display:flex;flex-direction:column;gap:12px}
 #actConfirm .ach b{font-size:22px}#actConfirm .ach.remove b{color:#B91C1C}
 #actConfirm .acsum{display:grid;gap:8px;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:12px 14px}
@@ -293,6 +303,16 @@ body.sizelocked .rangebox::after{content:"🔒 Sizes are locked. Unlock to make 
 #actConfirm .acskip{background:#FFFBEB;border:1px solid #FCD34D;color:#92400E;border-radius:8px;padding:8px 12px;font-size:15px;margin:0}
 #actConfirm .acbtns{justify-content:flex-end}#actConfirm .btn.danger{background:#DC2626;border-color:#DC2626}#actConfirm .btn.danger:hover{background:#B91C1C}
 #actConfirm .btn{font-size:16px;padding:10px 18px}
+#locSizePop .lsbox{width:min(640px,94vw);display:flex;flex-direction:column;gap:12px}
+#locSizePop .lsh{font-size:26px;font-weight:800}#locSizePop .lsh span{font-size:15px;color:#4B5563;font-weight:600}
+#locSizePop .lsopt{display:flex;align-items:center;justify-content:space-between;border:1px solid #E5E7EB;background:#fff;border-radius:12px;padding:13px 16px;font-size:18px;font-weight:700;cursor:pointer;width:100%;text-align:left}
+#locSizePop .lsopt.on{border-color:#93C5FD;background:#EFF6FF}#locSizePop .lsopt small{font-size:14px;font-weight:600;color:#4B5563}
+#locSizePop .lsopt i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:10px;background:var(--c)}
+#locSizePop .lssum{background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:12px 14px;font-size:15px;line-height:1.6}
+#locSizePop .btn,#tooBig .btn{font-size:17px;padding:11px 20px}
+#tooBig{z-index:100050!important}#tooBig .tbbox{width:min(600px,94vw);border:2px solid #FCA5A5!important;display:flex;flex-direction:column;gap:14px}
+#tooBig .tbh{display:flex;gap:14px;align-items:flex-start}#tooBig .tbi{width:44px;height:44px;border-radius:50%;background:#FEE2E2;color:#B91C1C;font-size:26px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:none}
+#tooBig .tbt{font-size:24px;font-weight:800;color:#B91C1C}#tooBig .tbg{display:grid;grid-template-columns:130px 1fr;gap:8px 14px;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:14px 16px;font-size:17px}#tooBig .tbg span{color:#6B7280}
 </style>
 <style>
 body,button,input,select,textarea,.ttab,.mono,.ttab .mono{font-family:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif!important}
@@ -3399,11 +3419,49 @@ const binType=id=>isShipId(id)?"ship":(BTYPE.type[id]||"store");
 const BTNAME={store:"Storage",ship:"Shipping"},BTCOL={store:"#EA580C",ship:"#5FA55A"};
 const nextShipNo=()=>{let m=0;BTYPE.created.forEach(id=>{if(isShipId(id)){const n=binNo(id);if(n>m)m=n;}});return m+1;};
 const nextBinNo=()=>{let m=0;tinRows().forEach(t=>{if(t.bt!=="ship"&&t.no>m)m=t.no;});Object.keys(BALLOC.byBin).forEach(id=>{if(isShipId(id))return;const n=binNo(id);if(n>m)m=n;});return m+1;};
+/* location size: "Any size" locations take every tin; other sizes take that size or smaller (see SPOT_TAKES) */
+const LAKEY="vault-locany-v1";let LANY={};try{LANY=JSON.parse(localStorage.getItem(LAKEY)||"{}")||{};}catch(e){}
+const saveLany=()=>{ROWCACHE={};DATAV++;try{localStorage.setItem(LAKEY,JSON.stringify(LANY));}catch(e){}};
+const LZ_OPTS=[["ANY","Any size","Any tin fits","#6B7280"],["CU","Standard","Small, Medium + Standard","#2563EB"],["S","Small","Small tins only","#C026D3"],["M","Medium","Small + Medium","#EAB308"],["L","Large","Small, Medium + Large","#92582E"],["XL","X-Large","Small → X-Large","#06B6D4"]];
+const locSizeKey=loc=>{if(LANY[loc])return "ANY";const L=locFromCode(loc);if(!L)return null;return locMax(L.r,L.lv,L.n).k;};
+const ZCOL={S:"#C026D3",M:"#A16207",L:"#92582E",XL:"#0891B2",CU:"#2563EB",CX:"#7C3AED"};
+function showTooBig(id,bs,loc,need){const old=document.getElementById("tooBig");if(old)old.remove();
+  const w=document.createElement("div");w.className="cupop";w.id="tooBig";const fitsIn=Object.keys(SPOT_TAKES).filter(k=>SPOT_TAKES[k].includes(bs.k)).map(kName);const big=`${fitsIn.length?"a "+fitsIn.join(" or ")+" location, or an":"an"} Any size`;
+  w.innerHTML=`<div class="cubox tbbox"><div class="tbh"><div class="tbi">!</div><div><div class="tbt">Tin too big for this location</div><div class="label" style="font-size:16px">Nothing was stored.</div></div></div>
+    <div class="tbg"><span>Tin</span><b>#${binNo(id)} · ${id} · <span style="color:${ZCOL[bs.k]||"#111"}">● ${sizeTxt(bs)}</span></b><span>Location</span><b>${loc} · <span style="color:${ZCOL[need.k]||"#111"}">● ${sizeTxt(need)}</span></b><span>Takes</span><b>${takesTxt(need)} tins</b></div>
+    <div style="font-size:16px;color:#374151">Scan a tin that fits here, or put this ${sizeTxt(bs)} tin in ${big} location.</div>
+    <div class="row" style="justify-content:flex-end"><button class="btn primary" id="tbOk">OK</button></div></div>`;
+  document.body.appendChild(w);const close=()=>w.remove();w.querySelector("#tbOk").onclick=close;w.onclick=e=>{if(e.target===w)close();};setTimeout(()=>w.querySelector("#tbOk").focus(),30);}
+document.addEventListener("keydown",e=>{const w=document.getElementById("tooBig");if(w&&(e.key==="Escape"||e.key==="Enter")){e.preventDefault();e.stopImmediatePropagation();w.remove();}},true);
+function setLocationSize(loc,k){const L=locFromCode(loc);if(!L)return "skip";
+  if(k==="ANY"){LANY[loc]=1;return "ok";}delete LANY[loc];
+  const st=state[L.r.id]=state[L.r.id]||{},key=L.lv+"-"+L.n,o={k,cap:k==="CU"?100:SZ(k).slots},id=binIdAt(L.r,L.lv,L.n);
+  if(!id){if(st._max){delete st._max[key];if(!Object.keys(st._max).length)delete st._max;}const cur=curSize(L.r,L.lv,L.n);if(cur.k!==k)setLocSize(L.r,L.lv,L.n,o);return "ok";}
+  const bs=curSize(L.r,L.lv,L.n);st._max=st._max||{};if(bs.k===k){delete st._max[key];if(!Object.keys(st._max).length)delete st._max;}else st._max[key]=o;
+  return binFits(bs,o)?"ok":"big";}
+function openLocSize(locs){const old=document.getElementById("locSizePop");if(old)old.remove();let pick="CU";
+  const w=document.createElement("div");w.className="cupop";w.id="locSizePop";const N=locs.length;
+  w.innerHTML=`<div class="cubox lsbox"><div class="lsh">Change location size <span>${N.toLocaleString()} location${N>1?"s":""} selected</span></div>
+    <div style="font-size:16px;color:#374151">A location takes tins its size <b>or smaller</b>. A tin that is too big is refused when it's scanned in.</div>
+    <div class="label" style="font-weight:800;letter-spacing:.06em">LOCATION SIZE</div><div style="display:grid;gap:8px">${LZ_OPTS.map(([k,n,d,c])=>`<button class="lsopt" data-k="${k}" style="--c:${c}"><span><i></i>${n}</span><small>${d}</small></button>`).join("")}</div>
+    <div class="lssum" id="lsSum"></div><div class="row" style="justify-content:flex-end;gap:10px"><button class="btn" id="lsX">Cancel</button><button class="btn primary" id="lsGo"></button></div></div>`;
+  document.body.appendChild(w);const close=()=>w.remove();w.querySelector("#lsX").onclick=close;w.onclick=e=>{if(e.target===w)close();};
+  const upd=()=>{w.querySelectorAll(".lsopt").forEach(b=>b.classList.toggle("on",b.dataset.k===pick));const o=LZ_OPTS.find(x=>x[0]===pick);
+    const takes=pick==="ANY"?["S","M","L","XL","CU","CX"]:(SPOT_TAKES[pick]||[]),refused=pick==="ANY"?[]:["S","M","L","XL","CU"].filter(k=>!takes.includes(k));
+    let big=0;if(pick!=="ANY"){const need={k:pick,cap:pick==="CU"?100:SZ(pick).slots};locs.forEach(l=>{const L=locFromCode(l);if(L&&binIdAt(L.r,L.lv,L.n)&&!binFits(curSize(L.r,L.lv,L.n),need))big++;});}
+    w.querySelector("#lsSum").innerHTML=`<b>${o[1]}</b> locations take: ${pick==="ANY"?"every tin":takes.filter(k=>k!=="CX").map(k=>`<b style="color:${ZCOL[k]}">● ${kName(k)}</b>`).join(" &nbsp;")}${refused.length?`<br><span style="color:#B91C1C">Refused:</span> ${refused.map(kName).join(", ")}`:""}${big?`<br><span style="color:#92400E">${big.toLocaleString()} of the ${N.toLocaleString()} already hold a bigger tin — they keep it; nothing is moved.</span>`:""}`;
+    w.querySelector("#lsGo").textContent=`Set ${N.toLocaleString()} location${N>1?"s":""} to ${o[1]}`;};
+  w.querySelectorAll(".lsopt").forEach(b=>b.onclick=()=>{pick=b.dataset.k;upd();});upd();
+  w.querySelector("#lsGo").onclick=()=>{let ok=0,big=0;locs.forEach(l=>{const r=setLocationSize(l,pick);if(r==="ok")ok++;else if(r==="big")big++;});save();saveLany();
+    const o=LZ_OPTS.find(x=>x[0]===pick);SLOG.push({at:new Date().toISOString(),who:WHO||"",rack:"Locations",scope:"all",from:"—",to:`location size → ${o[1]}`,note:`${(ok+big).toLocaleString()} locations`});try{saveLog();}catch(e){}
+    close();LMSG=`✓ ${(ok+big).toLocaleString()} location${ok+big>1?"s":""} set to ${o[1]}${big?` · ${big} still hold a bigger tin`:""}`;refresh();drawLocs();};
+  setTimeout(()=>w.querySelector("#lsGo").focus(),30);}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){const w=document.getElementById("locSizePop");if(w){e.stopImmediatePropagation();w.remove();}}},true);
 function allocate(id,loc){loc=normLoc(loc);const L=locFromCode(loc);if(!L)return {err:`${loc} is not a location label`};id=normBin(id);if(!id)return {err:"That is not a tin barcode (e.g. BIN-00123)"};if(binType(id)==="ship")return {err:`${id} is a shipping tin — shipping tins don't go on a location`};
   if(isOcc(L.r,L.lv,L.n)&&binIdAt(L.r,L.lv,L.n)!==id)return {err:`${loc} holds items in another tin — clear it first`};
   const prev=binLocOf(id),here=binIdAt(L.r,L.lv,L.n);if(prev===loc)return {ok:true,same:true,id,loc};
   const need=locMax(L.r,L.lv,L.n),bs=binSizeOf(id);
-  if(bs&&!binFits(bs,need))return {err:`${id} is a ${sizeTxt(bs)} tin — won't fit in ${loc}, which takes ${takesTxt(need)}`};
+  if(bs&&!LANY[loc]&&!binFits(bs,need)){try{showTooBig(id,bs,loc,need);}catch(e){}return {err:`${id} is a ${sizeTxt(bs)} tin — won't fit in ${loc}, which takes ${takesTxt(need)}`};}
   if(prev){BALLOC.byLoc[prev]=null;}
   if(here&&here!==id){rememberSize(here,L.r,L.lv,L.n);BALLOC.byBin[here]=null;}
   BALLOC.byLoc[loc]=id;BALLOC.byBin[id]=loc;saveAlloc();if(LASTSIZE[id]){delete LASTSIZE[id];saveLast();}
@@ -4422,19 +4480,24 @@ function drawLocs(){const tb=document.getElementById("lRows");if(!tb)return;cons
   tb.querySelectorAll("td.cb").forEach(td=>td.onclick=e=>{if(e.target.tagName!=="INPUT"){e.stopPropagation();const c=td.querySelector("input");c.checked=!c.checked;pickAt(c,e.shiftKey);}});
   tb.querySelectorAll("tr[data-i]").forEach(tr=>{const t=page[+tr.dataset.i];tr.querySelector(".bcc").appendChild(barcodeSVG(t.loc,{h:26,mod:.85}));bcHover(tr.querySelector(".bcc"),t.loc,t.loc,`Location label · Aisle ${t.a} · Column ${t.c} · Level ${t.lv}`);tr.onclick=()=>{openBinOnly(t.r,t.lv,t.n);};});
   drawLAct();}
-function drawLAct(){const bar=document.getElementById("lAct");if(!bar)return;const n=LSEL.size;
+function drawLAct(){const bar=document.getElementById("lAct");if(!bar)return;const n=LSEL.size;document.querySelectorAll("body > #lActMenu, body > #lActShade").forEach(x=>x.remove());
   bar.innerHTML=`<span class="tsel">${n?`<b>${n.toLocaleString()} location${n>1?"s":""} selected</b>`:"Select locations with the checkboxes — click one, or shift-click for a range"}</span>
     ${LLIST.length&&n<LLIST.length?`<button class="lnk" id="lSelAll">Select all ${LLIST.length.toLocaleString()} matching</button>`:""}${n?'<button class="lnk" id="lSelNone">Clear selection</button>':""}
     <span class="grow"></span><span class="label">${LMSG}</span>
-    <div class="dd"><button class="btn primary" id="lActBtn" ${n?"":"disabled"}>Actions ▾</button><div class="ddm" id="lActMenu" hidden>
-      <button data-lact="size">Change size…</button><button data-lact="on">Turn on</button><button data-lact="off">Turn off</button><button data-lact="scan" ${n===1?"":"disabled"}>Scan a tin in…</button><button data-lact="remove">Remove tin</button><button data-lact="print">🖨 Print label${n>1?`s (${n.toLocaleString()})`:""}</button><hr><button data-lact="clear">Clear selection</button></div></div>`;
+    <div class="dd"><button class="btn primary" id="lActBtn" ${n?"":"disabled"}>Actions ▾</button><div class="actshade" id="lActShade" hidden></div><div class="ddm actpanel" id="lActMenu" hidden role="dialog" aria-label="Actions">
+      <div class="aph"><div><div class="apt">Actions</div><div class="aps">${n.toLocaleString()} location${n>1?"s":""} selected</div></div><button class="apx" id="lActX" aria-label="Close">✕</button></div>
+      <button data-lact="locsize">Change location size…</button><button data-lact="size">Change tin size…</button><button data-lact="on">Turn on</button><button data-lact="off">Turn off</button><button data-lact="scan" ${n===1?"":"disabled"}>Scan a tin in…</button><button data-lact="remove">Remove tin</button><button data-lact="print">🖨 Print label${n>1?`s (${n.toLocaleString()})`:""}</button><hr><button data-lact="clear">Clear selection</button></div></div>`;
   const sa=bar.querySelector("#lSelAll");if(sa)sa.onclick=()=>{LLIST.forEach(t=>LSEL.add(t.loc));LMSG="";drawLocs();};
   const sn=bar.querySelector("#lSelNone");if(sn)sn.onclick=()=>{LSEL.clear();LMSG="";drawLocs();};
-  const btn=bar.querySelector("#lActBtn"),menu=bar.querySelector("#lActMenu");btn.onclick=e=>{e.stopPropagation();menu.hidden=!menu.hidden;};document.addEventListener("click",()=>{menu.hidden=true;},{once:true});
-  menu.querySelectorAll("[data-lact]").forEach(b=>b.onclick=e=>{e.stopPropagation();menu.hidden=true;locAction(b.dataset.lact);});}
+  const btn=bar.querySelector("#lActBtn"),menu=bar.querySelector("#lActMenu"),shade=bar.querySelector("#lActShade");document.body.appendChild(shade);document.body.appendChild(menu);
+  const show=v=>{menu.hidden=!v;shade.hidden=!v;btn.setAttribute("aria-expanded",v);};
+  btn.onclick=e=>{e.stopPropagation();show(menu.hidden);};menu.onclick=e=>e.stopPropagation();shade.onclick=()=>show(false);menu.querySelector("#lActX").onclick=()=>show(false);
+  document.addEventListener("keydown",function k(e){if(e.key==="Escape"&&!menu.hidden){e.stopImmediatePropagation();show(false);}if(!document.body.contains(menu))document.removeEventListener("keydown",k,true);},true);
+  menu.querySelectorAll("[data-lact]").forEach(b=>b.onclick=e=>{e.stopPropagation();show(false);locAction(b.dataset.lact);});}
 function locAction(act){const locs=[...LSEL];if(!locs.length)return;
   if(["on","off","remove"].includes(act)&&!locAction._ok){confirmAct("loc",act,locs,()=>{locAction._ok=true;try{locAction(act);}finally{locAction._ok=false;}});return;}
   if(act==="print"){printLabels("loc",locs);return;}
+  if(act==="locsize"){openLocSize(locs);return;}
   if(act==="clear"){LSEL.clear();LMSG="";drawLocs();return;}
   if(act==="scan"){openScan({loc:locs[0]});return;}
   if(act==="size"){const ids=locs.map(l=>binIdAt(locFromCode(l).r,locFromCode(l).lv,locFromCode(l).n)).filter(Boolean);
