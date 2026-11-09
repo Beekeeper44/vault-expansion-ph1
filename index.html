@@ -498,10 +498,10 @@ svg text{font-family:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif
 .btn.done{background:#16A34A!important;border-color:#16A34A!important;color:#fff!important;font-weight:800}.btn.done:hover{background:#15803D!important}
 #aDetail .arange{display:none!important}
 #tSizePop .szbox{width:min(780px,95vw)!important}#tSizePop .szh b{font-size:30px!important}#tSizePop .szn{font-size:18px!important}
-#tSizePop .szl,#tSizePop .szrow>span{font-size:15px!important}
-#tSizePop .szpill{padding:14px 22px!important}#tSizePop .szpill b{font-size:21px!important}#tSizePop .szpill span{font-size:16px!important}
-#tSizePop .szchip{font-size:21px!important;padding:8px 18px}#tSizePop .szsum input{font-size:36px!important;height:68px!important}
-#tSizePop .szhint{font-size:15px!important}#tSizePop ul.sznote{font-size:17px!important}#tSizePop .btn{font-size:19px!important;padding:12px 24px!important}
+#tSizePop .szl,#tSizePop .szrow>span{font-size:18px!important;font-weight:800!important}
+#tSizePop .szpill{padding:14px 22px!important}#tSizePop .szpill b{font-size:23px!important}#tSizePop .szpill span{font-size:21px!important;font-weight:800!important;color:#111827!important}
+#tSizePop .szchip{font-size:21px!important;padding:8px 18px}#tSizePop .szsum input{font-size:46px!important;height:80px!important;font-weight:800!important}
+#tSizePop .szhint{font-size:17px!important}#tSizePop ul.sznote{font-size:17px!important}#tSizePop .btn{font-size:19px!important;padding:12px 24px!important}
 .cupop .szsum input{width:100%!important;height:62px!important;font-size:32px!important;font-weight:800;text-align:center;border:2px solid #D1D5DB!important;border-radius:12px;background:#fff}
 .szhint{font-size:13px;color:var(--muted)}
 .szpill{font:inherit;display:grid;gap:2px;justify-items:center;padding:12px 6px;border-radius:999px;border:2px solid #E5E7EB;background:#fff;color:#111827;cursor:pointer;transition:all .12s}
@@ -4486,7 +4486,7 @@ function drawLAct(){const bar=document.getElementById("lAct");if(!bar)return;con
     <span class="grow"></span><span class="label">${LMSG}</span>
     <div class="dd"><button class="btn primary" id="lActBtn" ${n?"":"disabled"}>Actions ▾</button><div class="actshade" id="lActShade" hidden></div><div class="ddm actpanel" id="lActMenu" hidden role="dialog" aria-label="Actions">
       <div class="aph"><div><div class="apt">Actions</div><div class="aps">${n.toLocaleString()} location${n>1?"s":""} selected</div></div><button class="apx" id="lActX" aria-label="Close">✕</button></div>
-      <button data-lact="locsize">Change location size…</button><button data-lact="size">Change tin size…</button><button data-lact="on">Turn on</button><button data-lact="off">Turn off</button><button data-lact="scan" ${n===1?"":"disabled"}>Scan a tin in…</button><button data-lact="remove">Remove tin</button><button data-lact="print">🖨 Print label${n>1?`s (${n.toLocaleString()})`:""}</button><hr><button data-lact="clear">Clear selection</button></div></div>`;
+      <button data-lact="locsize">Change location size…</button><button data-lact="on">Turn on</button><button data-lact="off">Turn off</button><button data-lact="scan" ${n===1?"":"disabled"}>Scan a tin in…</button><button data-lact="remove">Remove tin</button><button data-lact="print">🖨 Print label${n>1?`s (${n.toLocaleString()})`:""}</button><hr><button data-lact="clear">Clear selection</button></div></div>`;
   const sa=bar.querySelector("#lSelAll");if(sa)sa.onclick=()=>{LLIST.forEach(t=>LSEL.add(t.loc));LMSG="";drawLocs();};
   const sn=bar.querySelector("#lSelNone");if(sn)sn.onclick=()=>{LSEL.clear();LMSG="";drawLocs();};
   const btn=bar.querySelector("#lActBtn"),menu=bar.querySelector("#lActMenu"),shade=bar.querySelector("#lActShade");document.body.appendChild(shade);document.body.appendChild(menu);
