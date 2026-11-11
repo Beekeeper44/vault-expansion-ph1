@@ -346,6 +346,10 @@ svg.mini,svg.mini text{-webkit-user-select:none;user-select:none}
 .mini g.lh.sel rect,.mini g.ch.sel rect{fill:#DBEAFE!important;stroke:#1D4ED8!important;stroke-width:2.5!important}.mini g.lh.sel text,.mini g.ch.sel text{fill:#1D4ED8!important}
 #hdrHint{pointer-events:none;position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:900;background:#111827;color:#fff;border-radius:14px;padding:12px 16px 12px 20px;font-size:17px;display:flex;align-items:center;gap:14px;box-shadow:0 12px 30px rgba(0,0,0,.25)}
 #hdrHint span{color:#D1D5DB;font-size:15px}#hdrHint span b{color:#fff}#hdrHint button{pointer-events:auto;background:#374151;color:#fff;border:0;border-radius:8px;width:32px;height:32px;font-size:16px;cursor:pointer}
+#phaseNote{position:fixed;top:58px;right:24px;z-index:950;background:#065F46;color:#fff;border-radius:12px;padding:12px 18px;font-size:17px;box-shadow:0 10px 26px rgba(0,0,0,.25)}
+html:not(.ph2) #tabBins,html:not(.ph2) #tabMap,html:not(.ph2) .rcard .open[data-open]{display:none!important}
+#tabBins::after,#tabMap::after,.rcard .open[data-open]::after{display:none!important}
+.dqtabs{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 6px}.dqtabs .btn{font-size:15px;padding:7px 14px}.dqtabs .btn.on{background:#7C3AED;color:#fff;border-color:#7C3AED}
 </style>
 <style>
 body,button,input,select,textarea,.ttab,.mono,.ttab .mono{font-family:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif!important}
@@ -563,7 +567,7 @@ svg text{font-family:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif
 </head>
 <body>
 <nav class="anav" aria-label="Admin"><span class="logo">ARENA</span><a>Grading</a><a>Operations</a><span class="navdd"><a class="on" id="navVault" aria-haspopup="true" aria-expanded="false">Vaulting</a>
-    <div class="navmenu" id="navMenu" hidden><a>Office Checkout</a><a>Vault Check In</a><a>Vault Retrieval</a><a>Revault Items</a><a id="navVaults" class="cur">Vaults</a><a>Shelves</a><a>Tins</a><a>Boxes</a><a>Protectors</a></div></span><a>Packs</a><a>Tasks</a><a>Orders</a><a>Cards</a><a>Users</a><a>Items</a><a>Graders</a><a>Create Admin</a><span class="grow"></span><span class="phase" id="phaseSeg" role="group" aria-label="Fit rules" title="Phase 1: a tin only goes in a spot of its own size. Phase 2: smaller tins fit bigger spots — Small fits every spot, each size up fits one fewer."><button data-p="1">Phase 1</button><button data-p="2">Phase 2</button></span><span class="who">alan4 <span class="pillb">Log Out</span><span class="pillg">Start Work</span></span></nav>
+    <div class="navmenu" id="navMenu" hidden><a>Office Checkout</a><a>Vault Check In</a><a>Vault Retrieval</a><a>Revault Items</a><a id="navVaults" class="cur">Vaults</a><a>Shelves</a><a>Tins</a><a>Boxes</a><a>Protectors</a></div></span><a>Packs</a><a>Tasks</a><a>Orders</a><a>Cards</a><a>Users</a><a>Items</a><a>Graders</a><a>Create Admin</a><span class="grow"></span><span class="phase" id="phaseSeg" role="group" aria-label="Fit rules" title="Phase 1: every location is Standard — it fits all tins and sizes. Phase 2 adds location sizes (each location takes its own size and smaller), Detail view and Overhead map."><button data-p="1">Phase 1</button><button data-p="2">Phase 2</button></span><span class="who">alan4 <span class="pillb">Log Out</span><span class="pillg">Start Work</span></span></nav>
 <section id="landing" aria-label="Vaults">
   <h1>Vaults</h1>
   <div class="lf"><label>Authentication Status<select><option>ANY</option></select></label><label>Status<select><option>ANY</option></select></label><label>Name<input id="vName"></label><label>#<input id="vNum"></label><button class="search" id="vSearch">Search</button></div>
@@ -3212,6 +3216,10 @@ function openHist(kind,key,alt){const old=document.getElementById("histPop");if(
   const close=()=>{w.remove();document.removeEventListener("keydown",esc,true);},esc=e=>{if(e.key==="Escape"){e.preventDefault();e.stopImmediatePropagation();close();}};
   document.addEventListener("keydown",esc,true);w.onclick=e=>{if(e.target===w)close();};draw();host.appendChild(w);}
 const DEMO_ITEM="ITEM-DEMO-0001";
+/* demo item codes for testing — a fresh code every time, by item type */
+const DEMO_TYPES=[["WATCH","⌚","Watch"],["COMIC","📚","Comic"],["BAG","👜","Bag"]];
+const newDemoCode=t=>`${t}-${Date.now().toString(36).slice(-4).toUpperCase()}${Math.floor(Math.random()*1296).toString(36).toUpperCase().padStart(2,"0")}`;
+const itemTypeTxt=c=>{const d=DEMO_TYPES.find(x=>String(c||"").startsWith(x[0]+"-"));return d?`${d[1]} ${d[2]} · `:"";};
 // reusable camera reader: built-in BarcodeDetector where the browser has one, otherwise the open-source ZXing reader
 function startScanner(vid,onCode,onMsg){let stream=null,raf=0,zx=null,stopped=false;
   const stop=()=>{stopped=true;cancelAnimationFrame(raf);if(zx){try{zx.reset();}catch(e){}zx=null;}if(stream){stream.getTracks().forEach(t=>t.stop());stream=null;}};
@@ -3533,13 +3541,16 @@ const sizeTxt=o=>o.k==="CX"?`Custom ${capTxt(o.cap)}`:kName(o.k);
 // Custom tins fit a Custom spot with the same or more slots, or a Standard spot if they have 100 or fewer.
 // Phase toggle (top bar): Phase 1 = a tin only goes in a spot of its own size. Phase 2 = smaller tins fit bigger spots:
 // Small fits every spot, and each size up fits one fewer — Medium → M, L, XL, Standard · Large → L, XL · X-Large → XL only.
-var PHASE=1;try{PHASE=+localStorage.getItem("vault-phase")===2?2:1;}catch(e){}
-const SPOT_TAKES={S:["S"],M:["S","M","CU"],L:["S","M","L","CU"],XL:["S","M","L","XL","CU"],CU:["S","M","CU"],CX:["S"]};/* Standard tins fit Medium, Large and X-Large spots */
+var PHASE=1;try{PHASE=+localStorage.getItem("vault-phase")===2?2:1;}catch(e){}document.documentElement.classList.toggle("ph2",PHASE===2);/* Detail view + Overhead map are Phase 2 */
+const SPOT_TAKES={S:["S"],M:["S","M"],L:["S","M","L"],XL:["S","M","L","XL"],CU:["S","M","L","XL","CU"],CX:["S","M","L","XL","CU","CX"]};/* each location takes its own size and everything smaller; Standard takes Small→Standard; Custom takes every tin */
 const binFits=(bs,need)=>{
-  if(PHASE===1)return (bs.k==="CU"&&["M","L","XL"].includes(need.k))||(bs.k===need.k&&(need.k!=="CX"||need.cap===0||bs.cap===need.cap));/* Standard tins also fit Medium, Large and X-Large spots */
-  if(need.k==="CX")return (bs.k==="CX"&&(need.cap===0||(bs.cap!==0&&bs.cap<=need.cap)))||bs.k==="S";if(bs.k==="CX")return need.k==="CU"&&bs.cap!==0&&bs.cap<=100;return (SPOT_TAKES[need.k]||[]).includes(bs.k);};
+  if(PHASE===1)return true;/* Phase 1: no location sizes — a location takes whatever tin is scanned in *//* Standard tins also fit Medium, Large and X-Large spots */
+  if(need.k==="CX")return true;if(bs.k==="CX")return false;return (SPOT_TAKES[need.k]||[]).includes(bs.k);};
 const takesTxt=need=>PHASE===1?(need.k==="CX"?`Custom ${capTxt(need.cap)} only`:["M","L","XL"].includes(need.k)?`${sizeTxt(need)} or Standard`:`${sizeTxt(need)} only`):need.k==="CX"?`Custom ${capTxt(need.cap)} or fewer slots, or Small`:need.k==="CU"?"Standard, Medium or Small":["M","L","XL"].includes(need.k)?`${sizeTxt(need)} or smaller, or Standard`:`${sizeTxt(need)} or smaller`;
-function setPhase(p){PHASE=p===2?2:1;try{localStorage.setItem("vault-phase",String(PHASE));}catch(e){}document.querySelectorAll("#phaseSeg button").forEach(b=>b.setAttribute("aria-pressed",+b.dataset.p===PHASE));ROWCACHE={};DATAV++;try{refresh();}catch(e){}try{if(selRack&&selLv&&selTin)drawBin();}catch(e){}}
+function setPhase(p){const was=PHASE;PHASE=p===2?2:1;document.documentElement.classList.toggle("ph2",PHASE===2);
+  if(PHASE===1){const t=document.querySelector("#tabBins[aria-selected=true],#tabMap[aria-selected=true]");if(t){const a=document.getElementById("tabAisles");if(a)a.click();}}
+  if(PHASE===2&&was!==2){let n=document.getElementById("phaseNote");if(!n){n=document.createElement("div");n.id="phaseNote";document.body.appendChild(n);}n.innerHTML="<b>Phase 2</b> adds location sizes (smaller tins fit bigger locations), Detail view and Overhead map.";clearTimeout(window.PNT);window.PNT=setTimeout(()=>{const x=document.getElementById("phaseNote");if(x)x.remove();},4500);}
+  else{const x=document.getElementById("phaseNote");if(x)x.remove();}try{localStorage.setItem("vault-phase",String(PHASE));}catch(e){}document.querySelectorAll("#phaseSeg button").forEach(b=>b.setAttribute("aria-pressed",+b.dataset.p===PHASE));ROWCACHE={};DATAV++;try{refresh();}catch(e){}try{if(selRack&&selLv&&selTin)drawBin();}catch(e){}}
 {const ps=document.getElementById("phaseSeg");if(ps){ps.querySelectorAll("button").forEach(b=>{b.setAttribute("aria-pressed",+b.dataset.p===PHASE);b.onclick=()=>setPhase(+b.dataset.p);});}}
 const curSize=(r,lv,n)=>{const z=tinSize(r,lv,n);return {k:dKey(r,lv,n),cap:z==="CU"?tinCap(r,lv,n):SZ(z).slots};};
 // a location remembers its own (largest) size while a smaller bin sits in it
@@ -4104,24 +4115,26 @@ function drawBin(){stopSlotCam();
       d.innerHTML=`<div class="slothead"><b>Slot location</b><button class="btn" id="slotX" aria-label="Close slot">×</button></div>
         <div class="slotgrid">
           <div class="sgh">Location</div>
-          <span>Aisle</span><b>${aisleOf(r)}</b><div class="sbcell" style="grid-row:span 3"><div class="sloc"></div></div>
+          <span>Aisle</span><b>${aisleOf(r)}</b><div class="sbcell" style="grid-row:span 4"><div class="sloc"></div></div>
+          <span>Bay</span><b>${bayOf(r)}</b>
           <span>Column</span><b>${colNo(r,n)}</b>
           <span>Level</span><b>${lv}</b>
           <div class="sgh">Tin</div>
           <span>Tin</span><b>${bid?`#${binNo(bid)}`:"—"}</b><div class="sbcell"><div class="sbc2">${bid?"":'<span class="label">No tin here</span>'}</div></div>
           <div class="sgh"></div>
           <span>Slot</span><b>${k}</b><div class="sbcell"><em>assigned by the system</em></div>
-          <span>Item</span><b class="itemcode" style="grid-column:2/4">${bid&&ITEMS[bid+"|"+k]?ITEMS[bid+"|"+k]:"—"}</b>
+          <span>Item</span><b class="itemcode" style="grid-column:2/4">${bid&&ITEMS[bid+"|"+k]?itemTypeTxt(ITEMS[bid+"|"+k])+ITEMS[bid+"|"+k]:"—"}</b>
         </div>
         <div class="cam" id="slCamBox" hidden><video id="slVid" playsinline muted autoplay></video><div class="camaim"></div><div class="camstep" id="slStep"></div></div>
         <div class="row"><button class="btn primary" id="slCam" ${bid?"":"disabled"}>📷 Scan to place item</button><span class="label" id="slMsg">${bid?"Scan the tin or location label, then the item's QR code":"Put a tin here first"}</span></div>
-        <details class="demoqr"><summary>Demo item QR — scan this to test</summary><div class="dq"><div id="dqImg"></div><div><b>${DEMO_ITEM}</b><br><span class="label">Any QR or barcode that isn't a tin or location label is read as an item.</span></div></div></details>
+        <details class="demoqr"><summary>Test item QR codes — watch, comic, bag</summary><div class="dqtabs">${DEMO_TYPES.map(([k,e,n],i)=>`<button class="btn${i===0?" on":""}" data-dq="${k}">${e} ${n}</button>`).join("")}<button class="btn" id="dqNew">↻ New code</button></div><div class="dq"><div id="dqImg"></div><div><b id="dqCode"></b><br><span class="label">A new code every time — scan it as the item. Any QR or barcode that isn't a tin or location label is read as an item.</span></div></div></details>
         <div class="row"><span class="${on?"occ-on":"occ-off"}">${on?"● Occupied":"○ Empty"}</span><span class="grow"></span><button class="btn" id="slotToggle">${on?"Clear slot (demo)":"Mark occupied (demo)"}</button></div>`;
       {const tag=(t,cap)=>{const W=420,H=118,q=26,bits=c128bits(t),mw=(W-2*q)/bits.length,svg=el("svg",{viewBox:`0 0 ${W} ${H}`,class:"bc-svg tagsvg",role:"img","aria-label":`Barcode ${t}`,"shape-rendering":"crispEdges"});
         el("rect",{x:1.5,y:1.5,width:W-3,height:H-3,rx:12,fill:"#fff",stroke:"#9CA3AF","stroke-width":2},svg);let d="";for(let i=0;i<bits.length;){let j=i;while(j<bits.length&&bits[j]===bits[i])j++;if(bits[i]==="1")d+=`M${q+i*mw} 14h${(j-i)*mw}v64h${-(j-i)*mw}z`;i=j;}
         el("path",{d,fill:"#000"},svg);txt(svg,W/2,104,cap,{"text-anchor":"middle","font-size":24,"font-weight":800,"font-family":"ui-monospace,Menlo,monospace",fill:"#000"});return svg;};
       d.querySelector(".sloc").appendChild(locLabelSVG(binCode(r,lv,n),560));if(bid)d.querySelector(".sbc2").appendChild(binLabelSVG(bid,420));}
-      d.querySelector("#dqImg").appendChild(qrSVG(DEMO_ITEM,150));
+      {let dqT="WATCH";const dqDraw=()=>{const c=newDemoCode(dqT),img=d.querySelector("#dqImg");img.innerHTML="";img.appendChild(qrSVG(c,150));d.querySelector("#dqCode").textContent=c;d.querySelectorAll("[data-dq]").forEach(b=>b.classList.toggle("on",b.dataset.dq===dqT));};
+        d.querySelectorAll("[data-dq]").forEach(b=>b.onclick=e=>{e.preventDefault();dqT=b.dataset.dq;dqDraw();});d.querySelector("#dqNew").onclick=e=>{e.preventDefault();dqDraw();};dqDraw();}
       {const vid=d.querySelector("#slVid"),box=d.querySelector("#slCamBox"),msg=d.querySelector("#slMsg"),step=d.querySelector("#slStep"),btn=d.querySelector("#slCam"),here=binCode(r,lv,n);
         let ok=false,last="",lastAt=0;const say=(t,bad)=>{msg.innerHTML=bad?`<span class="err">${t}</span>`:t;};
         const setStep=()=>{step.textContent=ok?`Tin #${binNo(bid)} ✓ — now scan the item's QR code`:`Scan Tin #${binNo(bid)} or the ${shortLoc(here)} label`;};
@@ -4481,8 +4494,8 @@ function miniRack(r){const NL=lvOf(r),W=Math.max(386,64+perOf(r)*54),lx=50,top=4
   for(let lv=1;lv<=NL;lv++){const y=top+(NL-lv)*rh;const lon=levelOn(r,lv);o+=`<g class="lh" data-r="${r.id}" data-lv="${lv}" style="cursor:pointer"><title>Level ${lv} — click to turn ${lon?"off":"on"}</title><rect x="20" y="${y+3}" width="26" height="${rh-6}" rx="4" fill="${lon?"#F3F4F6":"#FEE2E2"}" stroke="${lon?"#E5E7EB":"#FCA5A5"}"/><text x="33" y="${y+rh/2+4}" text-anchor="middle" font-size="12" font-weight="800" fill="${lon?"#374151":"#B91C1C"}">${lv}</text></g>`;
     for(let n=1;n<=perOf(r);n++){const x=lx+(n-1)*cw,on=isBinOn(r,lv,n),z=tinSize(r,lv,n),dk=dKey(r,lv,n),id=binIdAt(r,lv,n),oc=occ(r,lv,n).length,cap=z==="CU"?tinCap(r,lv,n):SZ(z).slots;
       const fill=!on?"#FEE2E2":sizeFill(dk),txtc=!on?"#B91C1C":!id?sizeFill(dk):"#fff";const lm=locMax(r,lv,n),lk=lm.k==="CU"&&lm.cap!==100?"CX":lm.k;/* dashed ring = the location's own size */
-      o+=`<g class="c" data-r="${r.id}" data-lv="${lv}" data-n="${n}"><title>Aisle ${aisleOf(r)} · Column ${colNo(r,n)} · Level ${lv}${id?` · Tin #${binNo(id)}${extOf(binCode(r,lv,n)).length?` + ${extOf(binCode(r,lv,n)).map(x=>"#"+binNo(x)).join(", ")} sharing`:""}`:" · empty"}${on?"":" · OFF"} · ${z==="CU"?cuL(dk==="CX",cap):SZ(z).name} · Location: ${kName(lk)}</title>
-        <rect class="lz" x="${x+.6}" y="${y+.6}" width="${cw-1.2}" height="${rh-1.2}" rx="4" fill="none" stroke="${sizeFill(lk)}" stroke-width="1.8" stroke-dasharray="4 2.5"/>
+      o+=`<g class="c" data-r="${r.id}" data-lv="${lv}" data-n="${n}"><title>Aisle ${aisleOf(r)} · Column ${colNo(r,n)} · Level ${lv}${id?` · Tin #${binNo(id)}${extOf(binCode(r,lv,n)).length?` + ${extOf(binCode(r,lv,n)).map(x=>"#"+binNo(x)).join(", ")} sharing`:""}`:" · empty"}${on?"":" · OFF"} · ${z==="CU"?cuL(dk==="CX",cap):SZ(z).name}${PHASE===2?` · Location: ${kName(lk)}`:" · Location: Standard — fits all tins and sizes"}</title>
+        ${PHASE===2?`<rect class="lz" x="${x+.6}" y="${y+.6}" width="${cw-1.2}" height="${rh-1.2}" rx="4" fill="none" stroke="${sizeFill(lk)}" stroke-width="1.8" stroke-dasharray="4 2.5"/>`:""}
         <rect class="b" x="${x+3}" y="${y+3}" width="${cw-6}" height="${rh-6}" rx="3" fill="${fill}" fill-opacity="${on&&!id?.1:1}" stroke="${!on?"#FCA5A5":"none"}" stroke-width="1" stroke-dasharray="0"/>
         <text x="${x+cw/2}" y="${y+rh/2+4}" text-anchor="middle" font-size="10.5" font-weight="700" fill="${txtc}">${!on?"OFF":id?`#${binNo(id)}${extOf(binCode(r,lv,n)).length?` +${extOf(binCode(r,lv,n)).length}`:""}`:"empty"}</text>
         ${oc?`<circle cx="${x+cw-8}" cy="${y+8}" r="5" fill="#DC2626"/>`:""}</g>`;}}
@@ -4667,7 +4680,7 @@ function drawLAct(){const bar=document.getElementById("lAct");if(!bar)return;con
     <span class="grow"></span><span class="label">${LMSG}</span>
     <div class="dd"><button class="btn primary" id="lActBtn" ${n?"":"disabled"}>Actions ▾</button><div class="actshade" id="lActShade" hidden></div><div class="ddm actpanel" id="lActMenu" hidden role="dialog" aria-label="Actions">
       <div class="aph"><div><div class="apt">Actions</div><div class="aps">${n.toLocaleString()} location${n>1?"s":""} selected</div></div><button class="apx" id="lActX" aria-label="Close">✕</button></div>
-      <button data-lact="locsize">Change location size…</button><button data-lact="on">Turn on</button><button data-lact="off">Turn off</button><button data-lact="scan" ${n===1?"":"disabled"}>Scan a tin in…</button><button data-lact="remove">Remove tin</button><button data-lact="print">🖨 Print label${n>1?`s (${n.toLocaleString()})`:""}</button><hr><button data-lact="clear">Clear selection</button></div></div>`;
+      ${PHASE===2?`<button data-lact="locsize">Change location size…</button>`:""}<button data-lact="on">Turn on</button><button data-lact="off">Turn off</button><button data-lact="scan" ${n===1?"":"disabled"}>Scan a tin in…</button><button data-lact="remove">Remove tin</button><button data-lact="print">🖨 Print label${n>1?`s (${n.toLocaleString()})`:""}</button><hr><button data-lact="clear">Clear selection</button></div></div>`;
   const sa=bar.querySelector("#lSelAll");if(sa)sa.onclick=()=>{LLIST.forEach(t=>LSEL.add(t.loc));LMSG="";drawLocs();};
   const sn=bar.querySelector("#lSelNone");if(sn)sn.onclick=()=>{LSEL.clear();LMSG="";drawLocs();};
   const btn=bar.querySelector("#lActBtn"),menu=bar.querySelector("#lActMenu"),shade=bar.querySelector("#lActShade");document.body.appendChild(shade);document.body.appendChild(menu);
@@ -4692,16 +4705,16 @@ function openRowPick(o){const old=document.getElementById("rowPick");if(old)old.
   const now=Object.keys(sizes).map(k=>`${k}${Object.keys(sizes).length>1?` ×${sizes[k]}`:""}`).join(", ");
   const w=document.createElement("div");w.className="cupop";w.id="rowPick";
   w.innerHTML=`<div class="cubox rpbox"><div class="rph"><b>${o.title}</b><span>${o.sub}</span></div>
-    <div class="rpinfo"><span class="label">Locations</span>&nbsp; <b>${o.range}</b> &nbsp;·&nbsp; <span class="label">Now</span> <b>${now||"—"}</b> · <b style="color:${o.on?"#15803D":"#B91C1C"}">${o.on?"Active":"Off"}</b>${offN&&o.on?` <span class="label">(${offN} off)</span>`:""}</div>
+    <div class="rpinfo"><span class="label">Locations</span>&nbsp; <b>${o.range}</b> &nbsp;·&nbsp; ${PHASE===2?`<span class="label">Now</span> <b>${now||"—"}</b> · `:`<span class="label">Location</span> <b>Standard</b> <span class="label">— fits all tins and sizes</span> · `}<b style="color:${o.on?"#15803D":"#B91C1C"}">${o.on?"Active":"Off"}</b>${offN&&o.on?` <span class="label">(${offN} off)</span>`:""}</div>
     <div class="rpq">WHAT DO YOU WANT TO DO?</div>
-    <button class="rpc" id="rpSize" style="--b:#93C5FD;--g:#EFF6FF"><em>📐</em><span><b>Change location size…</b><small>Pick the size these ${o.locs.length} locations take — Small, Medium, Large, X-Large, Standard or Custom</small></span></button>
+    <button class="rpc" id="rpSize" style="--b:#93C5FD;--g:#EFF6FF" ${PHASE===2?"":"hidden"}><em>📐</em><span><b>Change location size…</b><small>Pick the size these ${o.locs.length} locations take — Small, Medium, Large, X-Large, Standard or Custom</small></span></button>
     <button class="rpc" id="rpBin" style="--b:#C4B5FD;--g:#F5F3FF" ${o.locs.some(l=>{const L=locFromCode(l);return L&&binIdAt(L.r,L.lv,L.n);})?"":"disabled"}><em>📦</em><span><b>Change tin size…</b><small>${(()=>{const n=o.locs.filter(l=>{const L=locFromCode(l);return L&&binIdAt(L.r,L.lv,L.n);}).length;return n?`Resize the ${n} tin${n>1?"s":""} sitting in these locations — tins holding items are skipped`:"No tins in these locations yet";})()}</small></span></button>
     <button class="rpc" id="rpTog" style="--b:${o.on?"#FCA5A5":"#86EFAC"};--g:${o.on?"#FEF2F2":"#F0FDF4"}"><em>⏻</em><span><b>${o.on?"Turn off":"Turn on"} ${o.what}</b><small>${o.on?`All ${o.locs.length} locations — tins there stop taking items`:`All ${o.locs.length} locations take items again`}</small></span></button>
     <div class="row" style="justify-content:flex-end"><button class="btn" id="rpX">Cancel</button></div></div>`;
   document.body.appendChild(w);const close=()=>{w.remove();document.removeEventListener("keydown",esc,true);},esc=e=>{if(e.key==="Escape"){e.preventDefault();e.stopImmediatePropagation();close();}};
   document.addEventListener("keydown",esc,true);w.onclick=e=>{if(e.target===w)close();};w.querySelector("#rpX").onclick=close;
   w.querySelector("#rpSize").onclick=()=>{close();openLocSize(o.locs);};w.querySelector("#rpBin").onclick=()=>{const ids=o.locs.map(l=>{const L=locFromCode(l);return L?binIdAt(L.r,L.lv,L.n):null;}).filter(Boolean);if(!ids.length)return;close();const keep=new Set(TSEL);TSEL.clear();ids.forEach(id=>TSEL.add(id));try{tinAction("size");}finally{TSEL.clear();keep.forEach(id=>TSEL.add(id));}};w.querySelector("#rpTog").onclick=()=>{close();o.toggle();};
-  setTimeout(()=>w.querySelector("#rpSize").focus(),30);}
+  setTimeout(()=>{const f=w.querySelector(PHASE===2?"#rpSize":"#rpBin");if(f)f.focus();},30);}
 function openLocSize(locs){const old=document.getElementById("locSizePop");if(old)old.remove();let pick=null,cap=100;
   const OPTS=[["S",6],["M",3],["L",2],["XL",1],["CU",100],["CX",null]],BINK=["S","M","L","XL","CU","CX"];
   /* which tin sizes fit a spot of size k — follows the Phase 1 / Phase 2 switch */
@@ -4716,7 +4729,7 @@ function openLocSize(locs){const old=document.getElementById("locSizePop");if(ol
     <div class="szsum"><div class="szrow"><span>Size</span>${pick?`<b class="szchip" style="--c:${sizeFill(pick)}">${pick==="CX"?`Custom ${capTxt(cap)}`:kName(pick)}</b>`:`<b class="label">Pick a size</b>`}</div>
       ${pick==="CX"?`<div class="szrow"><span>Slots</span><input type="number" id="lsCap" min="1" max="100" value="${cap||""}" ${cap===0?"disabled placeholder=\"∞\"":""}><button type="button" class="szinf${cap===0?" on":""}" id="lsInf" aria-pressed="${cap===0}">∞ No cap</button></div>`:""}
       <div class="szrow"><span>Takes</span><div class="lstake">${pick?fit.map(b=>`<div><i style="--d:${sizeFill(b)}"></i>${kName(b)}</div>`).join(""):'<div class="label" style="font-size:17px;font-weight:600">—</div>'}</div></div>
-      <div class="szhint">A tin that doesn't fit is refused when it's scanned in.${PHASE===1?" Phase 1: a tin goes in a spot of its own size.":" Phase 2: smaller tins fit bigger spots."}</div></div></div>
+      <div class="szhint">A tin that doesn't fit is refused when it's scanned in. Each location takes its own size and anything smaller.</div></div></div>
     <ul class="sznote"><li>Locations that already hold a smaller tin keep it — nothing is moved.</li><li>Locations whose tin holds items, or whose tin is too big for the new size, are skipped.</li><li>Off locations still change size and stay off. Empty locations take the new size straight away.</li></ul>
     <div class="row szbtns"><button class="btn" id="lsX">Cancel</button><button class="btn primary" id="lsGo" ${pick?"":"disabled"}>Apply to ${N.toLocaleString()} location${N>1?"s":""}</button></div></div>`;
     w.querySelectorAll(".szpill").forEach(b=>b.onclick=()=>{pick=b.dataset.k;if(pick==="CX"&&!(cap>=0))cap=100;draw();});
