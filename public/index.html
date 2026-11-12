@@ -664,6 +664,50 @@ table.bintable th:nth-child(4),table.bintable td:nth-child(4){width:64px}
 .rt-cbwrap{padding:12px;border-top:1px solid var(--line)}
 .rt-shipped .rt-cbin{display:flex;align-items:center;justify-content:center;gap:8px;margin:0}
 .rt-shipped .rt-cbin:disabled svg circle{fill:#b4b9c0}
+.mh-slotnav{display:flex;gap:6px}
+.mh-slist{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.mh-si{display:flex;gap:10px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:8px}
+.mh-si img{width:44px;height:58px;object-fit:contain;background:#fff;border-radius:4px;flex:none}
+.mh-si small{display:block;font-size:11px;color:var(--muted);line-height:1.3;margin-top:2px}
+.mh-sempty{margin:4px 0 2px;text-align:center;color:var(--muted);font-size:13px;padding:18px 8px;border:1.5px dashed #cfd4db;border-radius:8px}
+.mh-tgl button:disabled{opacity:.5;cursor:default}
+.mh-listhead{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.mh-listhead h4{margin:0}
+.mh-seg{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.mh-seg button{border:0;background:#fff;padding:6px 12px;font:inherit;font-size:12px;font-weight:700;cursor:pointer;color:#5f6772}
+.mh-seg button+button{border-left:1px solid var(--line)}
+.mh-seg button.on{background:#111;color:#fff}
+.mh-slotnav button{border:1px solid var(--line);background:#fff;border-radius:6px;padding:5px 10px;font:inherit;font-size:12px;font-weight:700;cursor:pointer;color:#111}
+.mh-slotnav button:disabled{opacity:.4;cursor:default}
+.mh-shiphead b{color:#111}
+.mh-cart{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.mh-tote{position:relative;height:54px;border:1.5px solid #cfd4db;border-radius:6px;background:#f4f5f7;cursor:pointer;padding:4px 6px;text-align:left;font:inherit;overflow:hidden}
+.mh-tote.full{background:#fff;border-color:#9aa1ab}
+.mh-tote.on{border:2px solid #e8590c;box-shadow:0 0 0 3px rgba(232,89,12,.15);background:#fff}
+.mh-tl{position:absolute;top:4px;left:6px;font-size:11px;font-weight:800;color:#5f6772}
+.mh-tote.on .mh-tl{color:#e8590c}
+.mh-tc{position:absolute;top:4px;right:6px;min-width:18px;height:18px;border-radius:9px;background:#111;color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;padding:0 5px}
+.mh-tt{position:absolute;left:6px;right:6px;bottom:4px;display:flex;gap:3px;align-items:flex-end;height:26px}
+.mh-tt img{height:26px;width:20px;object-fit:contain;background:#fff;border-radius:2px}
+.mh-tt i{font-style:normal;font-size:11px;font-weight:700;color:#5f6772;margin-left:2px}
+.mh-tgl.mh-tgl3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.mh-tgl.mh-tgl3 button b{font-size:12px;line-height:1.25}
+.mh-need{margin:0 0 10px;font-size:14px;line-height:1.5;color:#3d434b}
+.mh-chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;flex:1}
+.mh-chip{display:inline-flex;align-items:center;gap:4px;padding:4px 6px 4px 10px;border-radius:999px;background:#111;color:#fff;font-size:12px;font-weight:700}
+.mh-chip button{border:0;background:none;color:#cfd3d8;font-size:15px;line-height:1;cursor:pointer;padding:0 2px}
+.mh-chip button:hover{color:#fff}
+.mh-padd{border:1px dashed #9aa1ab;border-radius:999px;padding:4px 8px;font:inherit;font-size:12px;font-weight:700;background:#fff;color:#3d434b;cursor:pointer;color-scheme:light}
+.mh-tgl button.notype b{color:#e8590c}.mh-tgl button.on.notype b{color:#ffb27a}
+.mh-ptype{display:flex;align-items:center;gap:10px;margin:-4px 0 12px;font-size:13px;color:var(--muted)}
+.mh-ptype label{font-weight:700;color:#111}
+.mh-ptype select{flex:1;padding:8px 10px;border:1px solid var(--line);border-radius:6px;font:inherit;font-size:14px;background:#fff;color:#111;color-scheme:light}
+.mh-ptype select option{color:#111;background:#fff}
+.mh-sug{margin:-6px 0 10px;text-align:center;font-size:13px;font-weight:700;color:#e8590c}
+.mh-tp{display:inline-block;padding:3px 9px;border-radius:999px;font-size:12px;font-weight:700;background:#eef0f3;color:#3d434b}
+.mh-tp-coin{background:#fdf3dc;color:#8a5a00}
+.mh-tgl button.typed span{color:inherit;opacity:.8}
+.mh-tp-watch{background:#e8f0fe;color:#1a4fb4}.mh-tp-wallet{background:#f3ece4;color:#7a4a2a}.mh-tp-comic{background:#f6e8f7;color:#8a2a8f}.mh-tp-card{background:#e7f6ec;color:#1f7a3c}
 .rt-vip{display:flex;gap:12px;align-items:flex-start;background:#fdf8e7;border:1px solid #f0dfa6;border-radius:8px;padding:14px 18px;margin:16px 0 18px;color:#8a5a00}
 .rt-vip svg{flex:none;margin-top:2px}
 .rt-vip b{font-size:15px;display:block;margin-bottom:4px}
@@ -688,11 +732,12 @@ table.bintable th:nth-child(4),table.bintable td:nth-child(4){width:64px}
 .rt.mh .rt-panel table.rtt .thumb{width:50px;height:70px}
 .rt.mh .rt-panel table.rtt th[data-sort="aisle"],.rt.mh .rt-panel table.rtt th[data-sort="bay"],.rt.mh .rt-panel table.rtt th[data-sort="col"],.rt.mh .rt-panel table.rtt th[data-sort="deck"]{text-align:center}
 .mh-tgl{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:12px;background:#fff}
-.mh-tgl button{border:0;background:#fff;padding:10px 14px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:2px;font:inherit}
+.mh-tgl button{border:0;background:#fff;color:#111;padding:10px 14px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:2px;font:inherit}
 .mh-tgl button+button{border-left:1px solid var(--line)}
 .mh-tgl button b{font-size:13px;letter-spacing:.04em;text-transform:uppercase}
 .mh-tgl button span{font-size:12px;color:var(--muted)}
 .mh-tgl button.on{background:#111;color:#fff}.mh-tgl button.on span{color:#cfd3d8}
+.mh-tgslot{font-size:13px;color:#e8590c}.mh-tgl button.on .mh-tgslot{color:#ffb27a}
 .mh-bar{height:10px;border-radius:999px;background:#eef0f3;overflow:hidden}.mh-bar i{display:block;height:100%;background:#2563eb}
 .mh-barnote{margin:6px 0 0;font-size:12px;color:var(--muted)}
 .mhbay{display:flex;align-items:stretch;justify-content:center;gap:6px;margin:6px auto 10px}
@@ -2724,7 +2769,9 @@ function mhPick(kind,i){
   if(kind==="watch"){ const w=MH_WATCHES[i%MH_WATCHES.length]; return {name:w.name,img:w.img,back:MH_CASEBACK}; }
   const L=kind==="wallet"?MH_WALLETS:MH_COMICS; return L[i%L.length];
 }
-const MH_KINDS={watch:"Watch",wallet:"Wallet",comic:"Comic"};
+const MH_KINDS={watch:"Watch",wallet:"Wallet",comic:"Comic",card:"Card",coin:"Coin"};
+/* item-type colors [light, strong], shared by the Type tags and the bin tabs */
+const MH_TCOL={watch:["#e8f0fe","#1a4fb4"],wallet:["#f3ece4","#7a4a2a"],comic:["#f6e8f7","#8a2a8f"],card:["#e7f6ec","#1f7a3c"],coin:["#fdf3dc","#8a5a00"]};
 /* ---- Bin sizes (matches the admin Change size dialog) ---- */
 const BIN_SIZES={standard:{label:"Standard",slots:100,color:"#2563eb",letter:"T"},custom:{label:"Custom",slots:null,color:"#7c3aed",letter:"C"},
   small:{label:"Small",slots:6,color:"#c026d3",letter:"S"},medium:{label:"Medium",slots:3,color:"#d4a017",letter:"M"},
@@ -2826,7 +2873,7 @@ function mhLoc(bin){
 function mhLocText(bin){ const l=mhLoc(bin); return "A"+l.aisle+", B"+l.bay+", C"+l.column+", D"+l.deck; }
 function mhLocCells(bin){ const l=mhLoc(bin); return '<td class="mh-lc">'+l.aisle+'</td><td class="mh-lc">'+l.bay+'</td><td class="mh-lc">'+l.column+'</td><td class="mh-lc">'+l.deck+'</td>'; }
 /* Mt Hood shipping bin types: Items (watches, wallets, comics in sized bins) and Cards / Coins (standard slots) */
-const MH_BIN_TYPES={items:{label:"Items",kinds:["watch","wallet","comic"]},cards:{label:"Cards / Coins",kinds:["card","coin"]}};
+const MH_BIN_TYPES={items:{label:"Items",kinds:["watch","wallet","comic","card"]},cards:{label:"Cards / Coins",kinds:["coin"]}};
 const MH_PLURAL={watch:"Watches",wallet:"Wallets",comic:"Comics",card:"Cards",coin:"Coins"};
 function mhTypeOfKind(k){ return MH_BIN_TYPES.cards.kinds.indexOf(k)>-1?"cards":"items"; }
 function mhLocKey(bin){ const l=mhLoc(bin); return ((l.aisle*10+l.bay)*100+l.column)*100+l.deck; }
@@ -3157,6 +3204,53 @@ function viewRetrieval(){
   const RV=(curHash().indexOf("#/retrieval/mthood")===0)?"mthood":"davos";
   const RVK=RV==="mthood"?"retrieval_mthood":"retrieval";
   const st=store[RVK] || (store[RVK]={shipping:null});
+  /* Mt Hood: three shipping bins at the station. Bin position 1 takes any item; 2 and 3 are set to an item type.
+     st.shipping / st.code always mirror the active position, so the rest of the page works on "the bin you're in". */
+  if(RV==="mthood"){
+    if(!st.pos){ st.pos=[null,null,null]; if(st.shipping) st.pos[0]={shipping:st.shipping,code:st.code||null,loc:st.loc||""}; st.act=0; }
+    if(!st.ptype || !st.ptypeV2){ st.ptype=["items",null,null]; st.ptypeV2=1; }   /* tabs 2 and 3 have no type until you pick one */
+    if(st.act==null) st.act=0;
+    if(st.shipping && (/^C\d/.test(st.code||"") || /Picking cart/.test(st.loc||""))){ st.code=binCode(st.shipping,"standard"); st.loc="Mt Hood #3 · Shipping bin"; } /* old cart-version state */
+    st.pos[st.act]=st.shipping?{shipping:st.shipping,code:st.code||null,loc:st.loc||""}:null;
+  }
+  function mhUsePos(i){
+    st.pos[st.act]=st.shipping?{shipping:st.shipping,code:st.code||null,loc:st.loc||""}:null;
+    st.act=i; const q=st.pos[i];
+    st.shipping=q?q.shipping:null; st.code=q?q.code:null; st.loc=q?q.loc:""; st.name=""; st.size=null; st.cap=null;
+  }
+  function mhTypeBg(T,dark){
+    const c=T.map(function(k){ return (MH_TCOL[k]||["#eef0f3","#3d434b"])[dark]; });
+    if(c.length===1) return c[0];
+    const w=100/c.length; return 'linear-gradient(90deg,'+c.map(function(x,n){ return x+' '+(n*w)+'% '+((n+1)*w)+'%'; }).join(',')+')';
+  }
+  function mhTypes(i){ const t=st.ptype[i]; return !t?[]:(Array.isArray(t)?t:[t]); }   /* older saves stored one type as a string */
+  /* scanned a comic/card with no bin for it: ask for one to be set up */
+  function mhNeedBin(r){
+    const k=r.kind, P=MH_PLURAL[k];
+    let tgt=[1,2].filter(function(i){ return !st.pos[i]; })[0];
+    if(tgt==null) tgt=[1,2].filter(function(i){ return !mhTypes(i).length; })[0];
+    const into=tgt!=null ? (st.pos[tgt]?'Bin '+esc(st.pos[tgt].shipping):'an empty bin') : null;
+    modal(P+" need their own bin",
+      '<p class="mh-need">'+esc(r.num)+' is a <b>'+MH_KINDS[k].toLowerCase()+'</b>. '+P+' can&rsquo;t go in the Items bin, and no bin is set up for '+P.toLowerCase()+'.</p>' +
+      '<p class="mh-need">'+(into?'Set up '+into+' for '+P.toLowerCase()+', then scan this item again.':'Both other bins are in use. Add '+P.toLowerCase()+' to one of them with <b>+ Add type</b>, or complete one to free it up.')+'</p>',
+      into ? function(){
+        mhUsePos(tgt); if(mhTypes(tgt).indexOf(k)<0) st.ptype[tgt]=mhTypes(tgt).concat([k]);
+        rtTarget=st.shipping?"card":"shipping"; save(); viewRetrieval();
+        toast(st.shipping?"Bin "+st.shipping+" now takes "+mhPosLabel(tgt).toLowerCase()+" · scan the item again":"Scan a bin for "+P.toLowerCase());
+      } : null, into?"Set up "+P.toLowerCase()+" bin":"OK");
+  }
+  function mhPosType(i){ return i===0?"items":(mhTypes(i).length?mhTypes(i):null); }
+  function mhPosLabel(i){ if(i===0) return "Items"; return mhTypes(i).map(function(k){ return MH_PLURAL[k]; }).join(" + "); }
+  /* the bin an item should go in: the bin set to its type, else bin position 1 (Items), else whatever is loaded */
+  /* comics and cards never go in the Items bin: they need a bin set up for them */
+  const MH_OWN_BIN=["comic","card"];
+  function mhSuggest(kind){
+    for(let i=1;i<3;i++) if(st.pos[i] && mhTypes(i).indexOf(kind)>-1) return i;
+    if(MH_OWN_BIN.indexOf(kind)>-1) return -1;
+    if(st.pos[0]) return 0;
+    for(let i=0;i<3;i++) if(st.pos[i]) return i;
+    return null;
+  }
   const TODAY=new Date(2026,8,28);
   const rows=[]; let seed=RV==="mthood"?41:7;
   function rnd(n){ seed=(seed*9301+49297)%233280; return Math.floor(seed/233280*n); }
@@ -3187,7 +3281,14 @@ function viewRetrieval(){
       const it=mhPick(d[1],Math.max(0,d[2]));
       rows.unshift({img:-1, kind:d[1], name:it.name, art:[it.img,it.back], thumb:it.img, order:18750100+k, due:new Date(2026,8,17), num:d[0], bin:d[3], slot:d[4], size:MH_KIND_BIN[d[1]].size, cap:MH_KIND_BIN[d[1]].cap});
     });
+    /* demo coin: a slabbed coin (drawn stand-in until there's a real photo) */
+    rows.unshift({img:-1, kind:"coin", name:"Liberty Dollar (demo)", art:["data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20480%20800%22%3E%3Crect%20width%3D%22480%22%20height%3D%22800%22%20fill%3D%22%23fff%22/%3E%3Crect%20x%3D%2270%22%20y%3D%22150%22%20width%3D%22340%22%20height%3D%22500%22%20rx%3D%2218%22%20fill%3D%22%23f4f5f7%22%20stroke%3D%22%23c9ced6%22%20stroke-width%3D%226%22/%3E%3Crect%20x%3D%2295%22%20y%3D%22175%22%20width%3D%22290%22%20height%3D%2270%22%20rx%3D%226%22%20fill%3D%22%23fff%22%20stroke%3D%22%23c9ced6%22%20stroke-width%3D%223%22/%3E%3Ctext%20x%3D%22240%22%20y%3D%22220%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2226%22%20font-weight%3D%22700%22%20fill%3D%22%233d434b%22%3EMS%2065%20%C2%B7%20DEMO%3C/text%3E%3Cdefs%3E%3CradialGradient%20id%3D%22gf%22%20cx%3D%2240%25%22%20cy%3D%2235%25%22%20r%3D%2270%25%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fbe7a1%22/%3E%3Cstop%20offset%3D%22.6%22%20stop-color%3D%22%23d9b25a%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a7802e%22/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%22410%22%20r%3D%22130%22%20fill%3D%22url%28%23gf%29%22%20stroke%3D%22%238a6a1f%22%20stroke-width%3D%228%22/%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%22410%22%20r%3D%22112%22%20fill%3D%22none%22%20stroke%3D%22%238a6a1f%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%224%206%22/%3E%3Ctext%20x%3D%22240%22%20y%3D%22372%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2244%22%20font-weight%3D%22700%22%20fill%3D%22%236b4a12%22%3ELIBERTY%3C/text%3E%3Ctext%20x%3D%22240%22%20y%3D%22440%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2264%22%20font-weight%3D%22700%22%20fill%3D%22%236b4a12%22%3E2026%3C/text%3E%3C/svg%3E","data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20480%20800%22%3E%3Crect%20width%3D%22480%22%20height%3D%22800%22%20fill%3D%22%23fff%22/%3E%3Crect%20x%3D%2270%22%20y%3D%22150%22%20width%3D%22340%22%20height%3D%22500%22%20rx%3D%2218%22%20fill%3D%22%23f4f5f7%22%20stroke%3D%22%23c9ced6%22%20stroke-width%3D%226%22/%3E%3Crect%20x%3D%2295%22%20y%3D%22175%22%20width%3D%22290%22%20height%3D%2270%22%20rx%3D%226%22%20fill%3D%22%23fff%22%20stroke%3D%22%23c9ced6%22%20stroke-width%3D%223%22/%3E%3Ctext%20x%3D%22240%22%20y%3D%22220%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2226%22%20font-weight%3D%22700%22%20fill%3D%22%233d434b%22%3EMS%2065%20%C2%B7%20DEMO%3C/text%3E%3Cdefs%3E%3CradialGradient%20id%3D%22gb%22%20cx%3D%2240%25%22%20cy%3D%2235%25%22%20r%3D%2270%25%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fbe7a1%22/%3E%3Cstop%20offset%3D%22.6%22%20stop-color%3D%22%23d9b25a%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a7802e%22/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%22410%22%20r%3D%22130%22%20fill%3D%22url%28%23gb%29%22%20stroke%3D%22%238a6a1f%22%20stroke-width%3D%228%22/%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%22410%22%20r%3D%22112%22%20fill%3D%22none%22%20stroke%3D%22%238a6a1f%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%224%206%22/%3E%3Ctext%20x%3D%22240%22%20y%3D%22390%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2278%22%20font-weight%3D%22700%22%20fill%3D%22%236b4a12%22%3EONE%3C/text%3E%3Ctext%20x%3D%22240%22%20y%3D%22450%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2234%22%20font-weight%3D%22700%22%20fill%3D%22%236b4a12%22%3EDOLLAR%3C/text%3E%3C/svg%3E"], thumb:"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20480%20800%22%3E%3Crect%20width%3D%22480%22%20height%3D%22800%22%20fill%3D%22%23fff%22/%3E%3Crect%20x%3D%2270%22%20y%3D%22150%22%20width%3D%22340%22%20height%3D%22500%22%20rx%3D%2218%22%20fill%3D%22%23f4f5f7%22%20stroke%3D%22%23c9ced6%22%20stroke-width%3D%226%22/%3E%3Crect%20x%3D%2295%22%20y%3D%22175%22%20width%3D%22290%22%20height%3D%2270%22%20rx%3D%226%22%20fill%3D%22%23fff%22%20stroke%3D%22%23c9ced6%22%20stroke-width%3D%223%22/%3E%3Ctext%20x%3D%22240%22%20y%3D%22220%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2226%22%20font-weight%3D%22700%22%20fill%3D%22%233d434b%22%3EMS%2065%20%C2%B7%20DEMO%3C/text%3E%3Cdefs%3E%3CradialGradient%20id%3D%22gf%22%20cx%3D%2240%25%22%20cy%3D%2235%25%22%20r%3D%2270%25%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fbe7a1%22/%3E%3Cstop%20offset%3D%22.6%22%20stop-color%3D%22%23d9b25a%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a7802e%22/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%22410%22%20r%3D%22130%22%20fill%3D%22url%28%23gf%29%22%20stroke%3D%22%238a6a1f%22%20stroke-width%3D%228%22/%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%22410%22%20r%3D%22112%22%20fill%3D%22none%22%20stroke%3D%22%238a6a1f%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%224%206%22/%3E%3Ctext%20x%3D%22240%22%20y%3D%22372%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2244%22%20font-weight%3D%22700%22%20fill%3D%22%236b4a12%22%3ELIBERTY%3C/text%3E%3Ctext%20x%3D%22240%22%20y%3D%22440%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2264%22%20font-weight%3D%22700%22%20fill%3D%22%236b4a12%22%3E2026%3C/text%3E%3C/svg%3E", order:18750098, due:new Date(2026,8,17), num:"51000021", bin:1104, slot:2, size:"standard", cap:100});
+    /* demo card: a graded slab picked into the same item carts */
+    rows.unshift({img:-1, kind:"card", name:"Luke in Peril!", art:SWSLAB, thumb:SWTHUMB, order:18750099, due:new Date(2026,8,17), num:"51000020", bin:1104, slot:1, size:"standard", cap:100});
     if(mhExportData()) mhAssignTins(rows);
+    /* demo buttons never run out: each extra press adds a fresh copy of that item (new number, same location) */
+    (st.clones||[]).forEach(function(c){ const src=rows.filter(function(x){ return x.num===c.src; })[0];
+      if(src) rows.unshift(Object.assign({},src,{num:c.num, order:c.order, clone:1})); });
   } else {
   rows.unshift({img:-1, art:XNSLAB, thumb:XNTHUMB, order:18748055, due:new Date(2026,8,17), num:"163072703", bin:702, slot:17});
   rows.unshift({img:-1, art:EPSLAB, thumb:EPTHUMB, order:18747392, due:new Date(2026,8,17), num:"70452950", bin:702, slot:15});
@@ -3198,6 +3299,8 @@ function viewRetrieval(){
   const moved=st.moved||(st.moved=[]);
   const inBin=moved.filter(function(m){ return String(m.bin)===String(st.shipping); });
   const preCount=inBin.filter(function(m){ return m.status!=="pending"; }).length;
+  /* Mt Hood: the list under the cart shows what's in the selected slot; "All" shows the whole cart */
+  const listed=inBin;
   function isDone(code){
     const d=(st.done||{})[code];
     if(d!==undefined) return d;
@@ -3220,9 +3323,11 @@ function viewRetrieval(){
   if(!st.batch || st.baySig!==baySig) fillBatch();
   else { const ok={}; all.forEach(function(r){ ok[r.num]=1; }); if(st.batch.length && !st.batch.some(function(n){ return ok[n]; })) fillBatch(); }
   const inBatch={}; st.batch.forEach(function(n){ inBatch[n]=1; });
+  /* Mt Hood demo items (watches, wallet, comic, card, coin) always sit in the queue for testing, even with an older saved batch */
+  if(RV==="mthood") eligible.forEach(function(r){ if(r.img===-1 && !r.clone) inBatch[r.num]=1; });
   const sort=st.sort||{k:"days",dir:-1};
   const SORTK={order:function(r){ return r.order; }, due:function(r){ return r.due.getTime(); }, num:function(r){ return r.num; },
-    loc:function(r){ return mhLocKey(r.bin)*100000+r.bin; }, aisle:function(r){ return mhLocKey(r.bin)*100000+r.bin; },
+    loc:function(r){ return mhLocKey(r.bin)*100000+r.bin; }, type:function(r){ return ["watch","wallet","comic","card","coin"].indexOf(r.kind)*1e9+mhLocKey(r.bin); }, aisle:function(r){ return mhLocKey(r.bin)*100000+r.bin; },
     bay:function(r){ const l=mhLoc(r.bin); return ((l.bay*100+l.column)*100+l.deck)*100+l.aisle; },
     col:function(r){ const l=mhLoc(r.bin); return ((l.column*100+l.deck)*100+l.aisle)*100+l.bay; },
     deck:function(r){ const l=mhLoc(r.bin); return ((l.deck*100+l.aisle)*100+l.bay)*100+l.column; }, bin:function(r){ return r.bin; }, slot:function(r){ return r.slot; }, days:function(r){ return pday(r.due); }};
@@ -3239,23 +3344,65 @@ function viewRetrieval(){
   const shown=CAT==="all"?base:base.filter(function(r){ return r.kind===CAT; });
   const queued=eligible.length-pending.length;
   /* Mt Hood shipping bin: size, barcode and one box per slot */
-  /* Mt Hood shipping bin: barcode + what's in it. No slot cap: the cart holds as many items as you pick. */
+  /* Mt Hood picking cart: 27 totes (S1-S27, 3 per shelf). Items go into the active slot; a slot can hold
+     as many items as physically fit (dividers are handled by the picker, not the system). */
+  function mhSlotBlock(){
+    const n=st.slots||27, act=st.slot||1, L=inBin.filter(function(m){ return m.slot===act; });
+    const items=L.map(function(m){
+      const row=all.filter(function(x){ return x.num===m.num; })[0]||{}, img=((row.art||m.art||[])[0]||"");
+      return '<div class="mh-si">'+(img?'<img src="'+img+'" alt="">':'<span class="mh-sinone"></span>')+'<div><button class="olink" data-scan="'+esc(m.num)+'">'+esc(m.num)+'</button>' +
+        (row.name?'<small>'+esc((MH_KINDS[row.kind]||"")+' · '+row.name)+'</small>':'')+'</div></div>';
+    }).join("");
+    return '<div class="mh-ship"><div class="mh-shiphead"><span>Cart '+esc(st.shipping)+' &middot; <b>Slot S'+act+'</b> &middot; '+L.length+' item'+(L.length===1?'':'s')+'</span>' +
+        '<span class="mh-slotnav"><button id="mh-prev" aria-label="Previous slot"'+(act<=1?' disabled':'')+'>&lsaquo;</button><button id="mh-next"'+(act>=n?' disabled':'')+'>Next slot &rsaquo;</button></span></div>' +
+      '<div class="mh-bc">'+barcodeSVG("C"+st.shipping+"-S"+act)+'</div>' +
+      (L.length?'<div class="mh-slist">'+items+'</div>':'<p class="mh-sempty">Nothing in S'+act+' yet. Scans go here while it&rsquo;s selected.</p>')+'</div>';
+  }
   function mhShipBlock(){
-    const size=st.size||"small";
     const cells=inBin.slice().sort(function(a,b){ return a.slot-b.slot; }).map(function(m){
       const row=all.filter(function(x){ return x.num===m.num; })[0]||{}, img=((row.art||m.art||[])[0]||"");
       return '<div class="mh-cell full" title="Slot '+m.slot+' · '+esc(m.num)+'"><b>'+m.slot+'</b>'+(img?'<img src="'+img+'" alt="">':'')+'</div>';
     }).join("")+'<div class="mh-cell" title="Next slot"><b>'+(inBin.length+1)+'</b></div>';
-    return '<div class="mh-ship"><div class="mh-shiphead"><span>'+inBin.length+' item'+(inBin.length===1?'':'s')+'</span></div>' +
-      '<div class="mh-bc">'+barcodeSVG(st.code||binCode(st.shipping,size))+'</div>' +
+    return '<div class="mh-ship"><div class="mh-shiphead"><span>'+inBin.length+' item'+(inBin.length===1?'':'s')+(mhPosLabel(st.act)?' &middot; '+mhPosLabel(st.act):'')+'</span></div>' +
+      '<div class="mh-bc">'+barcodeSVG(st.code||binCode(st.shipping,"standard"))+'</div>' +
       '<div class="mh-grid" style="--n:6">'+cells+'</div></div>';
   }
+  function mhCartBlockOld(){
+    const n=st.slots||27, act=st.slot||1, by={};
+    inBin.forEach(function(m){ (by[m.slot]=by[m.slot]||[]).push(m); });
+    let cells="";
+    for(let k=1;k<=n;k++){
+      const L=by[k]||[], th=L.slice(0,3).map(function(m){ const row=all.filter(function(x){ return x.num===m.num; })[0]||{}, img=((row.art||m.art||[])[0]||""); return img?'<img src="'+img+'" alt="">':''; }).join("");
+      cells+='<button class="mh-tote'+(k===act?' on':'')+(L.length?' full':'')+'" data-tote="'+k+'" title="C'+esc(st.shipping)+'-S'+k+(L.length?' · '+L.length+' item'+(L.length===1?'':'s'):' · empty')+'">' +
+        '<span class="mh-tl">S'+k+'</span>'+(L.length?'<span class="mh-tc">'+L.length+'</span>':'')+'<span class="mh-tt">'+th+(L.length>3?'<i>+'+(L.length-3)+'</i>':'')+'</span></button>';
+    }
+    return '<div class="mh-ship"><div class="mh-shiphead"><span>'+inBin.length+' item'+(inBin.length===1?'':'s')+' &middot; scanning into <b>S'+act+'</b></span>' +
+        '<span class="mh-slotnav"><button id="mh-prev" aria-label="Previous slot"'+(act<=1?' disabled':'')+'>&lsaquo;</button><button id="mh-next">Next slot &rsaquo;</button></span></div>' +
+      '<div class="mh-bc">'+barcodeSVG(st.code||("C"+st.shipping))+'</div>' +
+      '<div class="mh-cart">'+cells+'</div>' +
+      '</div>';
+  }
   function mhBinToggle(){
-    const act=st.binType||"items", alt=st.alt||null;
-    return '<div class="mh-tgl" role="tablist">'+["items","cards"].map(function(t){
-      const on=t===act, b=on?(st.shipping?{shipping:st.shipping,name:st.name}:null):(alt&&alt.type===t&&alt.shipping?alt:null);
-      return '<button role="tab" data-btype="'+t+'" class="'+(on?'on':'')+'"><b>'+MH_BIN_TYPES[t].label+'</b><span>'+(b?'Bin '+esc(b.shipping)+(b.name?' &middot; '+esc(b.name):''):'No bin')+'</span></button>';
-    }).join('')+'</div>';
+    const tabs=[0,1,2].map(function(i){
+      const q=st.pos[i], on=i===st.act;
+      const nm=i===0 ? 'Items' : (q ? (mhPosLabel(i)||'Choose type') : '&nbsp;');   /* first tab is always Items; 2 and 3 named once a bin is loaded and a type picked */
+      const T=i>0&&q?mhTypes(i):[];   /* typed tabs take their item-type colors; several types split the tab evenly */
+      const sty=T.length?' style="background:'+mhTypeBg(T,on?1:0)+';color:'+(on?'#fff':'#111')+'"':'';
+      return '<button role="tab" data-pos="'+i+'" class="'+(on?'on':'')+(q&&!mhPosLabel(i)?' notype':'')+(T.length?' typed':'')+'"'+sty+'><b>'+nm+'</b><span>'+(q?'Bin '+esc(q.shipping):'Scan a bin')+'</span></button>';
+    }).join("");
+    const pick=!st.shipping ? ''
+      : st.act>0 ? (function(){
+          const have=mhTypes(st.act), left=["watch","wallet","comic","card","coin"].filter(function(k){ return have.indexOf(k)<0; });
+          if(!have.length) return '<div class="mh-ptype"><label for="mh-ptype">Items going in this bin</label><select id="mh-ptype"><option value="" selected disabled>Select item type&hellip;</option>' +
+            left.map(function(k){ return '<option value="'+k+'">'+MH_PLURAL[k]+'</option>'; }).join("")+'</select></div>';
+          return '<div class="mh-ptype"><label>Items going in this bin</label><span class="mh-chips">' +
+            have.map(function(k){ return '<span class="mh-chip">'+MH_PLURAL[k]+'<button data-rmtype="'+k+'" aria-label="Remove '+MH_PLURAL[k]+'">&times;</button></span>'; }).join("") +
+            (left.length?'<select id="mh-padd" class="mh-padd" aria-label="Add another item type"><option value="" selected disabled>+ Add type</option>' +
+              left.map(function(k){ return '<option value="'+k+'">'+MH_PLURAL[k]+'</option>'; }).join("")+'</select>':'') +
+            '</span></div>';
+        })()
+      : '<div class="mh-ptype"><span>Items takes anything that doesn&rsquo;t have its own bin</span></div>';
+    return '<div class="mh-tgl mh-tgl3" role="tablist">'+tabs+'</div>'+pick;
   }
   const bayNote='<div class="rt-mybays"><div class="rt-mbh"><h3>Your bays</h3><span>'+(myBays.length?myBays.length+' assigned &middot; queue shows only these '+(MHB?'locations':'bins'):'None assigned &middot; showing every '+(MHB?'location':'bin'))+'</span></div>' +
     (myBays.length ? '<div class="rt-mbl">'+myBays.map(function(x){ return MHB ? '<div class="rt-mb"><b>Bay '+x.n+' &middot; '+mhBayCode(x.d)+(x.name?' &middot; '+esc(x.name):'')+'</b><span>Aisle '+x.d.aisle+', Bay '+x.d.bay+' &middot; '+mhBayCols(x.d)+'</span></div>' : '<div class="rt-mb"><b>Bay '+x.n+(x.name?' &middot; '+esc(x.name):'')+'</b><span>Bins '+x.a.toLocaleString()+'&ndash;'+x.b.toLocaleString()+'</span></div>'; }).join('')+'</div>' : '') +
@@ -3283,24 +3430,26 @@ function viewRetrieval(){
           (OQ&&!shown.length?'<div class="rt-empty">No waiting items for order <b>'+esc(OQ)+'</b>'+(myBays.length?' in your bays':'')+'.</div>':'') +
           (OQ||pending.length?'':'<div class="rt-empty">Queue is empty. Click <b>COMPLETED</b> on the shipping bin to load the next '+Math.min(QMAX,eligible.length)+' cards.</div>') +
           '<div class="tablewrap"><table class="dt rtt"><thead><tr>' +
-          '<th>Front</th>'+th("order","Order")+th("due","Due Date")+th("num","Number")+(RV==="mthood"?th("aisle","Aisle")+th("bay","Bay")+th("col","Column")+th("deck","Deck"):'')+th("bin","Bin")+th("slot","Slot")+th("days","In Process Days") +
+          '<th>Front</th>'+th("order","Order")+th("due","Due Date")+th("num","Number")+(RV==="mthood"?th("type","Type")+th("aisle","Aisle")+th("bay","Bay")+th("col","Column")+th("deck","Deck"):'')+th("bin","Bin")+th("slot","Slot")+th("days","In Process Days") +
           '</tr></thead><tbody>' +
           shown.map(function(r){ const d=pday(r.due);
             return '<tr><td><img class="thumb" src="'+(r.thumb||RTIMG[r.img % RTIMG.length])+'" alt=""></td>' +
               '<td><button class="olink">'+r.order+'</button></td>' +
               '<td>'+fmt(r.due)+'</td>' +
               '<td><button class="olink" data-scan="'+r.num+'">'+r.num+'</button>'+(r.kind?'<span class="mh-kind">'+MH_KINDS[r.kind]+' &middot; '+esc(r.name||'')+'</span>':'')+'</td>' +
-              (RV==="mthood"?mhLocCells(r.bin):'')+'<td>'+r.bin+''+'</td><td class="slot">'+r.slot+'</td>' +
+              (RV==="mthood"?'<td class="mh-type"><span class="mh-tp mh-tp-'+(r.kind||'x')+'">'+(MH_KINDS[r.kind]||'Item')+'</span></td>'+mhLocCells(r.bin):'')+'<td>'+r.bin+''+'</td><td class="slot">'+r.slot+'</td>' +
               '<td>'+d+'</td></tr>';
           }).join("") +
           '</tbody></table></div></div>' +
-        '<div class="rt-side">'+(RV==="mthood"?mhBinToggle():'')+'<div class="rt-shipcard'+(rtTarget==="shipping"?' on':'')+'"><button class="scancard'+(rtTarget==="shipping"?' on':'')+'" id="rt-ship"><h3>'+(st.shipping?("Shipping Bin "+esc(st.shipping)+(st.name?" &middot; "+esc(st.name):"")):"No Shipping Bin")+'</h3><p>'+(st.shipping&&st.loc?esc(st.loc):"Scan QR Code")+'</p></button>' +
+        '<div class="rt-side">'+(RV==="mthood"?mhBinToggle():'')+'<div class="rt-shipcard'+(rtTarget==="shipping"?' on':'')+'"><button class="scancard'+(rtTarget==="shipping"?' on':'')+'" id="rt-ship"><h3>'+(st.shipping?("Shipping Bin "+esc(st.shipping)+(RV==="mthood"?(mhPosLabel(st.act)?" &middot; "+mhPosLabel(st.act):""):(st.name?" &middot; "+esc(st.name):""))):"No Shipping Bin")+'</h3><p>'+(st.shipping&&st.loc?esc(st.loc):"Scan QR Code")+'</p></button>' +
           (st.shipping ? '<button class="rt-x" id="rt-unload" title="Remove this bin" aria-label="Remove Bin '+esc(st.shipping)+'">&times;</button>' : '') +
           '</div>' +
           (RV==="mthood"&&st.shipping ? mhShipBlock() : '') +
-          (st.shipping ? '<div class="rt-shipped"><h4>In Shipping Bin '+esc(st.shipping)+(inBin.length?' ('+inBin.length+')':'')+'</h4>' +
+          (st.shipping ? '<div class="rt-shipped">' +
+            (RV==="mthood" ? '<div class="rt-bintbl">' : /* Mt Hood: list under the cart is off for now; Complete Bin stays */
+            '<h4>In Shipping Bin '+esc(st.shipping)+(inBin.length?' ('+inBin.length+')':'')+'</h4>' +
             '<div class="rt-bintbl"><table><thead><tr><th>Front</th><th>Back</th><th>Number</th><th>Slot</th></tr></thead><tbody>' +
-            inBin.slice().sort(function(a,b){ return b.slot-a.slot; }).map(function(m){ const pend=m.status==="pending";
+            listed.slice().sort(function(a,b){ return b.slot-a.slot; }).map(function(m){ const pend=m.status==="pending";
               const row=all.filter(function(x){ return x.num===m.num; })[0]||{};
               const fr=row.art?row.art[0]:(row.thumb||RTIMG[(row.img||0) % RTIMG.length]);
               const bk=row.art?row.art[1]:BOSLAB[1];
@@ -3308,8 +3457,8 @@ function viewRetrieval(){
                 '<td><button class="olink" data-scan="'+esc(m.num)+'">'+esc(m.num)+'</button>' +
                 '<span class="rt-st '+(pend?'pend':'pre')+'">'+(pend?'Pending Shipping':'Pre Shipping')+'</span></td>' +
                 '<td class="rt-slot">'+m.slot+'</td></tr>'; }).join("") +
-            (inBin.length?'':'<tr><td colspan="4" class="rt-none">Nothing scanned yet.</td></tr>') +
-            '</tbody></table>' +
+            (listed.length?'':'<tr><td colspan="4" class="rt-none">Nothing scanned yet.</td></tr>') +
+            '</tbody></table>') +
             '<div class="rt-cbwrap"><button class="rt-complete rt-cbin" id="rt-complete"'+(binDone||!preCount?' disabled':'')+'><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="m7.5 12.5 3 3 6-6.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>'+(binDone?'BIN COMPLETED':'COMPLETE BIN')+'</button></div></div>' +
           '</div>' : '') +
         '</div>' +
@@ -3320,9 +3469,10 @@ function viewRetrieval(){
         '<div class="demogrid">' +
           '<span class="demolbl">Shipping bins</span>' +
           (RV==="mthood"
-            ? '<button class="mini load" data-sbin="1">Bin 1 · Small 6</button>' +
-              '<button class="mini load" data-sbin="2">Bin 2 · Custom 10</button>' +
-              '<button class="mini load" data-sbin="3">Bin 3 · Cards/Coins</button>'
+            ? '<button class="mini load" data-sbin="1">Bin 1</button>' +
+              '<button class="mini load" data-sbin="2">Bin 2</button>' +
+              '<button class="mini load" data-sbin="3">Bin 3</button>' +
+              '<button class="mini load" data-sbin="4">Bin 4</button>'
             : '<button class="mini load" data-sbin="668">Bin 668 · Pretty</button>' +
               '<button class="mini load" data-sbin="667">Bin 667 · Doubt</button>') +
           (RV==="mthood" ? '<span class="demolbl">Items</span>' +
@@ -3332,6 +3482,8 @@ function viewRetrieval(){
           '<button class="mini rtd" data-rcard="51000015">Casio</button>' +
           '<button class="mini rtd" data-rcard="51000018">Wallet</button>' +
           '<button class="mini rtd" data-rcard="51000019">Comic</button>' +
+          '<button class="mini rtd" data-rcard="51000020">Card</button>' +
+          '<button class="mini rtd" data-rcard="51000021">Coin</button>' +
           '<button class="mini rtd" id="rt-democard">Next retrieval</button>' +
           '<button class="mini" data-rcard="52000441" style="background:#b8544c">Wrong item</button>' : '<span class="demolbl">Cards</span>' +
           '<button class="mini rtd" data-rcard="84590650">Luke in Peril!</button>' +
@@ -3350,17 +3502,19 @@ function viewRetrieval(){
     '</div>';
   function openScan(num){
     num=String(num||"").trim().toUpperCase(); if(!num) return;
+    if(RV==="mthood"){
+      const r0=all.filter(function(x){ return x.num===num; })[0];
+      if(r0 && !movedSet[num]){ const sg=mhSuggest(r0.kind);
+        if(sg===-1){ mhNeedBin(r0); return; }
+        if(sg!=null && sg!==st.act){ mhUsePos(sg); rtTarget="card"; save(); window.__rtScan=num; viewRetrieval(); toast(MH_KINDS[r0.kind]+" \u2192 Bin "+st.shipping+" ("+mhPosLabel(sg)+")"); return; } }
+    }
     if(!st.shipping){ toast("Scan a shipping bin first"); return; }
     if(binDone && !movedSet[num]){ toast("Bin "+st.shipping+" is completed · rescan the bin to reopen it"); return; }
     if(WRONGCARDS[num]){ wrongCard(num); return; }
     const r=all.filter(function(x){ return x.num===num; })[0];
     if(!r){ toast(num+" is not pending retrieval"); return; }
-    if(!movedSet[num] && !mine(r)){ toast(num+" is in Bin "+r.bin+", outside your bays"); return; }
-    if(RV==="mthood" && !movedSet[num]){
-      const need=MH_KIND_BIN[r.kind], wantT=mhTypeOfKind(r.kind);
-      if((st.binType||"items")!==wantT){ const o=st.alt&&st.alt.type===wantT&&st.alt.shipping; toast(MH_PLURAL[r.kind]+" go in the "+MH_BIN_TYPES[wantT].label+" bin · "+(o?"switch to Bin "+st.alt.shipping+" with the toggle":"switch the toggle and scan one")); return; }
-    }
-    if(!movedSet[num] && pending.indexOf(r)<0 && shown.indexOf(r)<0){ toast(num+" is not in the current queue of "+QMAX+" yet"); return; }
+    if(!movedSet[num] && !r.clone && !mine(r)){ toast(num+" is in Bin "+r.bin+", outside your bays"); return; }
+    if(!movedSet[num] && !r.clone && pending.indexOf(r)<0 && shown.indexOf(r)<0){ toast(num+" is not in the current queue of "+QMAX+" yet"); return; }
     if(movedSet[num]){
       const m=moved.filter(function(x){ return x.num===num; })[0];
       if(m.status==="pending") pendingDlg(m); else toast(num+" is Pre Shipping in Bin "+m.bin+" · Slot "+m.slot);
@@ -3376,6 +3530,7 @@ function viewRetrieval(){
         '<figure><img src="'+(r.art||BOSLAB)[1]+'" alt="'+'Back'+'"></figure></div>' +
       '<p class="cdnum">'+esc(r.num)+'</p>' +
       '<p class="cdbin">Bin <b>'+esc(st.shipping)+'</b> &middot; Slot <b>'+toSlot+'</b></p>' +
+      (RV==="mthood" ? '<p class="mh-sug">'+(st.act>0 && mhTypes(st.act).indexOf(r.kind)>-1 ? 'Suggested: Bin '+esc(st.shipping)+' ('+mhPosLabel(st.act)+')' : (st.act===0 ? 'No '+MH_PLURAL[r.kind].toLowerCase()+' bin loaded &middot; going in Bin '+esc(st.shipping)+' (Items)' : (mhPosLabel(st.act)?'Bin '+esc(st.shipping)+' is your '+mhPosLabel(st.act).toLowerCase()+' bin':'Bin '+esc(st.shipping)+' has no item type yet')))+'</p>' : '') +
       '<p class="cdwas">Currently in '+(RV==="mthood"?mhLocText(r.bin)+' &middot; ':'')+'Bin '+r.bin+' &middot; Slot '+r.slot+' &middot; Retrieval order #'+r.order+'</p>' +
       '<div class="cdbar"><button class="btn-out red" id="sd-x">CANCEL</button>' +
       '<button class="cdok" id="sd-ok">CONFIRM</button></div>' +
@@ -3385,7 +3540,7 @@ function viewRetrieval(){
     wrap.onclick=function(e){ if(e.target===wrap) close(); };
     wrap.querySelector("#sd-x").onclick=close;
     wrap.querySelector("#sd-ok").onclick=function(){
-      close(); moved.push({num:r.num, bin:st.shipping, slot:inBin.length+1, status:"pre", art:r.art||null, order:r.order, from:r.bin, fromSlot:r.slot}); save(); viewRetrieval();
+      close(); moved.push({num:r.num, bin:st.shipping, slot:toSlot, status:"pre", art:r.art||null, order:r.order, from:r.bin, fromSlot:r.slot}); save(); viewRetrieval();
       toast(r.num+" moved to Shipping Bin "+st.shipping);
     };
   }
@@ -3429,17 +3584,16 @@ function viewRetrieval(){
     wrap.querySelector("#wp-close").focus();
   }
   const SBINS=RV==="mthood"
-    ? {"1":{name:"Pretty",loc:"Mt Hood #3 · Aisle 1 · Level 2",size:"small",cap:6,type:"items"},"2":{name:"Doubt",loc:"Mt Hood #3 · Aisle 1 · Level 2",size:"custom",cap:10,type:"items"},
-       "3":{name:"Shiny",loc:"Mt Hood #3 · Aisle 1 · Level 3",size:"standard",cap:100,type:"cards"}}
+    ? {"1":{loc:"Mt Hood #3 · Shipping bin"},"2":{loc:"Mt Hood #3 · Shipping bin"},"3":{loc:"Mt Hood #3 · Shipping bin"},"4":{loc:"Mt Hood #3 · Shipping bin"}}
     : {"668":{name:"Pretty",loc:"Davos Shelf#53 Party"},"667":{name:"Doubt",loc:"Davos Shelf#53 Party"}};
   if(RV==="mthood"){ const MAP={"668":"1","667":"2","670":"3"};
     if(MAP[st.shipping]){ const nb=MAP[st.shipping]; (st.moved||[]).forEach(function(m){ if(String(m.bin)===st.shipping) m.bin=nb; }); st.code=st.size?binCode(nb,st.size):null; st.shipping=nb; save(); }
     if(st.alt&&MAP[st.alt.shipping]){ const nb=MAP[st.alt.shipping]; (st.moved||[]).forEach(function(m){ if(String(m.bin)===st.alt.shipping) m.bin=nb; }); st.alt.code=st.alt.size?binCode(nb,st.alt.size):null; st.alt.shipping=nb; save(); } }
-  function mhSnap(type){ return {type:type, shipping:st.shipping||null, name:st.name||"", loc:st.loc||"", size:st.size||null, cap:st.cap||null, code:st.code||null}; }
+  function mhSnap(type){ return {type:type, shipping:st.shipping||null, name:st.name||"", loc:st.loc||"", size:st.size||null, cap:st.cap||null, code:st.code||null, slots:st.slots||27, slot:st.slot||1}; }
   function mhSwitch(t){
     const A=st.binType||"items"; if(t===A) return;
     const cur=mhSnap(A), o=(st.alt&&st.alt.type===t)?st.alt:{type:t};
-    st.shipping=o.shipping||null; st.name=o.name||""; st.loc=o.loc||""; st.size=o.size||null; st.cap=o.cap||null; st.code=o.code||null;
+    st.shipping=o.shipping||null; st.name=o.name||""; st.loc=o.loc||""; st.size=o.size||null; st.cap=o.cap||null; st.code=o.code||null; st.slots=o.slots||27; st.slot=o.slot||1;
     st.alt=cur; st.binType=t; rtTarget=st.shipping?"card":"shipping"; save(); viewRetrieval();
     toast(MH_BIN_TYPES[t].label+" bin"+(st.shipping?" · Bin "+st.shipping:" · scan a bin"));
   }
@@ -3449,11 +3603,15 @@ function viewRetrieval(){
     const done=st.done||(st.done={});
     const was=isDone(code);
     if(RV==="mthood"){
-      const T=k.type||"items", A=st.binType||"items";
-      if(T!==A){ st.alt=mhSnap(A); st.binType=T; }   /* keep the other type's bin loaded on the toggle */
+      const j=st.pos.findIndex(function(q){ return q && q.shipping===code; });
+      if(j>-1 && j!==st.act){
+        if(!st.shipping){ st.pos[j]=null; toast("Bin "+code+" moved to "+mhPosLabel(st.act)); }
+        else { mhUsePos(j); rtTarget="card"; save(); viewRetrieval(); toast("Bin "+code+" is your "+mhPosLabel(j).toLowerCase()+" bin"); return; }
+      }
     }
     st.shipping=code; st.name=k.name||""; st.loc=k.loc||"";
     st.size=k.size||null; st.cap=k.cap||null; st.code=k.size?binCode(code,k.size):null;
+    if(RV==="mthood"){ st.loc=k.loc||"Mt Hood #3 · Shipping bin"; st.code=binCode(code,"standard"); st.pos[st.act]={shipping:code,code:st.code,loc:st.loc}; }
     if(was){ done[code]=false; }
     rtTarget="card"; save(); viewRetrieval();
     toast(was ? "Shipping bin "+code+" reopened · you can add cards again" : "Shipping bin "+code+(k.name?" · "+k.name:""));
@@ -3461,6 +3619,8 @@ function viewRetrieval(){
   function handleQR(txt){
     const cert=(txt.toUpperCase().match(/8AC\d{6,}/)||[])[0];
     if(cert){ openScan(cert); return true; }
+    const cs=null;
+    if(cs){ const c=String(Number(cs[1])); if(st.shipping!==c) loadShip(c); if(cs[2] && st.shipping===c){ st.slot=Math.max(1,Math.min(st.slots||27,Number(cs[2]))); save(); viewRetrieval(); toast("Cart "+c+" · now scanning into S"+st.slot); } return true; }
     const mhb=(txt.trim().toUpperCase().match(/^MH[TCSMLX]-?0*(\d{1,6})$/)||[])[1];
     if(mhb){ loadShip(mhb); return true; }
     const psa=(txt.match(/(?:^|\D)(\d{8,10})(?:\D|$)/)||[])[1];
@@ -3473,10 +3633,25 @@ function viewRetrieval(){
   { const oq=document.getElementById("rt-oq"), run=function(){ st.orderQ=oq.value.trim(); save(); viewRetrieval(); };
     document.getElementById("rt-osb").onclick=run; oq.onkeydown=function(e){ if(e.key==="Enter") run(); };
     const oc=document.getElementById("rt-oclr"); if(oc) oc.onclick=function(){ st.orderQ=""; save(); viewRetrieval(); }; }
+  function mhSetSlot(k,open){ const n=st.slots||27; k=Math.max(1,Math.min(n,k)); st.slot=k; if(open) st.view="slot"; save(); viewRetrieval(); }
+  view.querySelectorAll("[data-pos]").forEach(function(b){ b.onclick=function(){ const i=Number(b.dataset.pos); if(i===st.act) return; mhUsePos(i); rtTarget=st.shipping?"card":"shipping"; save(); viewRetrieval(); }; });
+  { const pt=document.getElementById("mh-ptype"); if(pt) pt.onchange=function(){ st.ptype[st.act]=[pt.value]; save(); viewRetrieval(); toast((st.shipping?"Bin "+st.shipping:"This bin")+" set to "+MH_PLURAL[pt.value].toLowerCase()); };
+    const pa=document.getElementById("mh-padd"); if(pa) pa.onchange=function(){ const t=mhTypes(st.act).slice(); t.push(pa.value); st.ptype[st.act]=t; save(); viewRetrieval(); toast((st.shipping?"Bin "+st.shipping:"This bin")+" now takes "+mhPosLabel(st.act).toLowerCase()); };
+    view.querySelectorAll("[data-rmtype]").forEach(function(b){ b.onclick=function(){ st.ptype[st.act]=mhTypes(st.act).filter(function(k){ return k!==b.dataset.rmtype; }); save(); viewRetrieval(); }; }); }
+  view.querySelectorAll("[data-mview]").forEach(function(b){ b.onclick=function(){ st.view=b.dataset.mview; save(); viewRetrieval(); }; });
+  view.querySelectorAll("[data-tote]").forEach(function(b){ b.onclick=function(e){ e.stopPropagation();
+    /* click = select the slot; double-click = open the Slot tab to see what's inside (timed by hand, since each click re-renders) */
+    const k=Number(b.dataset.tote), now=Date.now(), L=window.__mhTote||{};
+    const dbl=L.k===k && now-L.t<400; window.__mhTote={k:k,t:dbl?0:now};
+    mhSetSlot(k,dbl); }; b.title+=" · double-click to see inside"; });
+  { const pv=document.getElementById("mh-prev"), nx=document.getElementById("mh-next");
+    if(pv) pv.onclick=function(){ mhSetSlot((st.slot||1)-1); };
+    if(nx) nx.onclick=function(){ mhSetSlot((st.slot||1)+1); }; }
   view.querySelectorAll("[data-btype]").forEach(function(b){ b.onclick=function(){ mhSwitch(b.dataset.btype); }; });
   { const ux=document.getElementById("rt-unload"); if(ux) ux.onclick=function(e){
       e.stopPropagation();
       const was=st.shipping; st.shipping=null; st.name=""; st.loc=""; st.size=null; st.cap=null; st.code=null;
+      if(RV==="mthood"){ st.pos[st.act]=null; if(st.act>0) st.ptype[st.act]=[]; }   /* removing a bin clears its item type too */
       rtTarget="shipping"; save(); viewRetrieval();
       toast("Bin "+was+" removed · its "+(RV==="mthood"?"items":"cards")+" keep their status · scan a bin to continue");
     }; }
@@ -3506,12 +3681,21 @@ function viewRetrieval(){
   };
   Array.prototype.forEach.call(view.querySelectorAll("[data-sbin]"),function(el){ el.onclick=function(){ loadShip(el.dataset.sbin); }; });
   Array.prototype.forEach.call(view.querySelectorAll("[data-rcard]"),function(el){
-    const done=movedSet[el.dataset.rcard]; if(done){ el.disabled=true; el.style.opacity=".45"; el.title="Already in a shipping bin"; }
-    el.onclick=function(){ openScan(el.dataset.rcard); };
+    const src=el.dataset.rcard, demoItem=RV==="mthood" && !WRONGCARDS[src];
+    if(!demoItem){ const done=movedSet[src]; if(done){ el.disabled=true; el.style.opacity=".45"; el.title="Already in a shipping bin"; } }
+    el.onclick=function(){
+      if(demoItem && movedSet[src]){
+        /* already picked: make another copy so the same test item can go in again */
+        const cl=st.clones||(st.clones=[]), num=String(52100000+cl.length+1);
+        cl.push({src:src, num:num, order:18750300+cl.length}); save(); window.__rtScan=num; viewRetrieval(); return;
+      }
+      openScan(src);
+    };
   });
+  if(window.__rtScan){ const n=window.__rtScan; window.__rtScan=null; openScan(n); }
   document.getElementById("rt-democard").onclick=function(){
     if(!pending.length){ toast("Nothing left pending"); return; }
-    const fit=RV==="mthood"?pending.filter(function(r){ return !movedSet[r.num] && mhTypeOfKind(r.kind)===(st.binType||"items"); })[0]:null;
+    const fit=null;
     openScan((fit||pending[0]).num);
   };
   document.getElementById("demoreset").onclick=function(){

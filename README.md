@@ -79,3 +79,11 @@ usually block it. The Demo buttons cover the same flow without the camera.
 - Phase 1 / Phase 2 toggle in the top bar; Operations greyed out.
 - Order # search, VIP retrieval banner, × to remove the current shipping bin, Complete Bin at the bottom, no slot cap on shipping bins.
 - `vercel.json` now sends `Permissions-Policy: camera=(self)` so the camera works on the Vercel domain.
+
+## Changes (Nov 12, 2026)
+
+- Mt Hood shipping station holds 3 bins: tab 1 is always Items; tabs 2 and 3 get one or more item types (Watches, Wallets, Comics, Cards, Coins) once a bin is loaded. Tabs use the item-type colors; several types split the tab.
+- Scanning an item jumps to the bin set up for its type and the confirm dialog shows the suggestion. Comics and cards can't go in Items: with no bin for them, a prompt asks to set one up.
+- Removing a bin (×) clears its type. Bin slots are one item each and grow as you pick (no cap).
+- Type column in the Mt Hood queue; Card and Coin demo items; demo item buttons never grey out (each press adds a copy).
+- Vaulting › Vaults opens Alan's Mt Hood #3 Locations & Tins app (built in); retrieval and Bay Setup use its real layout.
